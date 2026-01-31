@@ -1,1 +1,1 @@
-gridSpace = 32;
+gridSpace = 64;

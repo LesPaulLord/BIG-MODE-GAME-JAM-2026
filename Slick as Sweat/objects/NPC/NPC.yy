@@ -4,12 +4,18 @@
   "eventList":[],
   "managed":true,
   "name":"NPC",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},"propertyId":{"name":"isControllable","path":"objects/Character_Movement/Character_Movement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},"propertyId":{"name":"characterID","path":"objects/Character_Movement/Character_Movement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0",},
+  ],
   "parent":{
     "name":"Jay",
     "path":"folders/Jay.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"Character_Movement",
+    "path":"objects/Character_Movement/Character_Movement.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -27,7 +33,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_Idle_Turkey_01",
+    "path":"sprites/spr_Idle_Turkey_01/spr_Idle_Turkey_01.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

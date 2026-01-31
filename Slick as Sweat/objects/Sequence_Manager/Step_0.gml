@@ -1,4 +1,3 @@
-
 //0 = pause
 
 //1 = Set Random NPC moves
@@ -6,7 +5,6 @@
 //2 = Input player
 
 //3 = Fight Sequence
-
 
 
 switch(currentSequenceStep)
@@ -31,8 +29,11 @@ switch(currentSequenceStep)
 	case 2:	
 	if (!sequenceInited)	
 	{
+		InitPlayerMoveIntputSequence();
 		sequenceTimer = 0;
 	}
+	
+	PlayerInputPhase();
 	
 	break
 	
@@ -41,8 +42,11 @@ switch(currentSequenceStep)
 	case 3:
 	if (!sequenceInited)	
 	{
+		InitFight();
 		sequenceTimer = 0;
 	}
+	
+	FightSequence();
 	
 	break;
 }
@@ -51,35 +55,203 @@ function InitNPCMovesSequence()
 {
 	show_debug_message("Init NPC Move sequence");
 	sequenceTimer = 0;
-		
+	sequenceInited = true;
+	NPCActionList = []
+	array_resize(NPCActionList, actionNB);
+	moveShowedID = 0;
+	
+	for (var i = 0; i < actionNB; i++) 
+	{
+		// irandom(6) picks a number between 0 and 6
+		NPCActionList[i] = GetRandomActionType();
+		show_debug_message("random move: " + string(NPCActionList[i]));
+	}
 }
 
+///NPC////
 function cpu_generate_moves()
 {
-	sequenceTimer += delta_time / 1000000	
+	sequenceTimer += delta_time / 1000000
+	sequenceSubTimer += delta_time / 1000000	
 	
-	if(sequenceTimer > npcGetMoveLength)
+	if(moveShowedID < actionNB)
+	{
+		if(sequenceSubTimer > (npcGetMoveLength/actionNB))
+		{
+			ShowNPCActionFunc(moveShowedID);
+			sequenceSubTimer = 0;
+			moveShowedID++;
+		}
+	}
+	
+	if(sequenceTimer > npcGetMoveLength + 1)
 	{
 		currentSequenceStep = 2;
 		sequenceInited = false;
 	}
-	
-	
 }
 
+function ShowNPCActionFunc(_id)
+{
+	show_debug_message("Show action: " + string(_id))
+}
+
+
+
+/////PLAYER
 function InitPlayerMoveIntputSequence()
 {
 	show_debug_message("Init Player Input sequence");
-	sequenceTimer = 0;		
+	sequenceTimer = 0;
+	playerActionList = [];
+	sequenceFinished = false;
+	currentInputID = 0;
+	
+	sequenceInited = true;
 }
 
-function PlayerInputSequence()
+function PlayerInputPhase()
 {
-	sequenceTimer += delta_time / 1000000	
+	sequenceTimer += delta_time / 1000000
+
+	_keyPressed = false;
 	
-	if(sequenceTimer > npcGetMoveLength)
+	if(keyboard_check_pressed(vk_right))
 	{
-		currentSequenceStep = 2;
+		show_debug_message("press right");
+		playerActionList[currentInputID] = ActionType.moveRight;	
+		_keyPressed = true;
+	}
+
+	if(keyboard_check_pressed(vk_left))
+	{
+		show_debug_message("press left");
+		playerActionList[currentInputID] = ActionType.moveLeft;
+		_keyPressed = true;
+	}
+
+	if(keyboard_check_pressed(vk_space))
+	{
+		show_debug_message("press jump");
+		playerActionList[currentInputID] = ActionType.jump;	
+		_keyPressed = true;
+	}
+	
+	if(keyboard_check_pressed(ord("X")))
+	{
+		show_debug_message("press attack");
+		playerActionList[currentInputID] = ActionType.attack;
+		_keyPressed = true;
+	}	
+
+	if(_keyPressed)
+	{
+		currentInputID ++;
+		_keyPressed = false;
+		
+		if(currentInputID > actionNB - 1)
+		{
+			sequenceFinished = true;
+		}
+	}
+	
+	if(sequenceTimer > playerInputLength + 1 || sequenceFinished)
+	{
+		show_debug_message("player input finished");
+					
+		if(!sequenceFinished)
+		{
+			show_debug_message("player didin't finish input in time");
+			
+			for(var i = currentInputID; i < actionNB; i++)
+			{
+				show_debug_message("add idle on: " + string(i));
+				playerActionList[i] = ActionType.idle;
+			}
+		}
+		
+		for(var _x = 0; _x < actionNB; _x++)
+		{
+			show_debug_message("player action: " + string(playerActionList[_x]));
+		}
+		
+		currentSequenceStep = 3;
 		sequenceInited = false;
+	}
+}
+
+
+////FIGHT
+function InitFight()
+{
+		show_debug_message("Init fight");
+		sequenceTimer = 0;
+	
+		sequenceInited = true;
+		characters[0].readyToFight = true;
+		characters[1].readyToFight = true;
+		currentActionID = 0;
+		
+		show_debug_message("character: " + string(characters[0]));
+		show_debug_message("character: " + string(characters[1]));
+}
+
+
+function FightSequence()
+{	
+	if(ArePlayerReadyToFight())
+	{
+		if(currentFighterID == 0)
+		{
+			if(currentActionID < actionNB) ///Mettre specifiquement au character
+			{
+				show_debug_message("NPC action: " + string(currentActionID));	
+				characters[0].PerformAction(NPCActionList[currentActionID], 0.45)
+				currentFighterID = 1;
+			}
+		}		
+		else if (currentFighterID == 1)		
+		{
+			if(currentActionID < actionNB) ///Mettre specifiquement au character
+			{
+				show_debug_message("Player action: " + string(currentActionID));	
+				characters[1].PerformAction(playerActionList[currentActionID], 0.45)
+				currentFighterID = 0;
+			}
+			currentActionID++; // currentACtion change juste quand c player
+		}
+		
+		if(currentActionID >= actionNB)
+		{
+			show_debug_message("Fight sequence over");	
+			currentSequenceStep = 0;
+		}
+	}	
+}
+
+function GetRandomActionType()
+{
+	var _rand = irandom(4); 
+
+	switch(_rand)
+	{
+		case 0: return ActionType.moveLeft;
+		case 1: return ActionType.moveRight;
+		case 2: return ActionType.jump;
+		case 3: return ActionType.attack;
+		case 4: return ActionType.block;
+	}
+}
+
+function ArePlayerReadyToFight()
+{
+	if(characters[0].readyToFight && characters[1].readyToFight)
+	{
+		show_debug_message("Ready To Fight!!");
+		 return true;	
+	}
+	else	
+	{
+		//show_debug_message("Not ready to fight");
 	}
 }

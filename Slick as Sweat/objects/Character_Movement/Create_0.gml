@@ -26,6 +26,8 @@ jumping = false;
 //visual
 curveA = animcurve_get_channel(MovementCurves, "MovementCurveA");
 
+alarm[0] = 5;
+
 function PerformAction(_actionType, _length)
 {
 	actionType = _actionType;
