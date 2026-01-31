@@ -27,6 +27,7 @@
   "name":"Slick as Sweat",
   "resources":[
     {"id":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},},
+    {"id":{"name":"Sequence_Manager","path":"objects/Sequence_Manager/Sequence_Manager.yy",},},
     {"id":{"name":"Room_Test_Fred","path":"rooms/Room_Test_Fred/Room_Test_Fred.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"BG_Test","path":"sprites/BG_Test/BG_Test.yy",},},
