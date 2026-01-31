@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"SequenceManager",
+  "%Name":"Sequence_Manager",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"SequenceManager",
+  "name":"Sequence_Manager",
   "overriddenProperties":[],
   "parent":{
     "name":"Scripts",

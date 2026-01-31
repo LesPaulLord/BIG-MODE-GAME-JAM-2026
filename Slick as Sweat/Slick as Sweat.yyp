@@ -11,8 +11,9 @@
   "defaultScriptType":0,
   "Folders":[
     {"$GMFolder":"","%Name":"Art Assets","folderPath":"folders/Art Assets.yy","name":"Art Assets","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Scripts","folderPath":"folders/Scripts.yy","name":"Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Room","folderPath":"folders/Room.yy","name":"Room","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Player","folderPath":"folders/Player.yy","name":"Player","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Scripts","folderPath":"folders/Scripts.yy","name":"Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sounds","folderPath":"folders/Sounds.yy","name":"Sounds","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"VFX","folderPath":"folders/VFX.yy","name":"VFX","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
@@ -25,8 +26,13 @@
   },
   "name":"Slick as Sweat",
   "resources":[
-    {"id":{"name":"SequenceManager","path":"objects/SequenceManager/SequenceManager.yy",},},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},},
+    {"id":{"name":"Game_Manager","path":"objects/Game_Manager/Game_Manager.yy",},},
+    {"id":{"name":"Sequence_Manager","path":"objects/Sequence_Manager/Sequence_Manager.yy",},},
+    {"id":{"name":"Room_Main","path":"rooms/Room_Main/Room_Main.yy",},},
+    {"id":{"name":"Room_Test_Etienne","path":"rooms/Room_Test_Etienne/Room_Test_Etienne.yy",},},
+    {"id":{"name":"Room_Test_Fred","path":"rooms/Room_Test_Fred/Room_Test_Fred.yy",},},
+    {"id":{"name":"Room_Test_Jay","path":"rooms/Room_Test_Jay/Room_Test_Jay.yy",},},
     {"id":{"name":"BG_Test","path":"sprites/BG_Test/BG_Test.yy",},},
     {"id":{"name":"Idle_Penguin_01","path":"sprites/Idle_Penguin_01/Idle_Penguin_01.yy",},},
     {"id":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},},
@@ -34,7 +40,10 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"Room_Main","path":"rooms/Room_Main/Room_Main.yy",},},
+    {"roomId":{"name":"Room_Test_Fred","path":"rooms/Room_Test_Fred/Room_Test_Fred.yy",},},
+    {"roomId":{"name":"Room_Test_Etienne","path":"rooms/Room_Test_Etienne/Room_Test_Etienne.yy",},},
+    {"roomId":{"name":"Room_Test_Jay","path":"rooms/Room_Test_Jay/Room_Test_Jay.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
