@@ -1,6 +1,6 @@
 {
   "$GMSprite":"v2",
-  "%Name":"spr_Jump_Turkey_01",
+  "%Name":"spr_Jump_Stout_01",
   "bboxMode":0,
   "bbox_bottom":58,
   "bbox_left":8,
@@ -12,28 +12,28 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"9eba0f8b-2aff-4985-9bea-0837ac637b37","name":"9eba0f8b-2aff-4985-9bea-0837ac637b37","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e06bc51f-1382-4850-a698-6bf54c59a101","name":"e06bc51f-1382-4850-a698-6bf54c59a101","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":60,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"9b06e4d3-6790-4d0c-b0a4-3d08e201fd52","blendMode":0,"displayName":"default","isLocked":false,"name":"9b06e4d3-6790-4d0c-b0a4-3d08e201fd52","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"358f60a3-9d1f-48b1-985b-86578650355d","blendMode":0,"displayName":"default","isLocked":false,"name":"358f60a3-9d1f-48b1-985b-86578650355d","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_Jump_Turkey_01",
+  "name":"spr_Jump_Stout_01",
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Player 1",
-    "path":"folders/Sprite/Player 1.yy",
+    "name":"Player 2",
+    "path":"folders/Sprite/Player 2.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"spr_Jump_Turkey_01",
+    "%Name":"spr_Jump_Stout_01",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_Jump_Turkey_01",
+    "name":"spr_Jump_Stout_01",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9eba0f8b-2aff-4985-9bea-0837ac637b37","path":"sprites/spr_Jump_Turkey_01/spr_Jump_Turkey_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d2d479ed-8017-427e-8f97-970df7b45455","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e06bc51f-1382-4850-a698-6bf54c59a101","path":"sprites/spr_Jump_Stout_01/spr_Jump_Stout_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"39db576a-7d63-4b02-9f0c-4f2db2c68270","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
