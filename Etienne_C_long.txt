@@ -1,1 +1,6 @@
 https://www.youtube.com/watch?v=N1GmQdWzSRU
+
+if(Etienne is trop lent)
+{
+	kick him from the team();
+}
