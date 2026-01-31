@@ -5,25 +5,25 @@ if(!performAction)
 		if(keyboard_check(vk_right))
 		{
 			show_debug_message("perform move right");
-			PerformAction(ActionType.moveRight, actionLength);	
+			PerformAction(ActionType.moveRight, actionCurrentLength);	
 		}
 
 		if(keyboard_check(vk_left))
 		{
 			show_debug_message("perform move left");
-			PerformAction(ActionType.moveLeft, actionLength);	
+			PerformAction(ActionType.moveLeft, actionCurrentLength);	
 		}
 
 		if(keyboard_check(vk_up))
 		{
 			show_debug_message("perform jump");
-			PerformAction(ActionType.jump, actionLength);	
+			PerformAction(ActionType.jump, actionCurrentLength);	
 		}
 	
 		if(keyboard_check(ord("Y")))
 		{
 			show_debug_message("perform attack");
-			PerformAction(ActionType.attack, actionLength);
+			PerformAction(ActionType.attack, actionCurrentLength);
 		}
 	
 		if(keyboard_check(vk_enter))
@@ -90,8 +90,7 @@ if(performAction)
 	}	
 	
 	actionTimer += delta_time/1000000;	
-	var _fract = actionTimer / actionLength;	
-	show_debug_message("actionTimer: " + string(actionTimer) +" fract " + string(_fract));
+	var _fract = actionTimer / actionLength;
 	
 	///UPDATE PERFORM ACTION
 	switch(actionType)

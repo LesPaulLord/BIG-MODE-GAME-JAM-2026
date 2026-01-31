@@ -32,6 +32,7 @@
   "name":"Slick as Sweat",
   "resources":[
     {"id":{"name":"MovementCurves","path":"animcurves/MovementCurves/MovementCurves.yy",},},
+    {"id":{"name":"Font_currentState","path":"fonts/Font_currentState/Font_currentState.yy",},},
     {"id":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},},
     {"id":{"name":"Emitter_Start","path":"objects/Emitter_Start/Emitter_Start.yy",},},
     {"id":{"name":"Game_Manager","path":"objects/Game_Manager/Game_Manager.yy",},},

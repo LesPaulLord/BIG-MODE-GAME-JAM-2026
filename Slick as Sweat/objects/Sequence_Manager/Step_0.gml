@@ -84,7 +84,7 @@ function cpu_generate_moves()
 		}
 	}
 	
-	if(sequenceTimer > npcGetMoveLength + 1)
+	if(sequenceTimer > npcGetMoveLength + npcSequenceAfterTime)
 	{
 		currentSequenceStep = 2;
 		sequenceInited = false;
@@ -155,7 +155,7 @@ function PlayerInputPhase()
 		}
 	}
 	
-	if(sequenceTimer > playerInputLength + 1 || sequenceFinished)
+	if(sequenceTimer > playerInputLength + playerSequenceAfterTime || sequenceFinished)
 	{
 		show_debug_message("player input finished");
 					
@@ -193,12 +193,18 @@ function InitFight()
 		currentActionID = 0;
 		
 		show_debug_message("character: " + string(characters[0]));
-		show_debug_message("character: " + string(characters[1]));
+		show_debug_message("character: " + string(characters[1]));		
 }
 
 
 function FightSequence()
 {	
+	if(sequenceTimer < fightDelay)
+	{
+		sequenceTimer+= delta_time/1000000
+		return;
+	}
+	
 	if(ArePlayerReadyToFight())
 	{
 		if(currentFighterID == 0)
@@ -206,7 +212,7 @@ function FightSequence()
 			if(currentActionID < actionNB) ///Mettre specifiquement au character
 			{
 				show_debug_message("NPC action: " + string(currentActionID));	
-				characters[0].PerformAction(NPCActionList[currentActionID], 0.45)
+				characters[0].PerformAction(NPCActionList[currentActionID], Game_Manager.actionCurrentLength)
 				currentFighterID = 1;
 			}
 		}		
@@ -215,7 +221,7 @@ function FightSequence()
 			if(currentActionID < actionNB) ///Mettre specifiquement au character
 			{
 				show_debug_message("Player action: " + string(currentActionID));	
-				characters[1].PerformAction(playerActionList[currentActionID], 0.45)
+				characters[1].PerformAction(playerActionList[currentActionID], Game_Manager.actionCurrentLength)
 				currentFighterID = 0;
 			}
 			currentActionID++; // currentACtion change juste quand c player
@@ -225,6 +231,8 @@ function FightSequence()
 		{
 			show_debug_message("Fight sequence over");	
 			currentSequenceStep = 0;
+			currentTurn++;
+			alarm[0] = 60;
 		}
 	}	
 }
