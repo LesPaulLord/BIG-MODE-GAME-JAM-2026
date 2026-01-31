@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"Game_Manager",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"NPC",
+  "eventList":[],
   "managed":true,
-  "name":"Game_Manager",
+  "name":"NPC",
   "overriddenProperties":[],
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Jay",
+    "path":"folders/Jay.yy",
   },
   "parentObjectId":null,
   "persistent":false,

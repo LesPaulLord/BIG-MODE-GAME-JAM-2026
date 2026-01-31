@@ -1,17 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"Game_Manager",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"Player",
+  "eventList":[],
   "managed":true,
-  "name":"Game_Manager",
+  "name":"Player",
   "overriddenProperties":[],
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Jay",
+    "path":"folders/Jay.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"Character_Movement",
+    "path":"objects/Character_Movement/Character_Movement.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -29,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"Sprite3",
+    "path":"sprites/Sprite3/Sprite3.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

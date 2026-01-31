@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"Game_Manager",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"Object4",
+  "eventList":[],
   "managed":true,
-  "name":"Game_Manager",
+  "name":"Object4",
   "overriddenProperties":[],
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Jay",
+    "path":"folders/Jay.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -29,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"BG_Test",
+    "path":"sprites/BG_Test/BG_Test.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

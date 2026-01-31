@@ -1,14 +1,21 @@
+
+
+///GLOBAL
+actionNB = 3
 currentTurn = 0
 acceleration = 1.0
+currentSequenceStep = 0
+sequenceTimer = 0
+sequenceInited = false
 
-NPCSequenceLength = 1.0
-actionNB = 3
+///NPC
+npcGetMoveLength = 4;
 NPCActionModifier = 1
+
+///PLAYER
+playerInputLength = 1.0
 playerActionModifier = 1
 
-playerInputLength = 1.0
-
-sequenceID = 0
 
 enum CPU_Action {
     MOVE_FORWARD,
@@ -18,4 +25,7 @@ enum CPU_Action {
 }
 
 show_debug_message("hello world");
+
+
+alarm[0] = 120;
 
