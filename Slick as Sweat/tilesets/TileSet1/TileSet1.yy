@@ -12,8 +12,8 @@
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
-    "name":"Player",
-    "path":"folders/Player.yy",
+    "name":"old",
+    "path":"folders/Sprite/old.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
