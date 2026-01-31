@@ -16,8 +16,8 @@
   ],
   "name":"Room1",
   "parent":{
-    "name":"Slick as Sweat",
-    "path":"Slick as Sweat.yyp",
+    "name":"Rooms",
+    "path":"folders/Rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

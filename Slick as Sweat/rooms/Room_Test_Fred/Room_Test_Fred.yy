@@ -16,8 +16,8 @@
   ],
   "name":"Room_Test_Fred",
   "parent":{
-    "name":"Slick as Sweat",
-    "path":"Slick as Sweat.yyp",
+    "name":"Rooms",
+    "path":"folders/Rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
