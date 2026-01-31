@@ -1,32 +1,35 @@
 if(!performAction)
 {
-	if(keyboard_check(vk_right))
+	if(isControllable)
 	{
-		show_debug_message("perform move right");
-		PerformAction(ActionType.moveRight, actionLength);	
-	}
+		if(keyboard_check(vk_right))
+		{
+			show_debug_message("perform move right");
+			PerformAction(ActionType.moveRight, actionLength);	
+		}
 
-	if(keyboard_check(vk_left))
-	{
-		show_debug_message("perform move left");
-		PerformAction(ActionType.moveLeft, actionLength);	
-	}
+		if(keyboard_check(vk_left))
+		{
+			show_debug_message("perform move left");
+			PerformAction(ActionType.moveLeft, actionLength);	
+		}
 
-	if(keyboard_check(vk_up))
-	{
-		show_debug_message("perform jump");
-		PerformAction(ActionType.jump, actionLength);	
-	}
+		if(keyboard_check(vk_up))
+		{
+			show_debug_message("perform jump");
+			PerformAction(ActionType.jump, actionLength);	
+		}
 	
-	if(keyboard_check(ord("Y")))
-	{
-		show_debug_message("perform attack");
-		PerformAction(ActionType.attack, actionLength);
-	}
+		if(keyboard_check(ord("Y")))
+		{
+			show_debug_message("perform attack");
+			PerformAction(ActionType.attack, actionLength);
+		}
 	
-	if(keyboard_check(vk_enter))
-	{
-		 show_debug_message("current pos: " + string(x) + " " + string(y))
+		if(keyboard_check(vk_enter))
+		{
+			 show_debug_message("current pos: " + string(x) + " " + string(y))
+		}
 	}
 }
 
@@ -87,7 +90,7 @@ if(performAction)
 	}	
 	
 	actionTimer += delta_time/1000000;	
-	_fract = actionTimer / actionLength;	
+	var _fract = actionTimer / actionLength;	
 	show_debug_message("actionTimer: " + string(actionTimer) +" fract " + string(_fract));
 	
 	///UPDATE PERFORM ACTION
@@ -158,5 +161,6 @@ if(performAction)
 	{
 		show_debug_message("action end current pos = " + string(x) + " , " + string(y));
 		performAction = false;
+		readyToFight = true;
 	}
 }

@@ -4,7 +4,10 @@
   "eventList":[],
   "managed":true,
   "name":"Player",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},"propertyId":{"name":"isControllable","path":"objects/Character_Movement/Character_Movement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},"propertyId":{"name":"characterID","path":"objects/Character_Movement/Character_Movement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
+  ],
   "parent":{
     "name":"Jay",
     "path":"folders/Jay.yy",

@@ -7,25 +7,26 @@ acceleration = 1.0
 currentSequenceStep = 0
 sequenceTimer = 0
 sequenceInited = false
+sequenceSubTimer = 0;
+
+characters = array_create(2, Character_Movement);
 
 ///NPC
-npcGetMoveLength = 4;
+npcGetMoveLength = 2;
 NPCActionModifier = 1
+NPCActionList = []
+moveShowedID = 0;
 
 ///PLAYER
 playerInputLength = 1.0
 playerActionModifier = 1
+playerActionList = []
+sequenceFinished = false;
+currentInputID = 0;
 
+///FIGHT
+currentFighterID = 0;
+currentActionID = 0;
 
-enum CPU_Action {
-    MOVE_FORWARD,
-    JUMP,
-    HIT,
-    MOVE_BACKWARD
-}
-
-show_debug_message("hello world");
-
-
-alarm[0] = 120;
+alarm[0] = 90;
 

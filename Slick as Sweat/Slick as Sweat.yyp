@@ -39,6 +39,7 @@
     {"id":{"name":"Room_Test_Etienne","path":"rooms/Room_Test_Etienne/Room_Test_Etienne.yy",},},
     {"id":{"name":"Room_Test_Fred","path":"rooms/Room_Test_Fred/Room_Test_Fred.yy",},},
     {"id":{"name":"Room_Test_Jay","path":"rooms/Room_Test_Jay/Room_Test_Jay.yy",},},
+    {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
     {"id":{"name":"GlobalFuncitons","path":"scripts/GlobalFuncitons/GlobalFuncitons.yy",},},
     {"id":{"name":"BG_Test","path":"sprites/BG_Test/BG_Test.yy",},},
     {"id":{"name":"spr_Block_Turkey_01","path":"sprites/spr_Block_Turkey_01/spr_Block_Turkey_01.yy",},},

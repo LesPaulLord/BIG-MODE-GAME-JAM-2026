@@ -1,0 +1,1 @@
+Sequence_Manager.characters[characterID] = self;
