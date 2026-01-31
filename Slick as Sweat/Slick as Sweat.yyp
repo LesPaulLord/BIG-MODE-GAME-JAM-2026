@@ -24,6 +24,7 @@
   },
   "name":"Slick as Sweat",
   "resources":[
+    {"id":{"name":"Room_Test_Fred","path":"rooms/Room_Test_Fred/Room_Test_Fred.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"BG_Test","path":"sprites/BG_Test/BG_Test.yy",},},
     {"id":{"name":"Idle_Penguin_01","path":"sprites/Idle_Penguin_01/Idle_Penguin_01.yy",},},
@@ -33,6 +34,7 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"Room_Test_Fred","path":"rooms/Room_Test_Fred/Room_Test_Fred.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
