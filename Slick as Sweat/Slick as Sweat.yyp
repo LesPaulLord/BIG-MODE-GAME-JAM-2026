@@ -13,6 +13,7 @@
     {"$GMFolder":"","%Name":"Art Assets","folderPath":"folders/Art Assets.yy","name":"Art Assets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Scripts","folderPath":"folders/Scripts.yy","name":"Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Player","folderPath":"folders/Player.yy","name":"Player","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Rooms","folderPath":"folders/Rooms.yy","name":"Rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sounds","folderPath":"folders/Sounds.yy","name":"Sounds","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"VFX","folderPath":"folders/VFX.yy","name":"VFX","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
@@ -25,7 +26,13 @@
   },
   "name":"Slick as Sweat",
   "resources":[
+<<<<<<< HEAD
     {"id":{"name":"SequenceManager","path":"objects/SequenceManager/SequenceManager.yy",},},
+=======
+    {"id":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},},
+    {"id":{"name":"Sequence_Manager","path":"objects/Sequence_Manager/Sequence_Manager.yy",},},
+    {"id":{"name":"Room_Test_Fred","path":"rooms/Room_Test_Fred/Room_Test_Fred.yy",},},
+>>>>>>> 4aaa84e31818451ad15eb3ae91a18745609eb99c
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"BG_Test","path":"sprites/BG_Test/BG_Test.yy",},},
     {"id":{"name":"Idle_Penguin_01","path":"sprites/Idle_Penguin_01/Idle_Penguin_01.yy",},},
@@ -35,6 +42,7 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"Room_Test_Fred","path":"rooms/Room_Test_Fred/Room_Test_Fred.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
