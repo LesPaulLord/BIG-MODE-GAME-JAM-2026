@@ -1,27 +1,27 @@
 {
   "$GMSprite":"v2",
-  "%Name":"Idle_Penguin_01",
+  "%Name":"spr_Hit_Turkey_01",
   "bboxMode":0,
-  "bbox_bottom":31,
-  "bbox_left":32,
-  "bbox_right":254,
-  "bbox_top":1,
+  "bbox_bottom":59,
+  "bbox_left":0,
+  "bbox_right":57,
+  "bbox_top":6,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"e2b18f25-3e2c-4344-ba1c-49165774fb5b","name":"e2b18f25-3e2c-4344-ba1c-49165774fb5b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"2b2ed67d-2ede-4bbd-9f53-d31655523fb7","name":"2b2ed67d-2ede-4bbd-9f53-d31655523fb7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":32,
+  "height":60,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"d82cf4ae-7a45-4d82-934c-eee6415ae824","blendMode":0,"displayName":"default","isLocked":false,"name":"d82cf4ae-7a45-4d82-934c-eee6415ae824","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"d689d683-88ea-4dd6-92ed-0a58dd4e6084","blendMode":0,"displayName":"default","isLocked":false,"name":"d689d683-88ea-4dd6-92ed-0a58dd4e6084","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"Idle_Penguin_01",
+  "name":"spr_Hit_Turkey_01",
   "nineSlice":null,
   "origin":0,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"Idle_Penguin_01",
+    "%Name":"spr_Hit_Turkey_01",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"Idle_Penguin_01",
+    "name":"spr_Hit_Turkey_01",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e2b18f25-3e2c-4344-ba1c-49165774fb5b","path":"sprites/Idle_Penguin_01/Idle_Penguin_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"0ea38bf7-090d-4b35-9717-2919ba5ee5d4","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2b2ed67d-2ede-4bbd-9f53-d31655523fb7","path":"sprites/spr_Hit_Turkey_01/spr_Hit_Turkey_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"3ed40498-6432-47ef-a2be-8281e1bdb5aa","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":288,
+  "width":60,
 }

@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite3",
-    "path":"sprites/Sprite3/Sprite3.yy",
+    "name":"spr_Idle_Turkey_01",
+    "path":"sprites/spr_Idle_Turkey_01/spr_Idle_Turkey_01.yy",
   },
   "spriteMaskId":null,
   "visible":true,

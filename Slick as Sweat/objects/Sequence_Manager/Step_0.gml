@@ -73,7 +73,7 @@ function InitPlayerMoveIntputSequence()
 	sequenceTimer = 0;		
 }
 
-function cpu_generate_moves()
+function PlayerInputSequence()
 {
 	sequenceTimer += delta_time / 1000000	
 	
