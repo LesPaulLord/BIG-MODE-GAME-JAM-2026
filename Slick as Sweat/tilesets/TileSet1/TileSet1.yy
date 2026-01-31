@@ -18,8 +18,8 @@
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"Idle_Penguin_01",
-    "path":"sprites/Idle_Penguin_01/Idle_Penguin_01.yy",
+    "name":"spr_Idle_Penguin_01",
+    "path":"sprites/spr_Idle_Penguin_01/spr_Idle_Penguin_01.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{

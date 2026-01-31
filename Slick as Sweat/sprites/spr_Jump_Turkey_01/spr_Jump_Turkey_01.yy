@@ -1,6 +1,6 @@
 {
   "$GMSprite":"v2",
-  "%Name":"Jump_Turkey_01",
+  "%Name":"spr_Jump_Turkey_01",
   "bboxMode":0,
   "bbox_bottom":57,
   "bbox_left":5,
@@ -21,7 +21,7 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"41ca3341-be91-42cb-bda5-60a277ed65a0","blendMode":0,"displayName":"default","isLocked":false,"name":"41ca3341-be91-42cb-bda5-60a277ed65a0","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"Jump_Turkey_01",
+  "name":"spr_Jump_Turkey_01",
   "nineSlice":null,
   "origin":0,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"Jump_Turkey_01",
+    "%Name":"spr_Jump_Turkey_01",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"Jump_Turkey_01",
+    "name":"spr_Jump_Turkey_01",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,7 +69,7 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4f8b4499-1c68-4eac-bbbc-0274dd9eb4d0","path":"sprites/Jump_Turkey_01/Jump_Turkey_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4f8b4499-1c68-4eac-bbbc-0274dd9eb4d0","path":"sprites/spr_Jump_Turkey_01/spr_Jump_Turkey_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"9ca0fdc4-3087-4024-94a0-f79c92713a10","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
