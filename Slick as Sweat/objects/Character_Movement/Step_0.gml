@@ -43,6 +43,7 @@ if(performAction)
 		initialPos[0] = x;
 		initialPos[1] = y;
 		image_speed = 0.5;
+		depth = -50;
 		
 		blocking = false;
 		

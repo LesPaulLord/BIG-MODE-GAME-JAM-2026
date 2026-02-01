@@ -102,7 +102,7 @@ function Move(_initial, _goal, _fract)
 						
 						knocked = true;
 ;
-						alarm[1] = 20;
+						alarm[1] = 25;
 						
 						Sequence_Manager.characters[1-characterID].sprite_index = Sequence_Manager.characters[1-characterID].spr_hurt
 						instance_create_layer(x, y -30, "Instances", FX_stars);
