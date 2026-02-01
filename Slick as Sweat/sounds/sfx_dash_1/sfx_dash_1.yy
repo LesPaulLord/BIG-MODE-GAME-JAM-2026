@@ -10,7 +10,7 @@
   "compression":1,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.17489795,
+  "duration":0.17435375,
   "exportDir":"",
   "name":"sfx_dash_1",
   "parent":{
