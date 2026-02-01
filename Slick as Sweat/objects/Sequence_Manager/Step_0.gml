@@ -59,16 +59,17 @@ function InitNPCMovesSequence()
 	array_resize(NPCActionList, actionNB);
 	moveShowedID = 0;
 	
-	for (var i = 0; i < actionNB; i++) 
+	for (var i = 0; i < actionNB; i++)
 	{
 		randomize();
 		NPCActionList[i] = GetRandomActionType();
 		show_debug_message("random move: " + string(NPCActionList[i]));
 	}
-
+	
+	SetBoxPosition(UI_NPC_Actions, characters[0]);
 	layer_set_visible(UI_NPC_Actions, true);
-	SetActionBoxAlpha(NPC_actionBox_flexPannel, 0)	
-	SetBoxPosition(UI_NPC_Actions, character[0]);
+	SetActionBoxAlpha(NPC_actionBox_flexPannel, 0)
+
 }
 
 function cpu_generate_moves()
@@ -102,8 +103,6 @@ function ShowNPCActionFunc(_id, _moveId)
 	SetActionBoxSprite(NPC_actionBox_flexPannel, _id, NPCActionList[_id]);
 }
 
-
-
 /////PLAYER
 function InitPlayerMoveIntputSequence()
 {
@@ -112,6 +111,15 @@ function InitPlayerMoveIntputSequence()
 	playerActionList = [];
 	sequenceFinished = false;
 	currentInputID = 0;
+	
+	layer_set_visible(UI_Player_Actions, true);
+	SetActionBoxAlpha(player_actionBox_flexPannel, 0);
+	SetBoxPosition(UI_Player_Actions, characters[1])
+	
+	for(var i =0; i < actionNB; i++)
+	{
+		SetActionBoxSprite(player_actionBox_flexPannel, i, ActionType.idle);
+	}
 	
 	sequenceInited = true;
 }
@@ -134,31 +142,28 @@ function PlayerInputPhase()
 		show_debug_message("press left");
 		playerActionList[currentInputID] = ActionType.moveLeft;
 		_keyPressed = true;
+		
 	}
 
-	if(keyboard_check_pressed(vk_space))
+	if(keyboard_check_pressed(vk_up))
 	{
 		show_debug_message("press jump");
 		playerActionList[currentInputID] = ActionType.jump;	
 		_keyPressed = true;
 	}
 	
-	if(keyboard_check_pressed(ord("X")))
+	if(keyboard_check_pressed(vk_down))
 	{
-		show_debug_message("press attack");
-		playerActionList[currentInputID] = ActionType.attack;
-		_keyPressed = true;
-	}
-	
-		if(keyboard_check_pressed(ord("C")))
-	{
-		show_debug_message("press attack");
+		show_debug_message("press block");
 		playerActionList[currentInputID] = ActionType.block;
 		_keyPressed = true;
 	}	
 
+
 	if(_keyPressed)
 	{
+		SetActionBoxSprite(player_actionBox_flexPannel, currentInputID, playerActionList[currentInputID]);
+		
 		currentInputID ++;
 		_keyPressed = false;
 		
@@ -188,6 +193,8 @@ function PlayerInputPhase()
 			show_debug_message("player action: " + string(playerActionList[_x]));
 		}
 		
+		layer_set_visible(UI_Player_Actions, false);
+		
 		currentSequenceStep = 3;
 		sequenceInited = false;
 	}
@@ -212,7 +219,7 @@ function InitFight()
 
 function FightSequence()
 {	
-	if(sequenceTimer < fightDelay)
+	if(sequenceTimer < Game_Manager.fightDelay)
 	{
 		sequenceTimer+= delta_time/1000000
 		return;
@@ -271,15 +278,14 @@ function JumpCoolDown(_id)
 
 function GetRandomActionType()
 {
-	var _rand = irandom(4); 
+	var _rand = irandom(3); 
 
 	switch(_rand)
 	{
 		case 0: return ActionType.moveLeft;
 		case 1: return ActionType.moveRight;
 		case 2: return ActionType.jump;
-		case 3: return ActionType.attack;
-		case 4: return ActionType.block;
+		case 3: return ActionType.block;
 	}
 }
 

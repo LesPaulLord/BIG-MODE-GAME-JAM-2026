@@ -14,7 +14,7 @@ characters = array_create(2, Character_Movement);
 
 ///NPC
 npcGetMoveLength = 2;
-npcSequenceAfterTime = 0.25
+npcSequenceAfterTime = 0.65;
 
 NPCActionList = []
 moveShowedID = 0;
@@ -23,16 +23,15 @@ moveShowedID = 0;
 ///PLAYER
 playerInputLength = 2.5
 playerSequenceAfterTime = 0.25
+playerIconID = 0;
 //playerActionModifier = 1
 
 playerActionList = []
 sequenceFinished = false;
-currentInputID = 0;
 
 ///FIGHT
 currentFighterID = 0;
 currentActionID = 0;
-fightDelay = 0.5;
 
 ///UI
 UI_NPC_Actions = layer_get_id("UI_NPC_MoveBoxes");
@@ -43,10 +42,10 @@ player_actionBox_flexPannel = layer_get_flexpanel_node("UI_Character_MoveBoxes")
 
 SetBoxPosition(UI_NPC_Actions, characters[0])
 
-//layer_set_visible(UI_NPC_Actions, false);
+layer_set_visible(UI_NPC_Actions, false);
 layer_set_visible(UI_Player_Actions, false);
 
-alarm[0] = 90;
+alarm[0] = 20;
 
 
 function SetActionBoxAlpha(_flexRoot, _alpha)
@@ -55,7 +54,6 @@ function SetActionBoxAlpha(_flexRoot, _alpha)
 	for (var i = 0; i < _childCount; i++) {
     var _childNode = flexpanel_node_get_child(_flexRoot, i);
     var _struct = flexpanel_node_get_struct(_childNode);
-
     
     var _element = _struct.layerElements[0];
 	layer_sprite_alpha(_element.elementId, _alpha);
@@ -63,13 +61,11 @@ function SetActionBoxAlpha(_flexRoot, _alpha)
 
 function SetActionBoxSprite(_flexRoot, _actionID, actionType)
 {
-
 	var sprite = spr_UI_HealthBar_Frame;
 	
 	var _childNode = flexpanel_node_get_child(_flexRoot, _actionID);
 	var _struct = flexpanel_node_get_struct(_childNode);
 	var _element = _struct.layerElements[0];
-
 
 	switch(actionType)
 	{
@@ -91,6 +87,10 @@ function SetActionBoxSprite(_flexRoot, _actionID, actionType)
 		
 		case ActionType.jump:
 			sprite = spr_UI_MoveBox_ArrowUp;
+			break;
+			
+		case ActionType.idle:
+			sprite = spr_UI_MoveBox_Frame;
 			break;
 	}
 	

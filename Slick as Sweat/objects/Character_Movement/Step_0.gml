@@ -43,6 +43,8 @@ if(performAction)
 		initialPos[0] = x;
 		initialPos[1] = y;
 		
+		blocking = false;
+		
 		show_debug_message("perform action inited! initial: " + string(initialPos[0]) + ", " + string(initialPos[1]));
 		
 		switch(actionType)
@@ -71,7 +73,7 @@ if(performAction)
 				goalPos[0] = goalPos[0];
 				goalPos[1] = y - Game_Manager.gridSpace;
 				jumping = true;
-				jumpCoolDown = 2;
+				jumpCoolDown = 1;
 				sprite_index = spr_jump;
 				audio_play_sound(sfx_Character_Move, 1, false)
 				break;
@@ -79,12 +81,12 @@ if(performAction)
 			case ActionType.attack:
 				attacking = true;
 				sprite_index = spr_attack;
-				audio_play_sound(sfx_Character_Attack, 1, false)
 				break;
 		
 			case ActionType.block:
 				sprite_index = spr_block;
 				audio_play_sound(sfx_Character_Block, 1, false)
+				blocking = true;
 				break;
 		
 			case ActionType.knockBack:
@@ -123,7 +125,7 @@ if(performAction)
 			break;
 		
 		case ActionType.block:
-		
+			Move(initialPos, goalPos, _fract);
 			break;
 		
 		case ActionType.knockBack:
