@@ -47,7 +47,7 @@
         {"$GMRFlexPanel":"","%Name":"UI_Character_HealthBar_Box3","alignItems":2,"children":[
             {"$GMRSpriteGraphic":"v1","%Name":"graphic_611B4410","animationSpeed":1.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps",},"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_611B4410","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_UI_HealthBar_Box3","path":"sprites/spr_UI_HealthBar_Box3/spr_UI_HealthBar_Box3.yy",},"x":0.0,"y":0.0,},
           ],"flexDirection":0,"height":{"unit":3,"value":15.0,},"justifyContent":1,"name":"UI_Character_HealthBar_Box3","nodeColour":4292823282,"positionType":2,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":139.0,},},
-      ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":0,"name":"UI_Character_HealthBar","nodeColour":4286050888,"resourceType":"GMRUILayer","resourceVersion":"2.0",},
+      ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":0,"name":"UI_Character_HealthBar","nodeColour":4286050888,"paddingTop":{"unit":1,"value":5.0,},"resourceType":"GMRUILayer","resourceVersion":"2.0",},
     {"$GMRUILayer":"v1","%Name":"UI_NPC_MoveBox","alignItems":2,"children":[
         {"$GMRFlexPanel":"","%Name":"UI_NPC_MoveBox_01","alignItems":2,"children":[
             {"$GMRSpriteGraphic":"v1","%Name":"graphic_2DDBC3D2","animationSpeed":1.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps",},"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_2DDBC3D2","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_UI_MoveBox_Frame","path":"sprites/spr_UI_MoveBox_Frame/spr_UI_MoveBox_Frame.yy",},"x":0.0,"y":0.0,},
@@ -93,7 +93,7 @@
         {"$GMRFlexPanel":"","%Name":"UI_NPC_HealthBar_Box1","alignItems":2,"children":[
             {"$GMRSpriteGraphic":"v1","%Name":"graphic_7EA411EF","animationSpeed":1.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps",},"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_7EA411EF","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_UI_HealthBar_Enemy_Box1","path":"sprites/spr_UI_HealthBar_Enemy_Box1/spr_UI_HealthBar_Enemy_Box1.yy",},"x":0.0,"y":0.0,},
           ],"flexDirection":0,"height":{"unit":3,"value":15.0,},"justifyContent":1,"name":"UI_NPC_HealthBar_Box1","nodeColour":4294096200,"positionType":2,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":139.0,},},
-      ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":0,"name":"UI_NPC_HealthBar","nodeColour":4286050888,"resourceType":"GMRUILayer","resourceVersion":"2.0",},
+      ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":0,"name":"UI_NPC_HealthBar","nodeColour":4286050888,"paddingTop":{"unit":1,"value":5.0,},"resourceType":"GMRUILayer","resourceVersion":"2.0",},
   ],
   "locked":false,
   "name":"RoomUI",
