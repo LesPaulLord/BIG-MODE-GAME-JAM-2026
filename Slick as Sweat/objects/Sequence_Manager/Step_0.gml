@@ -64,10 +64,11 @@ function InitNPCMovesSequence()
 		randomize();
 		NPCActionList[i] = GetRandomActionType();
 		show_debug_message("random move: " + string(NPCActionList[i]));
-	}	
+	}
 
 	layer_set_visible(UI_NPC_Actions, true);
-	SetActionBoxAlpha(NPC_actionBox_flexPannel, 0)
+	SetActionBoxAlpha(NPC_actionBox_flexPannel, 0)	
+	SetBoxPosition(UI_NPC_Actions, character[0]);
 }
 
 function cpu_generate_moves()

@@ -41,8 +41,7 @@ NPC_actionBox_flexPannel = layer_get_flexpanel_node("UI_NPC_MoveBoxes");
 UI_Player_Actions = layer_get_id("UI_Character_MoveBoxes");
 player_actionBox_flexPannel = layer_get_flexpanel_node("UI_Character_MoveBoxes");
 
-layer_x(UI_NPC_Actions, characters[0].x - 60)
-layer_y(UI_NPC_Actions, characters[0].y - 100)
+SetBoxPosition(UI_NPC_Actions, characters[0])
 
 //layer_set_visible(UI_NPC_Actions, false);
 layer_set_visible(UI_Player_Actions, false);
@@ -99,4 +98,10 @@ function SetActionBoxSprite(_flexRoot, _actionID, actionType)
 	layer_sprite_change(_element.elementId, sprite);
 
 	}
+}
+
+function SetBoxPosition(_box, _character)
+{
+	layer_x(_box, _character.x - 60)
+	layer_y(_box, _character.y - 100)
 }
