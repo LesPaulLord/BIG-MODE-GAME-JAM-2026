@@ -142,6 +142,13 @@ function PlayerInputPhase()
 		show_debug_message("press attack");
 		playerActionList[currentInputID] = ActionType.attack;
 		_keyPressed = true;
+	}
+	
+		if(keyboard_check_pressed(ord("C")))
+	{
+		show_debug_message("press attack");
+		playerActionList[currentInputID] = ActionType.block;
+		_keyPressed = true;
 	}	
 
 	if(_keyPressed)
@@ -214,6 +221,8 @@ function FightSequence()
 				show_debug_message("NPC action: " + string(currentActionID));	
 				characters[0].PerformAction(NPCActionList[currentActionID], Game_Manager.actionCurrentLength)
 				currentFighterID = 1;
+				
+				JumpCoolDown(0);
 			}
 		}		
 		else if (currentFighterID == 1)		
@@ -223,6 +232,8 @@ function FightSequence()
 				show_debug_message("Player action: " + string(currentActionID));	
 				characters[1].PerformAction(playerActionList[currentActionID], Game_Manager.actionCurrentLength)
 				currentFighterID = 0;
+				
+				JumpCoolDown(1);
 			}
 			currentActionID++; // currentACtion change juste quand c player
 		}
@@ -236,6 +247,20 @@ function FightSequence()
 			alarm[0] = 60;
 		}
 	}	
+}
+
+function JumpCoolDown(_id)
+{
+	if(characters[_id].jumpCoolDown > 0)
+	{
+		characters[_id].jumpCoolDown--;
+					
+		if(characters[_id].jumpCoolDown==0)
+		{
+			show_debug_message("character:" + string(_id) + " fall!");
+			characters[_id].goalPos[1] = characters[_id].floorY;
+		}
+	}
 }
 
 function GetRandomActionType()

@@ -53,7 +53,7 @@ if(performAction)
 		
 			case ActionType.moveRight:			
 				goalPos[0] = x + Game_Manager.gridSpace;
-				goalPos[1] = y;
+				goalPos[1] = goalPos[1];
 				image_xscale = 1;
 				sprite_index = spr_idle;
 				audio_play_sound(sfx_Character_Move, 1, false)
@@ -61,16 +61,17 @@ if(performAction)
 		
 			case ActionType.moveLeft:
 				goalPos[0] = x - Game_Manager.gridSpace;
-				goalPos[1] = y;
+				goalPos[1] = goalPos[1];
 				image_xscale = -1;
 				sprite_index = spr_idle;
 				audio_play_sound(sfx_Character_Move, 1, false)
 				break;
 		
 			case ActionType.jump:
-				goalPos[0] = x;
+				goalPos[0] = goalPos[0];
 				goalPos[1] = y - Game_Manager.gridSpace;
 				jumping = true;
+				jumpCoolDown = 2;
 				sprite_index = spr_jump;
 				audio_play_sound(sfx_Character_Move, 1, false)
 				break;
