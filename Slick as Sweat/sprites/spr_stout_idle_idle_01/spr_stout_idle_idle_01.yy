@@ -1,6 +1,6 @@
 {
   "$GMSprite":"v2",
-  "%Name":"spr_Idle_Stout_01",
+  "%Name":"spr_stout_idle_idle_01",
   "bboxMode":0,
   "bbox_bottom":59,
   "bbox_left":9,
@@ -12,28 +12,28 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"f1d95845-0bea-4233-bac6-2d84c71cced0","name":"f1d95845-0bea-4233-bac6-2d84c71cced0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d85a1dd8-e8a8-47d0-80d1-4f354817670d","name":"d85a1dd8-e8a8-47d0-80d1-4f354817670d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":60,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"ea9bfd4f-272c-4ef0-8d5f-6b1be5b61d00","blendMode":0,"displayName":"default","isLocked":false,"name":"ea9bfd4f-272c-4ef0-8d5f-6b1be5b61d00","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"77278023-187c-44be-a6b6-504807fdf2ef","blendMode":0,"displayName":"default","isLocked":false,"name":"77278023-187c-44be-a6b6-504807fdf2ef","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_Idle_Stout_01",
+  "name":"spr_stout_idle_idle_01",
   "nineSlice":null,
   "origin":7,
   "parent":{
-    "name":"Stout",
-    "path":"folders/Sprite/Stout.yy",
+    "name":"idle",
+    "path":"folders/Sprite/Stout/idle.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"spr_Idle_Stout_01",
+    "%Name":"spr_stout_idle_idle_01",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_Idle_Stout_01",
+    "name":"spr_stout_idle_idle_01",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f1d95845-0bea-4233-bac6-2d84c71cced0","path":"sprites/spr_Idle_Stout_01/spr_Idle_Stout_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c867b670-c1a5-49bf-a226-daf2bbdce2f2","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d85a1dd8-e8a8-47d0-80d1-4f354817670d","path":"sprites/spr_stout_idle_idle_01/spr_stout_idle_idle_01.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"435a501b-ba4b-4b18-81d8-e74f306dd3a5","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
