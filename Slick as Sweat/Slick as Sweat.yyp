@@ -54,6 +54,7 @@
     {"id":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},},
     {"id":{"name":"Emitter_Start","path":"objects/Emitter_Start/Emitter_Start.yy",},},
     {"id":{"name":"Fight_Text","path":"objects/Fight_Text/Fight_Text.yy",},},
+    {"id":{"name":"FX_block","path":"objects/FX_block/FX_block.yy",},},
     {"id":{"name":"FX_jump","path":"objects/FX_jump/FX_jump.yy",},},
     {"id":{"name":"FX_stars","path":"objects/FX_stars/FX_stars.yy",},},
     {"id":{"name":"Game_Manager","path":"objects/Game_Manager/Game_Manager.yy",},},

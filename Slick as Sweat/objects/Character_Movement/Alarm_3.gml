@@ -1,0 +1,1 @@
+audio_play_sound_at(sfx_crowd_cheer_01, x, y, 0, 100, 300, 1, false, 1, 0.1, 0, random_range(0.7, 1.3));

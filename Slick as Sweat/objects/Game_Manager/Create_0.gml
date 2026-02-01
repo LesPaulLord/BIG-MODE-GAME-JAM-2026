@@ -24,3 +24,5 @@ function GameOver(_winnerID)
 	winnerID = _winnerID;
 	gameOver = true;
 }
+
+audio_play_sound_at(sfx_crowd_01, x, y, 0, 100, 300, 1, true, 1, 0.05);

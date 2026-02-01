@@ -44,6 +44,7 @@ if(performAction)
 		initialPos[1] = y;
 		image_speed = 0.5;
 		depth = -50;
+		currentActionType = actionType;
 		
 		blocking = false;
 		
@@ -97,8 +98,13 @@ if(performAction)
 				break;
 		
 			case ActionType.knockBack:
+				knocked = true;
+				break;
+				
+			case ActionType.move:
 				
 				break;
+				
 		}
 		
 		performActionInited = true;
@@ -115,15 +121,15 @@ if(performAction)
 			break;
 		
 		case ActionType.moveRight:
-			Move(initialPos, goalPos, _fract);
+			Move(initialPos, goalPos, _fract, true);
 			break;
 		
 		case ActionType.moveLeft:
-			Move(initialPos, goalPos, _fract);
+			Move(initialPos, goalPos, _fract, true);
 			break;
 		
 		case ActionType.jump:
-			Move(initialPos, goalPos, _fract);
+			Move(initialPos, goalPos, _fract, true);
 
 			break;
 		
@@ -132,11 +138,15 @@ if(performAction)
 			break;
 		
 		case ActionType.block:
-			Move(initialPos, goalPos, _fract);
+			Move(initialPos, goalPos, _fract, false);
 			break;
 		
 		case ActionType.knockBack:
-		
+			Move(initialPos, goalPos, _fract, false, true);
+			break;
+			
+		case ActionType.move:
+			Move(initialPos, goalPos, _fract, false);
 			break;
 	}
 	
@@ -166,6 +176,10 @@ if(performAction)
 			break;
 		
 		case ActionType.knockBack:
+			knocked = false;
+			break;
+			
+		case ActionType.move:
 		
 			break;
 	}
@@ -174,18 +188,15 @@ if(performAction)
 	{
 		show_debug_message("action end current pos = " + string(x) + " , " + string(y));
 		performAction = false;
-		readyToFight = true;
-		
-		if(actionType != ActionType.attack)
+		readyToFight = true;		
+
+		if(Sequence_Manager.characters[1-characterID].x- 10 < x)
 		{
-			if(Sequence_Manager.characters[1-characterID].x < x)
-			{
-					image_xscale = -1;
-			}
-			else		
-			{
-					image_xscale = 1;
-			}
+				image_xscale = -1;
 		}
+		else		
+		{
+				image_xscale = 1;
+		}		
 	}
 }

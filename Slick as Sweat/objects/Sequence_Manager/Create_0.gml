@@ -13,7 +13,7 @@ sequenceSubTimer = 0;
 characters = array_create(2, Character_Movement);
 
 ///NPC
-npcGetMoveLength = 1.35;
+npcGetMoveLength = 1.15;
 npcSequenceAfterTime = 0.65;
 
 NPCActionList = []
@@ -129,7 +129,6 @@ function JumpCoolDown(_id)
 
 function GetRandomActionType()
 {	
-	return ActionType.moveLeft;
 	var _rand = irandom(3); 
 
 	switch(_rand)
