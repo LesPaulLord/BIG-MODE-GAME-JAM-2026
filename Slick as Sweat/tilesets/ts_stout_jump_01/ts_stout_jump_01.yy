@@ -1,25 +1,25 @@
 {
   "$GMTileSet":"v1",
-  "%Name":"ts_fx_stars_01",
+  "%Name":"ts_stout_jump_01",
   "autoTileSets":[],
   "macroPageTiles":{
     "SerialiseHeight":0,
     "SerialiseWidth":0,
     "TileSerialiseData":[],
   },
-  "name":"ts_fx_stars_01",
-  "out_columns":2,
+  "name":"ts_stout_jump_01",
+  "out_columns":3,
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
     "name":"tileset",
-    "path":"folders/Sprite/FX/tileset.yy",
+    "path":"folders/Sprite/Character/Stout/tileset.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"spr_fx_stars_01",
-    "path":"sprites/spr_fx_stars_01/spr_fx_stars_01.yy",
+    "name":"spr_stout_jump_01",
+    "path":"sprites/spr_stout_jump_01/spr_stout_jump_01.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{
@@ -34,5 +34,5 @@
   "tileWidth":60,
   "tilexoff":0,
   "tileyoff":0,
-  "tile_count":5,
+  "tile_count":9,
 }
