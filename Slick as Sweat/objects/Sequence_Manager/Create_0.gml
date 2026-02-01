@@ -129,7 +129,7 @@ function JumpCoolDown(_id)
 
 function GetRandomActionType()
 {	
-	return ActionType.block;
+	return ActionType.moveLeft;
 	var _rand = irandom(3); 
 
 	switch(_rand)

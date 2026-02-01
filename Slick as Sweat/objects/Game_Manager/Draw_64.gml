@@ -24,5 +24,5 @@ if(gameOver)
 	var _winner = winnerID == 1 ? "Turkey" : "Stout";	
 	var _center = GetMiddleOfScreen();
 	
-	draw_text(_center[0], _center[1] - 45, _winner + " VICTORY!")
+	draw_text(_center[0] + 150, _center[1] - 45, _winner + " VICTORY!")
 }

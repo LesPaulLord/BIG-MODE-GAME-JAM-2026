@@ -176,13 +176,16 @@ if(performAction)
 		performAction = false;
 		readyToFight = true;
 		
-		if(Sequence_Manager.characters[1-characterID].x < x && Sequence_Manager.characters[1-characterID].x != x)
+		if(actionType != ActionType.attack)
 		{
-				image_xscale = -1;
-		}
-		else		
-		{
-				image_xscale = 1;
+			if(Sequence_Manager.characters[1-characterID].x < x)
+			{
+					image_xscale = -1;
+			}
+			else		
+			{
+					image_xscale = 1;
+			}
 		}
 	}
 }
