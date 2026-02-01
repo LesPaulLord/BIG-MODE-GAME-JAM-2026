@@ -1,7 +1,7 @@
 
 
 ///GLOBAL
-actionNB = 6
+actionNB = 3
 acceleration = 1.0
 
 //DONT SET
@@ -28,6 +28,9 @@ playerIconID = 0;
 
 playerActionList = []
 sequenceFinished = false;
+
+playerLastInput = ActionType.idle;
+npcLastInput = ActionType.idle;
 
 ///FIGHT
 currentFighterID = 0;
@@ -118,12 +121,15 @@ function JumpCoolDown(_id)
 		{
 			show_debug_message("character:" + string(_id) + " fall!");
 			characters[_id].goalPos[1] = characters[_id].floorY;
+			characters[_id].jumping = false;
 		}
 	}
 }
 
 function GetRandomActionType()
 {
+	
+	return ActionType.block;
 	var _rand = irandom(3); 
 
 	switch(_rand)

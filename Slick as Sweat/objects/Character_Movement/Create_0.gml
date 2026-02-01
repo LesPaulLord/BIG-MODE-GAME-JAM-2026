@@ -28,6 +28,7 @@ attackLanded = false;
 blocking = false;
 knocked = false;
 
+
 //visual
 curveA = animcurve_get_channel(MovementCurves, "MovementCurveA");
 
@@ -89,6 +90,10 @@ function Move(_initial, _goal, _fract)
 						audio_play_sound(audioFile, 1, false)
 						audio_play_sound(sfx_Character_Attack, 1, false, 0.5)
 						instance_create_layer(x, y -30, "Instances", FX_stars);
+						sprite_index = spr_attack;
+						goalPos[0] = _initial[0];
+						goalPos[1] = floorY;
+						
 					}
 					else //// PUNCH		
 					{

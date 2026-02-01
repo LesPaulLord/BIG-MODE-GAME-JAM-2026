@@ -11,7 +11,7 @@ if(!performAction)
 		if(keyboard_check(vk_left))
 		{
 			show_debug_message("perform move left");
-			PerformAction(ActionType.moveLeft, actionCurrentLength);	
+			PerformAction(ActionType.moveLeft, actionCurrentLength);
 		}
 
 		if(keyboard_check(vk_up))
@@ -56,7 +56,7 @@ if(performAction)
 
 				break;
 		
-			case ActionType.moveRight:			
+			case ActionType.moveRight:
 				goalPos[0] = x + Game_Manager.gridSpace;
 				goalPos[1] = goalPos[1];
 				sprite_index = spr_idle;
@@ -91,13 +91,13 @@ if(performAction)
 		
 			case ActionType.block:
 				sprite_index = spr_block;
-				var blockAudio = choose(sfx_blockC_1, sfx_blockC_2, sfx_blockC_3)
+				var blockAudio = choose(sfx_dash_1, sfx_dash_2)
 				audio_play_sound(blockAudio, 1, false, 1, 0 , random_range(0.8,1.2))
 				blocking = true;
 				break;
 		
 			case ActionType.knockBack:
-		
+				
 				break;
 		}
 		
@@ -155,7 +155,7 @@ if(performAction)
 			break;
 		
 		case ActionType.jump:
-			jumping = false;
+
 			break;
 		
 		case ActionType.attack:

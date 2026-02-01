@@ -72,6 +72,7 @@
     {"id":{"name":"sfx_blockC_1","path":"sounds/sfx_blockC_1/sfx_blockC_1.yy",},},
     {"id":{"name":"sfx_blockC_2","path":"sounds/sfx_blockC_2/sfx_blockC_2.yy",},},
     {"id":{"name":"sfx_blockC_3","path":"sounds/sfx_blockC_3/sfx_blockC_3.yy",},},
+    {"id":{"name":"sfx_cantInput","path":"sounds/sfx_cantInput/sfx_cantInput.yy",},},
     {"id":{"name":"sfx_Character_Attack","path":"sounds/sfx_Character_Attack/sfx_Character_Attack.yy",},},
     {"id":{"name":"sfx_Character_Block","path":"sounds/sfx_Character_Block/sfx_Character_Block.yy",},},
     {"id":{"name":"sfx_Character_Move","path":"sounds/sfx_Character_Move/sfx_Character_Move.yy",},},

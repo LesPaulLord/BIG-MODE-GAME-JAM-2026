@@ -11,10 +11,8 @@ switch(currentSequenceStep)
 {
 	///PAUSE
 	case 0:
-
-	break
-	
 	HideShakeFX();
+	break
 
 	//SET RANDOM NPC MOVES
 	case 1:
@@ -64,14 +62,24 @@ function InitNPCMovesSequence()
 	for (var i = 0; i < actionNB; i++)
 	{
 		randomize();
-		NPCActionList[i] = GetRandomActionType();
+		var _action  = GetRandomActionType();
+		
+		if(_action == ActionType.jump && npcLastInput == ActionType.jump)
+		{
+			_action = choose(ActionType.moveLeft, ActionType.moveRight, ActionType.block);
+		}
+		
+		npcLastInput = _action;
+		
+		NPCActionList[i] = _action;
 		show_debug_message("random move: " + string(NPCActionList[i]));
 	}
 	
 	SetBoxPosition(UI_NPC_Actions, characters[0]);
 	layer_set_visible(UI_NPC_Actions, true);
 	SetActionBoxAlpha(NPC_actionBox_flexPannel, 0)
-
+	
+	HideShakeFX();
 }
 
 function cpu_generate_moves()
@@ -152,9 +160,16 @@ function PlayerInputPhase()
 
 	if(keyboard_check_pressed(vk_up))
 	{
+		if(playerLastInput != ActionType.jump)
+		{
 		show_debug_message("press jump");
 		playerActionList[currentInputID] = ActionType.jump;	
 		_keyPressed = true;
+		}
+		else // AIR KICK IF WE PUT IT
+		{
+			audio_play_sound(sfx_cantInput, 1, false)
+		}
 	}
 	
 	if(keyboard_check_pressed(vk_down))
@@ -171,6 +186,8 @@ function PlayerInputPhase()
 		
 		var audioFile = choose(sfx_input_1, sfx_input_2, sfx_input_3)
 		audio_play_sound(audioFile, 1, false)
+		
+		playerLastInput = playerActionList[currentInputID];
 		
 		currentInputID ++;
 		_keyPressed = false;
