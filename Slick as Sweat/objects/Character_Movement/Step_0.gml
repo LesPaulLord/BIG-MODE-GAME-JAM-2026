@@ -5,25 +5,25 @@ if(!performAction)
 		if(keyboard_check(vk_right))
 		{
 			show_debug_message("perform move right");
-			PerformAction(ActionType.moveRight, actionLength);	
+			PerformAction(ActionType.moveRight, actionCurrentLength);	
 		}
 
 		if(keyboard_check(vk_left))
 		{
 			show_debug_message("perform move left");
-			PerformAction(ActionType.moveLeft, actionLength);	
+			PerformAction(ActionType.moveLeft, actionCurrentLength);	
 		}
 
 		if(keyboard_check(vk_up))
 		{
 			show_debug_message("perform jump");
-			PerformAction(ActionType.jump, actionLength);	
+			PerformAction(ActionType.jump, actionCurrentLength);	
 		}
 	
 		if(keyboard_check(ord("Y")))
 		{
 			show_debug_message("perform attack");
-			PerformAction(ActionType.attack, actionLength);
+			PerformAction(ActionType.attack, actionCurrentLength);
 		}
 	
 		if(keyboard_check(vk_enter))
@@ -53,32 +53,38 @@ if(performAction)
 		
 			case ActionType.moveRight:			
 				goalPos[0] = x + Game_Manager.gridSpace;
-				goalPos[1] = y;
+				goalPos[1] = goalPos[1];
 				image_xscale = 1;
-				sprite_index = spr_Idle_Turkey_01;
+				sprite_index = spr_idle;
+				audio_play_sound(sfx_Character_Move, 1, false)
 				break;
 		
 			case ActionType.moveLeft:
 				goalPos[0] = x - Game_Manager.gridSpace;
-				goalPos[1] = y;
+				goalPos[1] = goalPos[1];
 				image_xscale = -1;
-				sprite_index = spr_Idle_Turkey_01;
+				sprite_index = spr_idle;
+				audio_play_sound(sfx_Character_Move, 1, false)
 				break;
 		
 			case ActionType.jump:
-				goalPos[0] = x;
+				goalPos[0] = goalPos[0];
 				goalPos[1] = y - Game_Manager.gridSpace;
 				jumping = true;
-				sprite_index = spr_Jump_Turkey_01;
+				jumpCoolDown = 2;
+				sprite_index = spr_jump;
+				audio_play_sound(sfx_Character_Move, 1, false)
 				break;
 		
 			case ActionType.attack:
 				attacking = true;
-				sprite_index = spr_Punch_Turkey_01;
+				sprite_index = spr_attack;
+				audio_play_sound(sfx_Character_Attack, 1, false)
 				break;
 		
 			case ActionType.block:
-				sprite_index = spr_Block_Turkey_01;
+				sprite_index = spr_block;
+				audio_play_sound(sfx_Character_Block, 1, false)
 				break;
 		
 			case ActionType.knockBack:
@@ -90,8 +96,7 @@ if(performAction)
 	}	
 	
 	actionTimer += delta_time/1000000;	
-	var _fract = actionTimer / actionLength;	
-	show_debug_message("actionTimer: " + string(actionTimer) +" fract " + string(_fract));
+	var _fract = actionTimer / actionLength;
 	
 	///UPDATE PERFORM ACTION
 	switch(actionType)
