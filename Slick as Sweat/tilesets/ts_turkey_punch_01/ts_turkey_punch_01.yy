@@ -13,7 +13,7 @@
   "out_tilevborder":2,
   "parent":{
     "name":"tileset",
-    "path":"folders/Sprite/Character/Turkey/tileset.yy",
+    "path":"folders/Sprite/Turkey/tileset.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

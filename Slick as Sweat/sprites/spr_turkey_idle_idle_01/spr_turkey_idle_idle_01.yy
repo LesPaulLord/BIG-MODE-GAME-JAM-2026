@@ -26,7 +26,7 @@
   "origin":7,
   "parent":{
     "name":"idle",
-    "path":"folders/Sprite/Character/Turkey/idle.yy",
+    "path":"folders/Sprite/Turkey/idle.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
