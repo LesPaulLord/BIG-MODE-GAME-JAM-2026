@@ -62,12 +62,23 @@ function InitNPCMovesSequence()
 	for (var i = 0; i < actionNB; i++) 
 	{
 		randomize();
+		// irandom(6) picks a number between 0 and 6
 		NPCActionList[i] = GetRandomActionType();
 		show_debug_message("random move: " + string(NPCActionList[i]));
 	}	
 
 	layer_set_visible(UI_NPC_Actions, true);
-	SetActionBoxAlpha(NPC_actionBox_flexPannel, 0)
+	
+	for (var i = 0; i < array_length(UI_NPC_Boxes); i++)
+	{
+	    var inst = UI_NPC_Boxes[i];
+
+	    if (instance_exists(inst))
+	    {
+	        var spr = inst.sprite_index;
+	        show_debug_message("Sprite = " + string(spr));
+	    }
+	}
 }
 
 function cpu_generate_moves()
@@ -79,7 +90,7 @@ function cpu_generate_moves()
 	{
 		if(sequenceSubTimer > (npcGetMoveLength/actionNB))
 		{
-			ShowNPCActionFunc(moveShowedID, moveShowedID);
+			ShowNPCActionFunc(moveShowedID);
 			sequenceSubTimer = 0;
 			moveShowedID++;
 		}
@@ -94,11 +105,9 @@ function cpu_generate_moves()
 	}
 }
 
-function ShowNPCActionFunc(_id, _moveId)
+function ShowNPCActionFunc(_id)
 {
-	show_debug_message("Show action: " + string(_moveId))
-	
-	SetActionBoxSprite(NPC_actionBox_flexPannel, _id, NPCActionList[_id]);
+	show_debug_message("Show action: " + string(_id))
 }
 
 
