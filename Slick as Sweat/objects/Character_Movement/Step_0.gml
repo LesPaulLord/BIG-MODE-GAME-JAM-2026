@@ -72,10 +72,13 @@ if(performAction)
 			case ActionType.jump:
 				goalPos[0] = goalPos[0];
 				goalPos[1] = y - Game_Manager.gridSpace;
+				audio_play_sound(sfx_Character_Move, 1, false)
+				
+				if(!jumping) instance_create_layer(x, y, "Instances", FX_jump);
+				
 				jumping = true;
 				jumpCoolDown = 1;
 				sprite_index = spr_jump;
-				audio_play_sound(sfx_Character_Move, 1, false)
 				break;
 		
 			case ActionType.attack:

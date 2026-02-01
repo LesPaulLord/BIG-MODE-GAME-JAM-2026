@@ -12,7 +12,6 @@
   "Folders":[
     {"$GMFolder":"","%Name":"Emitters","folderPath":"folders/Emitters.yy","name":"Emitters","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Fred","folderPath":"folders/Fred.yy","name":"Fred","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"tileset","folderPath":"folders/Sprite/VFX/tileset.yy","name":"tileset","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Jay","folderPath":"folders/Jay.yy","name":"Jay","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Room","folderPath":"folders/Room.yy","name":"Room","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Scripts","folderPath":"folders/Scripts.yy","name":"Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -31,6 +30,7 @@
     {"$GMFolder":"","%Name":"UI","folderPath":"folders/Sprite/UI.yy","name":"UI","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"VFX","folderPath":"folders/Sprite/VFX.yy","name":"VFX","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"spritesheet","folderPath":"folders/Sprite/VFX/spritesheet.yy","name":"spritesheet","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"tileset","folderPath":"folders/Sprite/VFX/tileset.yy","name":"tileset","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[
     {"link":"io.gamemaker.gmparticlepresets-1.0.0","name":"io.gamemaker.gmparticlepresets-1.0.0","path":"io.gamemaker.gmparticlepresets-1.0.0.yyp",},
@@ -47,6 +47,8 @@
     {"id":{"name":"Font_currentState","path":"fonts/Font_currentState/Font_currentState.yy",},},
     {"id":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},},
     {"id":{"name":"Emitter_Start","path":"objects/Emitter_Start/Emitter_Start.yy",},},
+    {"id":{"name":"FX_jump","path":"objects/FX_jump/FX_jump.yy",},},
+    {"id":{"name":"FX_stars","path":"objects/FX_stars/FX_stars.yy",},},
     {"id":{"name":"Game_Manager","path":"objects/Game_Manager/Game_Manager.yy",},},
     {"id":{"name":"NPC","path":"objects/NPC/NPC.yy",},},
     {"id":{"name":"Object4","path":"objects/Object4/Object4.yy",},},
