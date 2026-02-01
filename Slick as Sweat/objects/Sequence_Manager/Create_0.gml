@@ -45,6 +45,8 @@ SetBoxPosition(UI_NPC_Actions, characters[0])
 layer_set_visible(UI_NPC_Actions, false);
 layer_set_visible(UI_Player_Actions, false);
 
+fightText = noone;
+
 alarm[0] = 20;
 
 
@@ -143,5 +145,13 @@ function ArePlayerReadyToFight()
 	else	
 	{
 		//show_debug_message("Not ready to fight");
+	}
+}
+
+function HideShakeFX()
+{
+	if(layer_get_visible("Effect_Shake") == true)
+	{
+		layer_set_visible("Effect_Shake", 0);
 	}
 }

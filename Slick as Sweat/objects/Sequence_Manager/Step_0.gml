@@ -13,6 +13,8 @@ switch(currentSequenceStep)
 	case 0:
 
 	break
+	
+	HideShakeFX();
 
 	//SET RANDOM NPC MOVES
 	case 1:
@@ -210,29 +212,42 @@ function PlayerInputPhase()
 ////FIGHT
 function InitFight()
 {
-		show_debug_message("Init fight");
-		sequenceTimer = 0;
+	show_debug_message("Init fight");
+	sequenceTimer = 0;
 	
-		sequenceInited = true;
-		characters[0].readyToFight = true;
-		characters[1].readyToFight = true;
-		currentActionID = 0;
+	sequenceInited = true;
+	characters[0].readyToFight = true;
+	characters[1].readyToFight = true;
+	currentActionID = 0;
 		
-		show_debug_message("character: " + string(characters[0]));
-		show_debug_message("character: " + string(characters[1]));		
+	var _center = GetMiddleOfScreen();
+	_center[1] -= 60;
+	fightText = instance_create_layer(_center[0], _center[1], "Instances", Fight_Text);
 }
 
 
 function FightSequence()
 {	
+	sequenceTimer+= delta_time/1000000
+			
 	if(sequenceTimer < Game_Manager.fightDelay)
 	{
-		sequenceTimer+= delta_time/1000000
 		return;
+	}
+	
+	if(sequenceTimer > Game_Manager.fightDelay * 1.5)
+	{
+		if(fightText != noone)
+		{
+			instance_destroy(fightText);
+			fightText = noone;
+		}
 	}
 	
 	if(ArePlayerReadyToFight())
 	{
+		HideShakeFX();
+		
 		if(currentFighterID == 0)
 		{
 			if(currentActionID < actionNB) ///Mettre specifiquement au character
@@ -264,6 +279,8 @@ function FightSequence()
 			currentTurn++;
 			sequenceInited = false;
 			alarm[0] = 60;
+			
+			HideShakeFX();
 		}
 	}	
 }

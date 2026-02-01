@@ -106,6 +106,8 @@ function Move(_initial, _goal, _fract)
 						
 						Sequence_Manager.characters[1-characterID].sprite_index = Sequence_Manager.characters[1-characterID].spr_hurt
 						instance_create_layer(x, y -30, "Instances", FX_stars);
+						
+						layer_set_visible("Effect_Shake", 1);
 					}
 				}
 			}
