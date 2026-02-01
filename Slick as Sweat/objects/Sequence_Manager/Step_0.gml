@@ -68,20 +68,16 @@ function InitNPCMovesSequence()
 	}	
 
 	layer_set_visible(UI_NPC_Actions, true);
+	
+	for (var i = 0; i < array_length(UI_NPC_Boxes); i++)
+	{
+	    var inst = UI_NPC_Boxes[i];
 
-	var move_boxes = [
-	    UI_NPC_MoveBox_01, UI_NPC_MoveBox_02, UI_NPC_MoveBox_03, 
-	    UI_NPC_MoveBox_04, UI_NPC_MoveBox_05, UI_NPC_MoveBox_06, 
-	    UI_NPC_MoveBox_07, UI_NPC_MoveBox_08, UI_NPC_MoveBox_09, 
-	    UI_NPC_MoveBox_10
-	];
-
-	for (var i = 0; i < array_length(move_boxes); i++) {
-	    var current_box = move_boxes[i];
-    
-	    var sprite_child = ui_element_get_child(current_box, 0);
-    
-	    ui_element_set_visible(sprite_child, false);
+	    if (instance_exists(inst))
+	    {
+	        var spr = inst.sprite_index;
+	        show_debug_message("Sprite = " + string(spr));
+	    }
 	}
 }
 
