@@ -37,6 +37,10 @@ fightDelay = 0.5;
 ///UI
 UI_NPC_Actions = layer_get_id("UI_NPC_MoveBox");
 
+UI_NPC_Boxes = layer_get_all_elements(UI_NPC_Actions);
+
+//show_message(string(array_length(UI_NPC_Boxes)));
+
 UI_Player_Actions = layer_get_id("UI_Character_MoveBox");
 
 
