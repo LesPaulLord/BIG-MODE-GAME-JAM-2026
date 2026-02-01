@@ -1,5 +1,5 @@
 gridSpace = 64;
-ringPadding = 64;
+ringPadding = 66;
 topPadding = 64;
 
 actionInitialLength = 0.15;

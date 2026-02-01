@@ -216,9 +216,7 @@ function PlayerInputPhase()
 		for(var _x = 0; _x < actionNB; _x++)
 		{
 			show_debug_message("player action: " + string(playerActionList[_x]));
-		}
-		
-		layer_set_visible(UI_Player_Actions, false);
+		}		
 		
 		currentSequenceStep = 3;
 		sequenceInited = false;
@@ -240,6 +238,8 @@ function InitFight()
 	var _center = GetMiddleOfScreen();
 	_center[1] -= 60;
 	fightText = instance_create_layer(_center[0], _center[1], "Instances", Fight_Text);
+	
+	layer_set_visible(UI_Player_Actions, false);
 }
 
 

@@ -68,7 +68,7 @@ function Move(_initial, _goal, _fract)
 		{
 			_moved = true;
 		}
-	}	
+	}
 
 	show_debug_message("move: " + string(_moved));	
 	
@@ -82,37 +82,39 @@ function Move(_initial, _goal, _fract)
 				{
 					depth = -100;
 					///BLOCK
-					if(Sequence_Manager.characters[1-characterID].blocking)
+					if(!blocking)
 					{
-						//show_message(object_get_name(Sequence_Manager.characters[1-characterID].object_index) + "blocked attack");
-						attackLanded = true;
-						var audioFile = choose(sfx_blockC_1, sfx_blockC_2, sfx_blockC_3)
-						audio_play_sound(audioFile, 1, false)
-						audio_play_sound(sfx_Character_Attack, 1, false, 0.5)
-						instance_create_layer(x, y -30, "Instances", FX_stars);
-						sprite_index = spr_attack;
-						goalPos[0] = _initial[0];
-						goalPos[1] = floorY;
+						if(Sequence_Manager.characters[1-characterID].blocking)
+						{
+							//show_message(object_get_name(Sequence_Manager.characters[1-characterID].object_index) + "blocked attack");
+							attackLanded = true;
+							var audioFile = choose(sfx_blockC_1, sfx_blockC_2, sfx_blockC_3)
+							audio_play_sound(audioFile, 1, false)
+							audio_play_sound(sfx_Character_Attack, 1, false, 0.5)
+							instance_create_layer(x, y -30, "Instances", FX_stars);
+							sprite_index = spr_attack;
+							goalPos[0] = _initial[0];
+							goalPos[1] = floorY;						
+						}
+						else //// PUNCH		
+						{
+							//show_message(object_get_name(object_index) + " touched " + object_get_name(Sequence_Manager.characters[1-characterID].object_index));
+							attackLanded = true;
 						
-					}
-					else //// PUNCH		
-					{
-						//show_message(object_get_name(object_index) + " touched " + object_get_name(Sequence_Manager.characters[1-characterID].object_index));
-						attackLanded = true;
+							var audioFile = choose(sfx_punchA_1, sfx_punchA_2, sfx_punchA_3)
+							audio_play_sound(audioFile, 1, false)
 						
-						var audioFile = choose(sfx_punchA_1, sfx_punchA_2, sfx_punchA_3)
-						audio_play_sound(audioFile, 1, false)
+							sprite_index = spr_attack;
 						
-						sprite_index = spr_attack;
+							knocked = true;
+	
+							alarm[1] = 25;
 						
-						knocked = true;
-;
-						alarm[1] = 25;
+							Sequence_Manager.characters[1-characterID].sprite_index = Sequence_Manager.characters[1-characterID].spr_hurt
+							instance_create_layer(x, y -30, "Instances", FX_stars);
 						
-						Sequence_Manager.characters[1-characterID].sprite_index = Sequence_Manager.characters[1-characterID].spr_hurt
-						instance_create_layer(x, y -30, "Instances", FX_stars);
-						
-						layer_set_visible("Effect_Shake", 1);
+							layer_set_visible("Effect_Shake", 1);
+						}
 					}
 				}
 			}

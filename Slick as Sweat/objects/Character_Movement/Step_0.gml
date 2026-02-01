@@ -5,7 +5,7 @@ if(!performAction)
 		if(keyboard_check(vk_right))
 		{
 			show_debug_message("perform move right");
-			PerformAction(ActionType.moveRight, actionCurrentLength);	
+			PerformAction(ActionType.moveRight, actionCurrentLength);
 		}
 
 		if(keyboard_check(vk_left))
@@ -17,7 +17,7 @@ if(!performAction)
 		if(keyboard_check(vk_up))
 		{
 			show_debug_message("perform jump");
-			PerformAction(ActionType.jump, actionCurrentLength);	
+			PerformAction(ActionType.jump, actionCurrentLength);
 		}
 	
 		if(keyboard_check(ord("Y")))
@@ -176,7 +176,7 @@ if(performAction)
 		performAction = false;
 		readyToFight = true;
 		
-		if(Sequence_Manager.characters[1-characterID].x < x)
+		if(Sequence_Manager.characters[1-characterID].x < x && Sequence_Manager.characters[1-characterID].x != x)
 		{
 				image_xscale = -1;
 		}
