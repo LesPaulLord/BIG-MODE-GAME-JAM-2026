@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":7,
   "parent":{
-    "name":"Player 2",
-    "path":"folders/Sprite/Player 2.yy",
+    "name":"Stout",
+    "path":"folders/Sprite/Stout.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
