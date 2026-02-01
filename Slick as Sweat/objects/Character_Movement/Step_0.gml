@@ -56,6 +56,7 @@ if(performAction)
 				goalPos[1] = y;
 				image_xscale = 1;
 				sprite_index = spr_idle;
+				audio_play_sound(sfx_Character_Move, 1, false)
 				break;
 		
 			case ActionType.moveLeft:
@@ -63,6 +64,7 @@ if(performAction)
 				goalPos[1] = y;
 				image_xscale = -1;
 				sprite_index = spr_idle;
+				audio_play_sound(sfx_Character_Move, 1, false)
 				break;
 		
 			case ActionType.jump:
@@ -70,15 +72,18 @@ if(performAction)
 				goalPos[1] = y - Game_Manager.gridSpace;
 				jumping = true;
 				sprite_index = spr_jump;
+				audio_play_sound(sfx_Character_Move, 1, false)
 				break;
 		
 			case ActionType.attack:
 				attacking = true;
 				sprite_index = spr_attack;
+				audio_play_sound(sfx_Character_Attack, 1, false)
 				break;
 		
 			case ActionType.block:
 				sprite_index = spr_block;
+				audio_play_sound(sfx_Character_Block, 1, false)
 				break;
 		
 			case ActionType.knockBack:
