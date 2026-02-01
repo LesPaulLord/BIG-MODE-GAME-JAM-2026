@@ -26,7 +26,7 @@
   "origin":9,
   "parent":{
     "name":"spritesheet",
-    "path":"folders/Sprite/Turkey/spritesheet.yy",
+    "path":"folders/Sprite/Character/Turkey/spritesheet.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
