@@ -7,11 +7,11 @@
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},"propertyId":{"name":"isControllable","path":"objects/Character_Movement/Character_Movement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},"propertyId":{"name":"characterID","path":"objects/Character_Movement/Character_Movement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},"propertyId":{"name":"spr_idle","path":"objects/Character_Movement/Character_Movement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_Idle_Stout_01",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},"propertyId":{"name":"spr_attack","path":"objects/Character_Movement/Character_Movement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_Punch_Stout_01",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},"propertyId":{"name":"spr_jump","path":"objects/Character_Movement/Character_Movement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_Jump_Stout_01",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},"propertyId":{"name":"spr_block","path":"objects/Character_Movement/Character_Movement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_Block_Stout_01",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},"propertyId":{"name":"spr_hurt","path":"objects/Character_Movement/Character_Movement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_Hit_Stout_01",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},"propertyId":{"name":"spr_idle","path":"objects/Character_Movement/Character_Movement.yy",},"resource":{"name":"spr_stout_idle_idle_01","path":"sprites/spr_stout_idle_idle_01/spr_stout_idle_idle_01.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_stout_idle_idle_01",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},"propertyId":{"name":"spr_attack","path":"objects/Character_Movement/Character_Movement.yy",},"resource":{"name":"spr_stout_idle_punch_01","path":"sprites/spr_stout_idle_punch_01/spr_stout_idle_punch_01.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_stout_idle_punch_01",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},"propertyId":{"name":"spr_jump","path":"objects/Character_Movement/Character_Movement.yy",},"resource":{"name":"spr_stout_idle_jump_01","path":"sprites/spr_stout_idle_jump_01/spr_stout_idle_jump_01.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_stout_idle_jump_01",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},"propertyId":{"name":"spr_block","path":"objects/Character_Movement/Character_Movement.yy",},"resource":{"name":"spr_stout_idle_block_01","path":"sprites/spr_stout_idle_block_01/spr_stout_idle_block_01.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_stout_idle_block_01",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},"propertyId":{"name":"spr_hurt","path":"objects/Character_Movement/Character_Movement.yy",},"resource":{"name":"spr_stout_idle_hit_01","path":"sprites/spr_stout_idle_hit_01/spr_stout_idle_hit_01.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_stout_idle_hit_01",},
   ],
   "parent":{
     "name":"Jay",
@@ -39,8 +39,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_Idle_Stout_01",
-    "path":"sprites/spr_Idle_Stout_01/spr_Idle_Stout_01.yy",
+    "name":"spr_stout_idle_idle_01",
+    "path":"sprites/spr_stout_idle_idle_01/spr_stout_idle_idle_01.yy",
   },
   "spriteMaskId":null,
   "visible":true,
