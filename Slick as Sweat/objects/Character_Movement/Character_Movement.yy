@@ -38,6 +38,7 @@
     {"$GMObjectProperty":"v2","%Name":"spr_jump","filters":[],"listItems":[],"multiselect":false,"name":"spr_jump","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
     {"$GMObjectProperty":"v2","%Name":"spr_block","filters":[],"listItems":[],"multiselect":false,"name":"spr_block","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
     {"$GMObjectProperty":"v2","%Name":"spr_hurt","filters":[],"listItems":[],"multiselect":false,"name":"spr_hurt","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+    {"$GMObjectProperty":"v2","%Name":"spr_attackBlocked","filters":[],"listItems":[],"multiselect":false,"name":"spr_attackBlocked","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
