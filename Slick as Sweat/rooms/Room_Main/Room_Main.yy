@@ -16,7 +16,7 @@
   "layers":[
     {"$GMREffectLayer":"","%Name":"Effect_Shake","depth":0,"effectEnabled":true,"effectType":"_filter_screenshake","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Effect_Shake","properties":[
         {"name":"g_Magnitude","type":0,"value":"4",},
-        {"name":"g_ShakeSpeed","type":0,"value":"0.3",},
+        {"name":"g_ShakeSpeed","type":0,"value":"1.5",},
         {"name":"g_NoiseTexture","type":2,"value":"_filter_screenshake_noise",},
       ],"resourceType":"GMREffectLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":false,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
@@ -53,7 +53,7 @@
   },
   "sequenceId":null,
   "views":[
-    {"hborder":32,"hport":720,"hspeed":-1,"hview":216,"inherit":false,"objectId":null,"vborder":32,"visible":true,"vspeed":-1,"wport":1280,"wview":384,"xport":0,"xview":0,"yport":0,"yview":0,},
+    {"hborder":32,"hport":720,"hspeed":-1,"hview":216,"inherit":false,"objectId":null,"vborder":32,"visible":true,"vspeed":-1,"wport":1200,"wview":384,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
