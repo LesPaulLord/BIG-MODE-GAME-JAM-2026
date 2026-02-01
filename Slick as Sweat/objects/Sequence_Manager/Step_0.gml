@@ -68,17 +68,23 @@ function InitNPCMovesSequence()
 	}	
 
 	layer_set_visible(UI_NPC_Actions, true);
-	
-	//var _count = flexpanel_node_get_num_children(UI_NPC_Actions);
-		
-	//for(var i =0; i < _count; i++)
-	//{		
-	//    var child = flexpanel_node_get_child(UI_NPC_Actions, i);
-	//    flexpanel_node_style_set_display(child, flexpanel_display.none);
-	//}	
+
+	var move_boxes = [
+	    UI_NPC_MoveBox_01, UI_NPC_MoveBox_02, UI_NPC_MoveBox_03, 
+	    UI_NPC_MoveBox_04, UI_NPC_MoveBox_05, UI_NPC_MoveBox_06, 
+	    UI_NPC_MoveBox_07, UI_NPC_MoveBox_08, UI_NPC_MoveBox_09, 
+	    UI_NPC_MoveBox_10
+	];
+
+	for (var i = 0; i < array_length(move_boxes); i++) {
+	    var current_box = move_boxes[i];
+    
+	    var sprite_child = ui_element_get_child(current_box, 0);
+    
+	    ui_element_set_visible(sprite_child, false);
+	}
 }
 
-///NPC////
 function cpu_generate_moves()
 {
 	sequenceTimer += delta_time / 1000000
