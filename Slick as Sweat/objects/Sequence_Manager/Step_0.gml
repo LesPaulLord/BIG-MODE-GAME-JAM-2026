@@ -69,13 +69,13 @@ function InitNPCMovesSequence()
 
 	layer_set_visible(UI_NPC_Actions, true);
 	
-	var _count = flexpanel_node_get_num_children(_parent_node);
+	//var _count = flexpanel_node_get_num_children(UI_NPC_Actions);
 		
-	for(var i =0; i < _count); i++)
-	{		
-	    var child = flexpanel_node_get_child(UI_NPC_Actions, i);
-	    flexpanel_node_style_set_display(child, flexpanel_display.none);
-	}	
+	//for(var i =0; i < _count; i++)
+	//{		
+	//    var child = flexpanel_node_get_child(UI_NPC_Actions, i);
+	//    flexpanel_node_style_set_display(child, flexpanel_display.none);
+	//}	
 }
 
 ///NPC////
