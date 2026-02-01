@@ -28,6 +28,9 @@ attackLanded = false;
 blocking = false;
 knocked = false;
 
+//HEALTH
+characterHealth = 5;
+maxHealth = characterHealth;
 
 //visual
 curveA = animcurve_get_channel(MovementCurves, "MovementCurveA");
@@ -45,8 +48,7 @@ function PerformAction(_actionType, _length)
 	attackLanded = false;
 }
 
-function Move(_initial, _goal, _fract)
-{
+function Move(_initial, _goal, _fract){
 	_newFract = animcurve_channel_evaluate(curveA, _fract);
 	show_debug_message("Move to: " + string(_goal));
 	var _moved = false;
@@ -81,9 +83,10 @@ function Move(_initial, _goal, _fract)
 				if(place_meeting(x,y, Sequence_Manager.characters[1-characterID]))
 				{
 					depth = -100;
-					///BLOCK
+
 					if(!blocking)
 					{
+						///BLOCK
 						if(Sequence_Manager.characters[1-characterID].blocking)
 						{
 							//show_message(object_get_name(Sequence_Manager.characters[1-characterID].object_index) + "blocked attack");
@@ -94,7 +97,7 @@ function Move(_initial, _goal, _fract)
 							instance_create_layer(x, y -30, "Instances", FX_stars);
 							sprite_index = spr_attack;
 							goalPos[0] = _initial[0];
-							goalPos[1] = floorY;						
+							goalPos[1] = floorY;
 						}
 						else //// PUNCH		
 						{
@@ -114,6 +117,10 @@ function Move(_initial, _goal, _fract)
 							instance_create_layer(x, y -30, "Instances", FX_stars);
 						
 							layer_set_visible("Effect_Shake", 1);
+							
+							Sequence_Manager.characters[1-characterID].GetHurt(1);					
+						
+							Game_Manager.updateCharactersHealth = true;
 						}
 					}
 				}
@@ -121,3 +128,26 @@ function Move(_initial, _goal, _fract)
 		}
 	}
 }
+
+function GetHurt(_value)
+{
+	characterHealth-= _value;
+	
+	if(IsDead())
+	{
+		Game_Manager.GameOver(1 - characterID);
+	}
+	
+	Game_Manager.updateCharactersHealth = true;
+}
+
+function IsDead()
+{
+	if(characterHealth <= 0)
+	{
+		return true;
+	}
+	
+	else return false;
+}
+

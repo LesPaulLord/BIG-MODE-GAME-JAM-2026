@@ -52,6 +52,7 @@ fightText = noone;
 
 alarm[0] = 20;
 
+Game_Manager.updateCharactersHealth = true;
 
 function SetActionBoxAlpha(_flexRoot, _alpha)
 {
@@ -143,7 +144,7 @@ function GetRandomActionType()
 
 function ArePlayerReadyToFight()
 {
-	if(characters[0].readyToFight && characters[1].readyToFight && !characters[0].knocked  && !characters[1].knocked)
+	if(characters[0].readyToFight && characters[1].readyToFight && !characters[0].knocked  && !characters[1].knocked && !Game_Manager.gameOver)
 	{
 		show_debug_message("Ready To Fight!!");
 		 return true;
