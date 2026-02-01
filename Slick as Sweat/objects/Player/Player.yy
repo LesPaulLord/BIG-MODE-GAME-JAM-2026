@@ -7,6 +7,10 @@
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},"propertyId":{"name":"isControllable","path":"objects/Character_Movement/Character_Movement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},"propertyId":{"name":"characterID","path":"objects/Character_Movement/Character_Movement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},"propertyId":{"name":"spr_idle","path":"objects/Character_Movement/Character_Movement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_Idle_Turkey_01",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},"propertyId":{"name":"spr_jump","path":"objects/Character_Movement/Character_Movement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_Jump_Turkey_01",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},"propertyId":{"name":"spr_attack","path":"objects/Character_Movement/Character_Movement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_Punch_Turkey_01",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},"propertyId":{"name":"spr_block","path":"objects/Character_Movement/Character_Movement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_Block_Turkey_01",},
   ],
   "parent":{
     "name":"Jay",

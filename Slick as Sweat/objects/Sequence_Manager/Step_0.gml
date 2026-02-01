@@ -37,8 +37,7 @@ switch(currentSequenceStep)
 	
 	break
 	
-	///FIGHT
-	
+	///FIGHT	
 	case 3:
 	if (!sequenceInited)	
 	{
@@ -62,6 +61,7 @@ function InitNPCMovesSequence()
 	
 	for (var i = 0; i < actionNB; i++) 
 	{
+		randomize();
 		// irandom(6) picks a number between 0 and 6
 		NPCActionList[i] = GetRandomActionType();
 		show_debug_message("random move: " + string(NPCActionList[i]));
@@ -232,6 +232,7 @@ function FightSequence()
 			show_debug_message("Fight sequence over");	
 			currentSequenceStep = 0;
 			currentTurn++;
+			sequenceInited = false;
 			alarm[0] = 60;
 		}
 	}	

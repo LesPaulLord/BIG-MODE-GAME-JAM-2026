@@ -55,30 +55,30 @@ if(performAction)
 				goalPos[0] = x + Game_Manager.gridSpace;
 				goalPos[1] = y;
 				image_xscale = 1;
-				sprite_index = spr_Idle_Turkey_01;
+				sprite_index = spr_idle;
 				break;
 		
 			case ActionType.moveLeft:
 				goalPos[0] = x - Game_Manager.gridSpace;
 				goalPos[1] = y;
 				image_xscale = -1;
-				sprite_index = spr_Idle_Turkey_01;
+				sprite_index = spr_idle;
 				break;
 		
 			case ActionType.jump:
 				goalPos[0] = x;
 				goalPos[1] = y - Game_Manager.gridSpace;
 				jumping = true;
-				sprite_index = spr_Jump_Turkey_01;
+				sprite_index = spr_jump;
 				break;
 		
 			case ActionType.attack:
 				attacking = true;
-				sprite_index = spr_Punch_Turkey_01;
+				sprite_index = spr_attack;
 				break;
 		
 			case ActionType.block:
-				sprite_index = spr_Block_Turkey_01;
+				sprite_index = spr_block;
 				break;
 		
 			case ActionType.knockBack:
