@@ -42,10 +42,12 @@ if(performAction)
 		readyToFight = false;
 		initialPos[0] = x;
 		initialPos[1] = y;
+		image_speed = 0.5;
 		
 		blocking = false;
 		
 		show_debug_message("perform action inited! initial: " + string(initialPos[0]) + ", " + string(initialPos[1]));
+		var dashAudio = choose(sfx_dash_1, sfx_dash_2)
 		
 		switch(actionType)
 		{
@@ -56,23 +58,23 @@ if(performAction)
 			case ActionType.moveRight:			
 				goalPos[0] = x + Game_Manager.gridSpace;
 				goalPos[1] = goalPos[1];
-				image_xscale = 1;
 				sprite_index = spr_idle;
-				audio_play_sound(sfx_Character_Move, 1, false)
+
+				audio_play_sound(dashAudio, 1, false, 1, 0 , random_range(0.8,1.2))
 				break;
 		
 			case ActionType.moveLeft:
 				goalPos[0] = x - Game_Manager.gridSpace;
 				goalPos[1] = goalPos[1];
-				image_xscale = -1;
 				sprite_index = spr_idle;
-				audio_play_sound(sfx_Character_Move, 1, false)
+				
+				audio_play_sound(dashAudio, 1, false, 1, 0 , random_range(0.8,1.2))
 				break;
 		
 			case ActionType.jump:
 				goalPos[0] = goalPos[0];
 				goalPos[1] = y - Game_Manager.gridSpace;
-				audio_play_sound(sfx_Character_Move, 1, false)
+				audio_play_sound(dashAudio, 1, false)
 				
 				if(!jumping) instance_create_layer(x, y, "Instances", FX_jump);
 				
@@ -88,7 +90,8 @@ if(performAction)
 		
 			case ActionType.block:
 				sprite_index = spr_block;
-				audio_play_sound(sfx_Character_Block, 1, false)
+				var blockAudio = choose(sfx_blockC_1, sfx_blockC_2, sfx_blockC_3)
+				audio_play_sound(blockAudio, 1, false, 1, 0 , random_range(0.8,1.2))
 				blocking = true;
 				break;
 		
@@ -159,7 +162,6 @@ if(performAction)
 			break;
 		
 		case ActionType.block:
-		
 			break;
 		
 		case ActionType.knockBack:
@@ -172,5 +174,14 @@ if(performAction)
 		show_debug_message("action end current pos = " + string(x) + " , " + string(y));
 		performAction = false;
 		readyToFight = true;
+		
+		if(Sequence_Manager.characters[1-characterID].x < x)
+		{
+				image_xscale = -1;
+		}
+		else		
+		{
+				image_xscale = 1;
+		}
 	}
 }

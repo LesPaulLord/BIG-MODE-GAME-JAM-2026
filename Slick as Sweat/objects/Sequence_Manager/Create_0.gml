@@ -1,7 +1,7 @@
 
 
 ///GLOBAL
-actionNB = 3
+actionNB = 6
 acceleration = 1.0
 
 //DONT SET
@@ -13,7 +13,7 @@ sequenceSubTimer = 0;
 characters = array_create(2, Character_Movement);
 
 ///NPC
-npcGetMoveLength = 2;
+npcGetMoveLength = 1.35;
 npcSequenceAfterTime = 0.65;
 
 NPCActionList = []
@@ -104,4 +104,44 @@ function SetBoxPosition(_box, _character)
 {
 	layer_x(_box, _character.x - 60)
 	layer_y(_box, _character.y - 100)
+}
+
+function JumpCoolDown(_id)
+{
+	if(characters[_id].jumpCoolDown > 0)
+	{
+		characters[_id].jumpCoolDown--;
+					
+		if(characters[_id].jumpCoolDown==0)
+		{
+			show_debug_message("character:" + string(_id) + " fall!");
+			characters[_id].goalPos[1] = characters[_id].floorY;
+		}
+	}
+}
+
+function GetRandomActionType()
+{
+	var _rand = irandom(3); 
+
+	switch(_rand)
+	{
+		case 0: return ActionType.moveLeft;
+		case 1: return ActionType.moveRight;
+		case 2: return ActionType.jump;
+		case 3: return ActionType.block;
+	}
+}
+
+function ArePlayerReadyToFight()
+{
+	if(characters[0].readyToFight && characters[1].readyToFight && !characters[0].knocked  && !characters[1].knocked)
+	{
+		show_debug_message("Ready To Fight!!");
+		 return true;
+	}
+	else	
+	{
+		//show_debug_message("Not ready to fight");
+	}
 }

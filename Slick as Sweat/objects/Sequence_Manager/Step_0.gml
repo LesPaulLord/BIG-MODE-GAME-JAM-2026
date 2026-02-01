@@ -101,6 +101,9 @@ function ShowNPCActionFunc(_id, _moveId)
 	show_debug_message("Show action: " + string(_moveId))
 	
 	SetActionBoxSprite(NPC_actionBox_flexPannel, _id, NPCActionList[_id]);
+	
+	var audioFile = choose(sfx_input_1, sfx_input_2, sfx_input_3)
+	audio_play_sound(audioFile, 1, false)
 }
 
 /////PLAYER
@@ -163,6 +166,9 @@ function PlayerInputPhase()
 	if(_keyPressed)
 	{
 		SetActionBoxSprite(player_actionBox_flexPannel, currentInputID, playerActionList[currentInputID]);
+		
+		var audioFile = choose(sfx_input_1, sfx_input_2, sfx_input_3)
+		audio_play_sound(audioFile, 1, false)
 		
 		currentInputID ++;
 		_keyPressed = false;
@@ -260,44 +266,4 @@ function FightSequence()
 			alarm[0] = 60;
 		}
 	}	
-}
-
-function JumpCoolDown(_id)
-{
-	if(characters[_id].jumpCoolDown > 0)
-	{
-		characters[_id].jumpCoolDown--;
-					
-		if(characters[_id].jumpCoolDown==0)
-		{
-			show_debug_message("character:" + string(_id) + " fall!");
-			characters[_id].goalPos[1] = characters[_id].floorY;
-		}
-	}
-}
-
-function GetRandomActionType()
-{
-	var _rand = irandom(3); 
-
-	switch(_rand)
-	{
-		case 0: return ActionType.moveLeft;
-		case 1: return ActionType.moveRight;
-		case 2: return ActionType.jump;
-		case 3: return ActionType.block;
-	}
-}
-
-function ArePlayerReadyToFight()
-{
-	if(characters[0].readyToFight && characters[1].readyToFight)
-	{
-		show_debug_message("Ready To Fight!!");
-		 return true;	
-	}
-	else	
-	{
-		//show_debug_message("Not ready to fight");
-	}
 }

@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"sfx_Character_Attack",
+  "%Name":"sfx_UI_A",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,9 +10,9 @@
   "compression":1,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":1.3291837,
+  "duration":0.19210884,
   "exportDir":"",
-  "name":"sfx_Character_Attack",
+  "name":"sfx_UI_A",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sfx_Character_Attack.wav",
+  "soundFile":"sfx_UI_A.wav",
   "volume":1.0,
 }

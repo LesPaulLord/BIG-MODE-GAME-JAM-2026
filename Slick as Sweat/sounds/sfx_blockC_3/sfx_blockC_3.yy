@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"sfx_Character_Attack",
+  "%Name":"sfx_blockC_3",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,17 +10,17 @@
   "compression":1,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":1.3291837,
+  "duration":0.17179139,
   "exportDir":"",
-  "name":"sfx_Character_Attack",
+  "name":"sfx_blockC_3",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"BlockC",
+    "path":"folders/Sounds/BlockC.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sfx_Character_Attack.wav",
+  "soundFile":"sfx_blockC_3.wav",
   "volume":1.0,
 }
