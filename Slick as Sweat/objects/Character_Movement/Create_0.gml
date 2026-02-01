@@ -93,7 +93,6 @@ function Move(_initial, _goal, _fract){
 							attackLanded = true;
 							var audioFile = choose(sfx_blockC_1, sfx_blockC_2, sfx_blockC_3)
 							audio_play_sound(audioFile, 1, false)
-							audio_play_sound(sfx_Character_Attack, 1, false, 0.5)
 							instance_create_layer(x, y -30, "Instances", FX_stars);
 							sprite_index = spr_attack;
 							goalPos[0] = _initial[0];
