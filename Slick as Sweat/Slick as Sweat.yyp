@@ -10,7 +10,6 @@
   },
   "defaultScriptType":0,
   "Folders":[
-    {"$GMFolder":"","%Name":"Art Assets","folderPath":"folders/Art Assets.yy","name":"Art Assets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Emitters","folderPath":"folders/Emitters.yy","name":"Emitters","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Fred","folderPath":"folders/Fred.yy","name":"Fred","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Jay","folderPath":"folders/Jay.yy","name":"Jay","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -18,9 +17,11 @@
     {"$GMFolder":"","%Name":"Scripts","folderPath":"folders/Scripts.yy","name":"Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sounds","folderPath":"folders/Sounds.yy","name":"Sounds","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sprite","folderPath":"folders/Sprite.yy","name":"Sprite","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Env","folderPath":"folders/Sprite/Env.yy","name":"Env","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"old","folderPath":"folders/Sprite/old.yy","name":"old","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Player 1","folderPath":"folders/Sprite/Player 1.yy","name":"Player 1","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Player 2","folderPath":"folders/Sprite/Player 2.yy","name":"Player 2","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"UI","folderPath":"folders/Sprite/UI.yy","name":"UI","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"VFX","folderPath":"folders/VFX.yy","name":"VFX","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[

@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Art Assets",
-    "path":"folders/Art Assets.yy",
+    "name":"Env",
+    "path":"folders/Sprite/Env.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

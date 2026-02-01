@@ -23,9 +23,16 @@
   "physicsRestitution":0.1,
   "physicsSensor":false,
   "physicsShape":1,
-  "physicsShapePoints":[],
+  "physicsShapePoints":[
+    {"x":0.0,"y":0.0,},
+    {"x":32.0,"y":0.0,},
+    {"x":32.0,"y":32.0,},
+    {"x":0.0,"y":32.0,},
+  ],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v2","%Name":"spr_actions","filters":[],"listItems":[],"multiselect":false,"name":"spr_actions","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"[spr_UI_MoveBox_Frame, spr_UI_MoveBox_ArrowLeft, spr_UI_MoveBox_ArrowRight, spr_UI_MoveBox_ArrowUp, spr_UI_MoveBox_Attack, spr_UI_MoveBox_Block]","varType":4,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,

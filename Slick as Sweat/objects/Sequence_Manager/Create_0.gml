@@ -34,6 +34,14 @@ currentFighterID = 0;
 currentActionID = 0;
 fightDelay = 0.5;
 
+///UI
+UI_NPC_Actions = layer_get_id("UI_NPC_MoveBox");
+
+UI_Player_Actions = layer_get_id("UI_Character_MoveBox");
+
+
+layer_set_visible(UI_NPC_Actions, false);
+layer_set_visible(UI_Player_Actions, false);
 
 alarm[0] = 90;
 

@@ -65,7 +65,17 @@ function InitNPCMovesSequence()
 		// irandom(6) picks a number between 0 and 6
 		NPCActionList[i] = GetRandomActionType();
 		show_debug_message("random move: " + string(NPCActionList[i]));
-	}
+	}	
+
+	layer_set_visible(UI_NPC_Actions, true);
+	
+	var _count = flexpanel_node_get_num_children(_parent_node);
+		
+	for(var i =0; i < _count); i++)
+	{		
+	    var child = flexpanel_node_get_child(UI_NPC_Actions, i);
+	    flexpanel_node_style_set_display(child, flexpanel_display.none);
+	}	
 }
 
 ///NPC////
@@ -88,6 +98,8 @@ function cpu_generate_moves()
 	{
 		currentSequenceStep = 2;
 		sequenceInited = false;
+		
+		layer_set_visible(UI_NPC_Actions, false);
 	}
 }
 
@@ -224,7 +236,7 @@ function FightSequence()
 				
 				JumpCoolDown(0);
 			}
-		}		
+		}
 		else if (currentFighterID == 1)		
 		{
 			if(currentActionID < actionNB) ///Mettre specifiquement au character
