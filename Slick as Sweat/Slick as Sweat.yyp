@@ -66,6 +66,7 @@
     {"id":{"name":"Test","path":"objects/Test/Test.yy",},},
     {"id":{"name":"ps_Sweat","path":"particles/ps_Sweat/ps_Sweat.yy",},},
     {"id":{"name":"Room_Main","path":"rooms/Room_Main/Room_Main.yy",},},
+    {"id":{"name":"Room_StartScreen","path":"rooms/Room_StartScreen/Room_StartScreen.yy",},},
     {"id":{"name":"Room_Test_Etienne","path":"rooms/Room_Test_Etienne/Room_Test_Etienne.yy",},},
     {"id":{"name":"Room_Test_Fred","path":"rooms/Room_Test_Fred/Room_Test_Fred.yy",},},
     {"id":{"name":"Room_Test_Jay","path":"rooms/Room_Test_Jay/Room_Test_Jay.yy",},},
@@ -156,6 +157,7 @@
     {"roomId":{"name":"Room_Test_Jay","path":"rooms/Room_Test_Jay/Room_Test_Jay.yy",},},
     {"roomId":{"name":"Room_Test_Fred","path":"rooms/Room_Test_Fred/Room_Test_Fred.yy",},},
     {"roomId":{"name":"Room_Test_Etienne","path":"rooms/Room_Test_Etienne/Room_Test_Etienne.yy",},},
+    {"roomId":{"name":"Room_StartScreen","path":"rooms/Room_StartScreen/Room_StartScreen.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
