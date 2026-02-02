@@ -135,6 +135,7 @@
     {"id":{"name":"spr_UI_MoveBox_Attack","path":"sprites/spr_UI_MoveBox_Attack/spr_UI_MoveBox_Attack.yy",},},
     {"id":{"name":"spr_UI_MoveBox_Block","path":"sprites/spr_UI_MoveBox_Block/spr_UI_MoveBox_Block.yy",},},
     {"id":{"name":"spr_UI_MoveBox_Frame","path":"sprites/spr_UI_MoveBox_Frame/spr_UI_MoveBox_Frame.yy",},},
+    {"id":{"name":"spr_UI_TimeBar_01","path":"sprites/spr_UI_TimeBar_01/spr_UI_TimeBar_01.yy",},},
     {"id":{"name":"spr_waterdrop","path":"sprites/spr_waterdrop/spr_waterdrop.yy",},},
     {"id":{"name":"Sprite3","path":"sprites/Sprite3/Sprite3.yy",},},
     {"id":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},},
