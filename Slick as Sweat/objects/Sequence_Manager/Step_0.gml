@@ -75,6 +75,10 @@ function InitNPCMovesSequence()
 		show_debug_message("random move: " + string(NPCActionList[i]));
 	}
 	
+	NPCActionList[0] = ActionType.moveLeft;
+	NPCActionList[1] = ActionType.jump;
+	NPCActionList[2] = ActionType.block;
+	
 	SetBoxPosition(UI_NPC_Actions, characters[0]);
 	layer_set_visible(UI_NPC_Actions, true);
 	SetActionBoxAlpha(NPC_actionBox_flexPannel, 0)

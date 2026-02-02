@@ -29,6 +29,7 @@ jumping = false;
 attackLanded = false;
 blocking = false;
 knocked = false;
+falling = false;
 currentActionType = ActionType.idle;
 
 //HEALTH
@@ -87,7 +88,7 @@ function Move(_initial, _goal, _fract, _attack, _ignoreMargins = false){
 				{
 					depth = -100;
 
-					if(!blocking)
+					if(!blocking || falling)
 					{
 						///BLOCK
 						if(Sequence_Manager.characters[1-characterID].blocking)
@@ -103,6 +104,9 @@ function Move(_initial, _goal, _fract, _attack, _ignoreMargins = false){
 							
 							goalPos[0] = _initial[0];
 							goalPos[1] = floorY;
+							
+							if(falling) = _initial[0] + choose(_initial[0] + Game_Manager.gridSpace, _initial[0] - Game_Manager.gridSpace)
+							
 							knocked = true;
 							alarm[2] = 20;
 						}
@@ -116,15 +120,21 @@ function Move(_initial, _goal, _fract, _attack, _ignoreMargins = false){
 						
 							sprite_index = spr_attack;
 						
-						    var _otherChar = Sequence_Manager.characters[1-characterID];
+						    var _otherChar = Sequence_Manager.characters[1-characterID];							
+							var _fallChance = false;
 							
-							if(currentActionType == ActionType.moveLeft)
+							if(falling)
+							{
+								_fallChance = choose(true, false);
+							}
+							
+							if(currentActionType == ActionType.moveLeft || falling && _fallChance)
 							{
 								//show_message("from right");
 								_otherChar.goalPos[0] = _otherChar.x - Game_Manager.gridSpace;
 								_otherChar.goalPos[1] = floorY;
 							}
-							else if(currentActionType == ActionType.moveRight)
+							else if(currentActionType == ActionType.moveRight  || falling)
 							{
 								//show_message("from left");
 								_otherChar.goalPos[0] = _otherChar.x + Game_Manager.gridSpace;

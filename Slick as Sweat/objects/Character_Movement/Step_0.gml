@@ -138,7 +138,14 @@ if(performAction)
 			break;
 		
 		case ActionType.block:
-			Move(initialPos, goalPos, _fract, false);
+			if(falling)
+			{
+				Move(initialPos, goalPos, _fract, true);
+			}
+			else			
+			{				
+				Move(initialPos, goalPos, _fract, false);
+			}
 			break;
 		
 		case ActionType.knockBack:
@@ -189,7 +196,7 @@ if(performAction)
 		show_debug_message("action end current pos = " + string(x) + " , " + string(y));
 		performAction = false;
 		readyToFight = true;		
-
+		falling = false;
 		if(Sequence_Manager.characters[1-characterID].x- 10 < x)
 		{
 				image_xscale = -1;

@@ -13,7 +13,7 @@ sequenceSubTimer = 0;
 characters = array_create(2, Character_Movement);
 
 ///NPC
-npcGetMoveLength = 1.15;
+npcGetMoveLength = 1.35;
 npcSequenceAfterTime = 0.65;
 
 NPCActionList = []
@@ -24,8 +24,8 @@ moveShowedID = 0;
 playerInputLength = 2.5
 playerSequenceAfterTime = 0.25
 playerIconID = 0;
-//playerActionModifier = 1
 
+///
 playerActionList = []
 sequenceFinished = false;
 
@@ -123,6 +123,7 @@ function JumpCoolDown(_id)
 			show_debug_message("character:" + string(_id) + " fall!");
 			characters[_id].goalPos[1] = characters[_id].floorY;
 			characters[_id].jumping = false;
+			characters[_id].falling = true;
 		}
 	}
 }
