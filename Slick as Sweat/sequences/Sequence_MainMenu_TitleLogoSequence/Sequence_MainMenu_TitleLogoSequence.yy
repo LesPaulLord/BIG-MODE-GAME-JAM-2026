@@ -1,11 +1,11 @@
 {
   "$GMSequence":"v1",
-  "%Name":"Sequence1",
+  "%Name":"Sequence_MainMenu_TitleLogoSequence",
   "autoRecord":true,
-  "backdropHeight":768,
+  "backdropHeight":216,
   "backdropImageOpacity":0.5,
   "backdropImagePath":"",
-  "backdropWidth":1366,
+  "backdropWidth":384,
   "backdropXOffset":0.0,
   "backdropYOffset":0.0,
   "events":{
@@ -24,7 +24,7 @@
     "5":"",
     "6":"",
   },
-  "length":240.0,
+  "length":116.0,
   "lockOrigin":false,
   "moments":{
     "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -32,7 +32,7 @@
     "resourceType":"KeyframeStore<MomentsEventKeyframe>",
     "resourceVersion":"2.0",
   },
-  "name":"Sequence1",
+  "name":"Sequence_MainMenu_TitleLogoSequence",
   "parent":{
     "name":"UI",
     "path":"folders/Sprite/UI.yy",
@@ -71,9 +71,9 @@
                   "0":{"$RealKeyframe":"","AnimCurveId":null,"EmbeddedAnimCurve":{"$GMAnimCurve":"","%Name":"Rotation","channels":[
                         {"$GMAnimCurveChannel":"","%Name":"angle","colour":4290799884,"name":"angle","points":[
                             {"th0":0.0,"th1":0.04874132,"tv0":0.0,"tv1":0.09346962,"x":0.0,"y":17.0,},
-                            {"th0":-0.019294279,"th1":0.020140886,"tv0":5.605887,"tv1":-5.8518653,"x":0.09382773,"y":-0.24246743,},
-                            {"th0":-0.06847129,"th1":0.074371696,"tv0":0.09436005,"tv1":-0.10249138,"x":0.20592666,"y":-16.066376,},
-                            {"th0":-0.011073434,"th1":0.013764858,"tv0":-3.9670448,"tv1":4.9312444,"x":0.3326524,"y":0.060739227,},
+                            {"th0":-0.019294279,"th1":0.020140886,"tv0":5.605887,"tv1":-5.8518653,"x":0.1000857,"y":8.613921,},
+                            {"th0":-0.06847129,"th1":0.074371696,"tv0":0.09436005,"tv1":-0.10249138,"x":0.21570472,"y":-0.8619952,},
+                            {"th0":-0.011073434,"th1":0.013764858,"tv0":-3.9670448,"tv1":4.9312444,"x":0.3389104,"y":8.866399,},
                             {"th0":-0.106479615,"th1":0.15931189,"tv0":0.0064144135,"tv1":-0.009597071,"x":0.48220068,"y":17.006414,},
                             {"th0":-0.07626802,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":1.0,"y":17.0,},
                           ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},

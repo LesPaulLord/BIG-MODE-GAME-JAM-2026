@@ -72,7 +72,8 @@
     {"id":{"name":"Room_Test_Jay","path":"rooms/Room_Test_Jay/Room_Test_Jay.yy",},},
     {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
     {"id":{"name":"GlobalFuncitons","path":"scripts/GlobalFuncitons/GlobalFuncitons.yy",},},
-    {"id":{"name":"Sequence1","path":"sequences/Sequence1/Sequence1.yy",},},
+    {"id":{"name":"Sequence_MainMenu_TitleLogoSequence","path":"sequences/Sequence_MainMenu_TitleLogoSequence/Sequence_MainMenu_TitleLogoSequence.yy",},},
+    {"id":{"name":"Sequence_MainMenuCharacters","path":"sequences/Sequence_MainMenuCharacters/Sequence_MainMenuCharacters.yy",},},
     {"id":{"name":"sfx_Battle_Song","path":"sounds/sfx_Battle_Song/sfx_Battle_Song.yy",},},
     {"id":{"name":"sfx_blockC_1","path":"sounds/sfx_blockC_1/sfx_blockC_1.yy",},},
     {"id":{"name":"sfx_blockC_2","path":"sounds/sfx_blockC_2/sfx_blockC_2.yy",},},
@@ -158,10 +159,10 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"Room_Main","path":"rooms/Room_Main/Room_Main.yy",},},
+    {"roomId":{"name":"Room_StartScreen","path":"rooms/Room_StartScreen/Room_StartScreen.yy",},},
     {"roomId":{"name":"Room_Test_Jay","path":"rooms/Room_Test_Jay/Room_Test_Jay.yy",},},
     {"roomId":{"name":"Room_Test_Fred","path":"rooms/Room_Test_Fred/Room_Test_Fred.yy",},},
     {"roomId":{"name":"Room_Test_Etienne","path":"rooms/Room_Test_Etienne/Room_Test_Etienne.yy",},},
-    {"roomId":{"name":"Room_StartScreen","path":"rooms/Room_StartScreen/Room_StartScreen.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
