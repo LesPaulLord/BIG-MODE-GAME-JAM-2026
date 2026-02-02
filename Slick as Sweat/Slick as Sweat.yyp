@@ -72,6 +72,7 @@
     {"id":{"name":"Room_Test_Jay","path":"rooms/Room_Test_Jay/Room_Test_Jay.yy",},},
     {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
     {"id":{"name":"GlobalFuncitons","path":"scripts/GlobalFuncitons/GlobalFuncitons.yy",},},
+    {"id":{"name":"Sequence1","path":"sequences/Sequence1/Sequence1.yy",},},
     {"id":{"name":"sfx_Battle_Song","path":"sounds/sfx_Battle_Song/sfx_Battle_Song.yy",},},
     {"id":{"name":"sfx_blockC_1","path":"sounds/sfx_blockC_1/sfx_blockC_1.yy",},},
     {"id":{"name":"sfx_blockC_2","path":"sounds/sfx_blockC_2/sfx_blockC_2.yy",},},
