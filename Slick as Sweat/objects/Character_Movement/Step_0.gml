@@ -5,25 +5,25 @@ if(!performAction)
 		if(keyboard_check(vk_right))
 		{
 			show_debug_message("perform move right");
-			PerformAction(ActionType.moveRight, actionCurrentLength);
+			PerformAction(ActionType.moveRight, Sequence_Manager.currentActionLength);
 		}
 
 		if(keyboard_check(vk_left))
 		{
 			show_debug_message("perform move left");
-			PerformAction(ActionType.moveLeft, actionCurrentLength);
+			PerformAction(ActionType.moveLeft, Sequence_Manager.currentActionLength);
 		}
 
 		if(keyboard_check(vk_up))
 		{
 			show_debug_message("perform jump");
-			PerformAction(ActionType.jump, actionCurrentLength);
+			PerformAction(ActionType.jump, Sequence_Manager.currentActionLength);
 		}
 	
 		if(keyboard_check(ord("Y")))
 		{
 			show_debug_message("perform attack");
-			PerformAction(ActionType.attack, actionCurrentLength);
+			PerformAction(ActionType.attack, Sequence_Manager.currentActionLength);
 		}
 	
 		if(keyboard_check(vk_enter))
@@ -60,7 +60,9 @@ if(performAction)
 			case ActionType.moveRight:
 				goalPos[0] = x + Game_Manager.gridSpace;
 				goalPos[1] = goalPos[1];
-				sprite_index = spr_idle;
+				
+				if(!falling) sprite_index = spr_idle;
+				else sprite_index = spr_downKick;
 
 				audio_play_sound(dashAudio, 1, false, 1, 0 , random_range(0.8,1.2))
 				break;
@@ -68,7 +70,8 @@ if(performAction)
 			case ActionType.moveLeft:
 				goalPos[0] = x - Game_Manager.gridSpace;
 				goalPos[1] = goalPos[1];
-				sprite_index = spr_idle;
+				if(!falling) sprite_index = spr_idle;
+				else sprite_index = spr_downKick;
 				
 				audio_play_sound(dashAudio, 1, false, 1, 0 , random_range(0.8,1.2))
 				break;

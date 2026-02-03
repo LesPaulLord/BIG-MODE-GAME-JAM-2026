@@ -2,10 +2,8 @@ gridSpace = 64;
 ringPadding = 70;
 topPadding = 64;
 
-actionInitialLength = 0.15;
 fightDelay = 0.5;
 
-actionCurrentLength = actionInitialLength;
 updateCharactersHealth = true;
 
 playerHealth = 0;

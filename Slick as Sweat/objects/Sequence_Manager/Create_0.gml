@@ -1,19 +1,19 @@
 
 
 ///GLOBAL
-actionNB = 3
 acceleration = 1.0
+initiativeDelay = 25;
 
 //DONT SET
 currentTurn = 0
 currentSequenceStep = 0
 sequenceTimer = 0
 sequenceInited = false
+delayDone = false;
 sequenceSubTimer = 0;
 characters = array_create(2, Character_Movement);
 
 ///NPC
-npcGetMoveLength = 1.35;
 npcSequenceAfterTime = 0.65;
 
 NPCActionList = []
@@ -22,8 +22,9 @@ moveShowedID = 0;
 
 ///PLAYER
 playerInputLength = 2.5
-playerSequenceAfterTime = 0.25
+playerSequenceAfterTime = 0.5
 playerIconID = 0;
+playerSequenceFinishInit = false;
 
 ///
 playerActionList = []
@@ -32,9 +33,14 @@ sequenceFinished = false;
 playerLastInput = ActionType.idle;
 npcLastInput = ActionType.idle;
 
+playerAlreadyBlocked = false;
+npcAlreadyBlocked = false;
+
 ///FIGHT
 currentFighterID = 0;
 currentActionID = 0;
+currentActionMadePerTurn = 0;
+currentActionLength = actionLength;
 
 ///UI
 UI_NPC_Actions = layer_get_id("UI_NPC_MoveBoxes");
@@ -48,9 +54,17 @@ SetBoxPosition(UI_NPC_Actions, characters[0])
 layer_set_visible(UI_NPC_Actions, false);
 layer_set_visible(UI_Player_Actions, false);
 
+initiativeArrow = noone;
+
+initiativeID = 0;
+
 fightText = noone;
 
-alarm[0] = 20;
+var spr_round = [spr_UI_Round_01, spr_UI_Round_02, spr_UI_Round_03]
+
+roundObject = instance_create_layer(GetMiddleOfScreen()[0], GetMiddleOfScreen()[1]-50, "Instances", Round_text);
+roundObject.sprite_index = spr_round[roundID-1];
+alarm[0] = 70;
 
 Game_Manager.updateCharactersHealth = true;
 
@@ -130,7 +144,7 @@ function JumpCoolDown(_id)
 
 function GetRandomActionType()
 {	
-	var _rand = irandom(3); 
+	var _rand = irandom(3);
 
 	switch(_rand)
 	{

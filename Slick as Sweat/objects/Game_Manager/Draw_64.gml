@@ -3,8 +3,8 @@
 
 if(updateCharactersHealth)
 {
-	var _player = Sequence_Manager.characters[0]
-	var _npc = Sequence_Manager.characters[1]
+	var _player = Sequence_Manager.characters[1]
+	var _npc = Sequence_Manager.characters[0]
 	
 	playerHealth = _player.characterHealth;
 	npcHealth = _npc.characterHealth;

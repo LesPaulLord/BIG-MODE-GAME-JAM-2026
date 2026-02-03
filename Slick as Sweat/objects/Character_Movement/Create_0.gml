@@ -90,6 +90,9 @@ function Move(_initial, _goal, _fract, _attack, _ignoreMargins = false){
 
 					if(!blocking || falling)
 					{
+						if(!falling)sprite_index = spr_attack;
+						else sprite_index = spr_downKick;
+						
 						///BLOCK
 						if(Sequence_Manager.characters[1-characterID].blocking)
 						{
@@ -100,7 +103,6 @@ function Move(_initial, _goal, _fract, _attack, _ignoreMargins = false){
 							instance_create_layer(x, y -30, "Instances", FX_stars);
 							var _fxBlock = instance_create_layer(x, y -30, "Instances", FX_block);
 							_fxBlock.depth = -999;
-							sprite_index = spr_attack;
 							
 							goalPos[0] = _initial[0];
 							goalPos[1] = floorY;
@@ -118,17 +120,15 @@ function Move(_initial, _goal, _fract, _attack, _ignoreMargins = false){
 							var audioFile = choose(sfx_punchA_1, sfx_punchA_2, sfx_punchA_3)
 							audio_play_sound(audioFile, 1, false)
 						
-							sprite_index = spr_attack;
-						
 						    var _otherChar = Sequence_Manager.characters[1-characterID];							
-							var _fallChance = false;
+							var _fallChanceDir = false;
 							
 							if(falling)
 							{
-								_fallChance = choose(true, false);
+								_fallChanceDir = choose(true, false);
 							}
 							
-							if(currentActionType == ActionType.moveLeft || falling && _fallChance)
+							if(currentActionType == ActionType.moveLeft || falling && _fallChanceDir)
 							{
 								//show_message("from right");
 								_otherChar.goalPos[0] = _otherChar.x - Game_Manager.gridSpace;
@@ -143,7 +143,7 @@ function Move(_initial, _goal, _fract, _attack, _ignoreMargins = false){
 							
 							alarm[3] = random_range(5,20);							
 							
-							_otherChar.PerformAction(ActionType.knockBack, Game_Manager.actionCurrentLength*0.75)
+							_otherChar.PerformAction(ActionType.knockBack, Sequence_Manager.currentActionLength*0.75)
 						
 							_otherChar.sprite_index = Sequence_Manager.characters[1-characterID].spr_hurt
 							instance_create_layer(x, y -30, "Instances", FX_stars);
