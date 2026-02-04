@@ -5,7 +5,9 @@
 /// @DnDSaveInfo : "soundid" "sfx_MainMenuTheme"
 audio_stop_sound(sfx_MainMenuTheme);
 
-/// @DnDAction : YoYo Games.Rooms.Next_Room
+/// @DnDAction : YoYo Games.Rooms.Go_To_Room
 /// @DnDVersion : 1
-/// @DnDHash : 5F54EC3E
-room_goto_next();
+/// @DnDHash : 1C3951F7
+/// @DnDArgument : "room" "Room_Main"
+/// @DnDSaveInfo : "room" "Room_Main"
+room_goto(Room_Main);
