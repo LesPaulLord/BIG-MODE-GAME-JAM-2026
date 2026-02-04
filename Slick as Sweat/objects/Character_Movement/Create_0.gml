@@ -102,56 +102,36 @@ function Move(_initial, _goal, _fract, _attack, _ignoreMargins = false){
 							audio_play_sound(audioFile, 1, false)
 							instance_create_layer(x, y -30, "Instances", FX_stars);
 							var _fxBlock = instance_create_layer(x, y -30, "Instances", FX_block);
-							_fxBlock.depth = -999;
+							_fxBlock.depth = -999;							
 							
-							goalPos[0] = _initial[0];
-							goalPos[1] = floorY;
+							GoalPosDelayed[0] = _initial[0];
+							GoalPosDelayed[1] = floorY;
 							
-							if(falling) = _initial[0] + choose(_initial[0] + Game_Manager.gridSpace, _initial[0] - Game_Manager.gridSpace)
+							alarm[6] = 20
+							
+							//if(falling) = _initial[0] + choose(_initial[0] + Game_Manager.gridSpace, _initial[0] - Game_Manager.gridSpace)
 							
 							knocked = true;
 							alarm[2] = 20;
 						}
 						else //// PUNCH		
 						{
-							//show_message(object_get_name(object_index) + " touched " + object_get_name(Sequence_Manager.characters[1-characterID].object_index));
 							attackLanded = true;
-						
+							knocked = true;
+							
+							alarm[3] = random_range(5,20);
+							alarm[4] = 20;
+							
 							var audioFile = choose(sfx_punchA_1, sfx_punchA_2, sfx_punchA_3)
 							audio_play_sound(audioFile, 1, false)
-						
-						    var _otherChar = Sequence_Manager.characters[1-characterID];							
-							var _fallChanceDir = false;
 							
-							if(falling)
-							{
-								_fallChanceDir = choose(true, false);
-							}
-							
-							if(currentActionType == ActionType.moveLeft || falling && _fallChanceDir)
-							{
-								//show_message("from right");
-								_otherChar.goalPos[0] = _otherChar.x - Game_Manager.gridSpace;
-								_otherChar.goalPos[1] = floorY;
-							}
-							else if(currentActionType == ActionType.moveRight  || falling)
-							{
-								//show_message("from left");
-								_otherChar.goalPos[0] = _otherChar.x + Game_Manager.gridSpace;
-								_otherChar.goalPos[1] = floorY;
-							}
-							
-							alarm[3] = random_range(5,20);							
-							
-							_otherChar.PerformAction(ActionType.knockBack, Sequence_Manager.currentActionLength*0.75)
-						
-							_otherChar.sprite_index = Sequence_Manager.characters[1-characterID].spr_hurt
-							instance_create_layer(x, y -30, "Instances", FX_stars);
-						
 							layer_set_visible("Effect_Shake", 1);
 							
+							var _otherChar = Sequence_Manager.characters[1-characterID];	
+							
 							Sequence_Manager.characters[1-characterID].GetHurt(1);
-						
+							_otherChar.sprite_index = Sequence_Manager.characters[1-characterID].spr_hurt
+							
 							Game_Manager.updateCharactersHealth = true;
 						}
 					}
@@ -181,5 +161,17 @@ function IsDead()
 	}
 	
 	else return false;
+}
+
+function UpdateDirection()
+{		
+	if(Sequence_Manager.characters[1-characterID].x - 10 < x)
+		{
+			image_xscale = -1;
+		}
+		else		
+		{
+			image_xscale = 1;
+		}	
 }
 

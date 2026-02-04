@@ -349,6 +349,9 @@ function FightSequence()
 	
 	if(ArePlayerReadyToFight())
 	{
+		characters[0].UpdateDirection();
+		characters[1].UpdateDirection();
+		
 		HideShakeFX();
 		
 		if(currentFighterID == 0)

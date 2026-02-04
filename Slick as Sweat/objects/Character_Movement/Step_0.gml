@@ -199,14 +199,6 @@ if(performAction)
 		show_debug_message("action end current pos = " + string(x) + " , " + string(y));
 		performAction = false;
 		readyToFight = true;		
-		falling = false;
-		if(Sequence_Manager.characters[1-characterID].x- 10 < x)
-		{
-				image_xscale = -1;
-		}
-		else		
-		{
-				image_xscale = 1;
-		}		
+		falling = false;	
 	}
 }
