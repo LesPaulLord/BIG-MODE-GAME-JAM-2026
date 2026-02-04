@@ -144,6 +144,7 @@
     {"id":{"name":"spr_fx_shockwave_01","path":"sprites/spr_fx_shockwave_01/spr_fx_shockwave_01.yy",},},
     {"id":{"name":"spr_fx_shockwave_02","path":"sprites/spr_fx_shockwave_02/spr_fx_shockwave_02.yy",},},
     {"id":{"name":"spr_fx_stars_01","path":"sprites/spr_fx_stars_01/spr_fx_stars_01.yy",},},
+    {"id":{"name":"spr_HealthBar_01","path":"sprites/spr_HealthBar_01/spr_HealthBar_01.yy",},},
     {"id":{"name":"spr_HealthBars","path":"sprites/spr_HealthBars/spr_HealthBars.yy",},},
     {"id":{"name":"spr_Idle_Penguin_01","path":"sprites/spr_Idle_Penguin_01/spr_Idle_Penguin_01.yy",},},
     {"id":{"name":"spr_stout_block_01","path":"sprites/spr_stout_block_01/spr_stout_block_01.yy",},},
