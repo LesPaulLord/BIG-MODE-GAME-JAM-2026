@@ -181,8 +181,11 @@ function InitPlayerMoveIntputSequence()
 	
 	for(var i =0; i < actionNB; i++)
 	{
-		SetActionBoxSprite(player_actionBox_flexPannel, i, ActionType.idle);
+		SetActionBoxSprite(player_actionBox_flexPannel, i, ActionType.idle, false);
 	}
+	
+	var _timer = instance_create_layer( 200, 250, "Instances", Timer);
+	_timer.length = playerInputLength;
 	
 	sequenceInited = true;
 	playerSequenceFinishInit = false;

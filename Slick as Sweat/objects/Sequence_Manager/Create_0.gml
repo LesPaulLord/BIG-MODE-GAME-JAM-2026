@@ -54,6 +54,8 @@ SetBoxPosition(UI_NPC_Actions, characters[0])
 layer_set_visible(UI_NPC_Actions, false);
 layer_set_visible(UI_Player_Actions, false);
 
+currentElementAnimated = noone;
+
 initiativeArrow = noone;
 
 initiativeID = 0;
@@ -80,13 +82,32 @@ function SetActionBoxAlpha(_flexRoot, _alpha)
 	layer_sprite_alpha(_element.elementId, _alpha);
 }
 
-function SetActionBoxSprite(_flexRoot, _actionID, actionType)
+function SetActionBoxSprite(_flexRoot, _actionID, actionType, setAnim = true)
 {
 	var sprite = spr_UI_HealthBar_Frame;
 	
 	var _childNode = flexpanel_node_get_child(_flexRoot, _actionID);
 	var _struct = flexpanel_node_get_struct(_childNode);
 	var _element = _struct.layerElements[0];
+	
+	if(currentElementAnimated != noone)
+	{
+		layer_sprite_speed(currentElementAnimated, 0);
+		layer_sprite_index(currentElementAnimated, 9);	
+	}
+	currentElementAnimated = _element.elementId;
+	
+	layer_sprite_index(currentElementAnimated, 0);
+	
+	if(!setAnim)
+	{
+			layer_sprite_speed(_element.elementId, 0);
+			layer_sprite_index(currentElementAnimated, 9);
+	}
+	else	
+	{
+			layer_sprite_speed(_element.elementId, 1);
+	}
 
 	switch(actionType)
 	{
@@ -117,7 +138,8 @@ function SetActionBoxSprite(_flexRoot, _actionID, actionType)
 	
 	layer_sprite_alpha(_element.elementId, 1);
 	layer_sprite_change(_element.elementId, sprite);
-
+	
+	if(setAnim)	alarm[3] = 15;
 	}
 }
 

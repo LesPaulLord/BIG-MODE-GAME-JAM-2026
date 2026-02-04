@@ -1,6 +1,6 @@
 
 
-
+/*
 if(updateCharactersHealth)
 {
 	var _player = Sequence_Manager.characters[1]
@@ -26,3 +26,4 @@ if(gameOver)
 	
 	draw_text(_center[0] + 150, _center[1] - 45, _winner + " VICTORY!")
 }
+*/
