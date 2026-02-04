@@ -11,6 +11,7 @@
     {"name":"inst_2167D491","path":"rooms/Room_Main/Room_Main.yy",},
     {"name":"inst_7BBAE8D1","path":"rooms/Room_Main/Room_Main.yy",},
     {"name":"inst_3BC63103","path":"rooms/Room_Main/Room_Main.yy",},
+    {"name":"inst_31492213","path":"rooms/Room_Main/Room_Main.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -27,6 +28,7 @@
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-32.0,"y":32.0,},
         {"$GMRInstance":"v4","%Name":"inst_7BBAE8D1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7BBAE8D1","objectId":{"name":"NPC","path":"objects/NPC/NPC.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":256.0,"y":173.0,},
         {"$GMRInstance":"v4","%Name":"inst_3BC63103","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3BC63103","objectId":{"name":"playerTimer","path":"objects/playerTimer/playerTimer.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":384.0,"y":128.0,},
+        {"$GMRInstance":"v4","%Name":"inst_31492213","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_31492213","objectId":{"name":"Hearth","path":"objects/Hearth/Hearth.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":224.0,"y":32.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Assets_1","assets":[],"depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Assets_1","properties":[],"resourceType":"GMRAssetLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Tiles_1","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_1","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":1,"SerialiseWidth":1,"TileSerialiseData":[1,],},"tilesetId":{"name":"ts_Background","path":"tilesets/ts_Background/ts_Background.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
