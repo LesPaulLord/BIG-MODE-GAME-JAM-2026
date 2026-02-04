@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":14.769229,
+  "duration":14.307687,
   "exportDir":"",
   "name":"sfx_MainMenuTheme",
   "parent":{
@@ -22,5 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"sfx_MainMenuTheme.wav",
-  "volume":0.8,
+  "volume":1.0,
 }
