@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":2.1829252,
+  "duration":2.1607482,
   "exportDir":"",
   "name":"sfx_crowd_cheer_01",
   "parent":{
@@ -22,5 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"sfx_crowd_cheer_01.wav",
-  "volume":0.6,
+  "volume":0.8,
 }

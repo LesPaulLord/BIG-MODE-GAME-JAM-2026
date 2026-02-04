@@ -24,3 +24,4 @@ function GameOver(_winnerID)
 }
 
 audio_play_sound_at(sfx_crowd_01, x, y, 0, 100, 300, 1, true, 1, 1);
+audio_play_sound_at(sfx_Battle_Song_02, x, y, 0, 100, 300, 1, true, 1, 1);

@@ -320,6 +320,7 @@ function InitFight()
 	var _center = GetMiddleOfScreen();
 	_center[1] -= 60;
 	fightText = instance_create_layer(_center[0], _center[1], "Instances", Fight_Text);
+	audio_play_sound_at(sfx_Announcer_Fight, x, y, 0, 100, 300, 1, false, 1, 1, 0, random_range(0.9, 1.1));
 	
 	layer_set_visible(UI_Player_Actions, false);
 	
