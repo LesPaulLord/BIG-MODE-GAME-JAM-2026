@@ -124,6 +124,7 @@
     {"id":{"name":"sfx_juicyPunch_2","path":"sounds/sfx_juicyPunch_2/sfx_juicyPunch_2.yy",},},
     {"id":{"name":"sfx_juicyPunch_3","path":"sounds/sfx_juicyPunch_3/sfx_juicyPunch_3.yy",},},
     {"id":{"name":"sfx_jump_01","path":"sounds/sfx_jump_01/sfx_jump_01.yy",},},
+    {"id":{"name":"sfx_MainMenuTheme","path":"sounds/sfx_MainMenuTheme/sfx_MainMenuTheme.yy",},},
     {"id":{"name":"sfx_punchA_1","path":"sounds/sfx_punchA_1/sfx_punchA_1.yy",},},
     {"id":{"name":"sfx_punchA_2","path":"sounds/sfx_punchA_2/sfx_punchA_2.yy",},},
     {"id":{"name":"sfx_punchA_3","path":"sounds/sfx_punchA_3/sfx_punchA_3.yy",},},

@@ -1,4 +1,4 @@
-<REAPER_PROJECT 0.1 "7.36/win64" 1770230976
+<REAPER_PROJECT 0.1 "7.36/win64" 1770219325
   <NOTES 0 2
   >
   RIPPLE 0 0
@@ -18,9 +18,9 @@
   VIDEO_CONFIG 0 0 65792
   PANMODE 3
   PANLAWFLAGS 3
-  CURSOR 8.30769230769231
+  CURSOR 11.07692307692308
   ZOOM 35.18732705587185 0 0
-  VZOOMEX 5.84251404 0
+  VZOOMEX 5.875 0
   USE_REC_CFG 0
   RECMODE 1
   SMPTESYNC 0 30 100 40 1000 300 0 0 1 0 0
@@ -32,7 +32,7 @@
   >
   <APPLYFX_CFG
   >
-  RENDER_FILE "E:\GitHub\BIG-MODE-GAME-JAM-2026\Sound\sfx_MainMenuTheme.wav"
+  RENDER_FILE "E:\GitHub\BIG-MODE-GAME-JAM-2026\Sound\sfx_Battle_Song_02.wav"
   RENDER_FMT 0 2 44100
   RENDER_1X 0
   RENDER_RANGE 2 0 0 0 1000
@@ -50,7 +50,7 @@
     ZXZhdxgAAQ==
   >
   LOCK 1
-  <METRONOME 22 1
+  <METRONOME 7 2
     VOL 0.25 0.125
     BEATLEN 4
     FREQ 1760 880 1
@@ -65,8 +65,8 @@
   GLOBAL_AUTO -1
   TEMPO 130 4 4 0
   PLAYRATE 1 0 0.25 4
-  SELECTION 14.76923076923077 0
-  SELECTION2 14.76923076923077 0
+  SELECTION 33.23076923076923 0
+  SELECTION2 33.23076923076923 0
   MASTERAUTOMODE 0
   MASTERTRACKHEIGHT 0 0
   MASTERPEAKCOL 16576
@@ -89,7 +89,7 @@
   >
   <TEMPOENVEX
     EGUID {8979B74D-0658-4E9C-BA45-4DA47D7A9A90}
-    ACT 0 -1
+    ACT 1 -1
     VIS 1 0 1
     LANEHEIGHT 0 0
     ARM 0
@@ -103,7 +103,7 @@
     BEAT -1
     AUTOMODE 0
     PANLAWFLAGS 3
-    VOLPAN 0.49866990604774 0 -1 -1 1
+    VOLPAN 1 0 -1 -1 1
     MUTESOLO 0 0 0
     IPHASE 0
     PLAYOFFS 0 1
@@ -144,7 +144,7 @@
         YXkiIHZhbHVlPSIwLjI5OTk5OTk4MjExODYwNjYiLz48UEFSQU0gaWQ9InZpYnJhdG9EZXB0aCIgdmFsdWU9IjAuMCIvPjxQQVJBTSBpZD0idmlicmF0b0lnbm9yZXNX
         aGVlbF9yYXciIHZhbHVlPSIxLjAiLz48UEFSQU0gaWQ9InZpYnJhdG9SYXRlIiB2YWx1ZT0iMC4xNTAwMDAwMDU5NjA0NjQ1Ii8+PC9QYXJhbXM+PHZvbHVtZUVudj48
         L3ZvbHVtZUVudj48cGl0Y2hFbnY+PC9waXRjaEVudj48ZHV0eUVudj48L2R1dHlFbnY+PC9yb290PgA=
-        AFByb2dyYW0gMQAQAAAA
+        AAAQAAAA
       >
       FLOATPOS 0 0 0 0
       FXID {152AE524-FE76-4720-951F-3AE302167ACA}
@@ -153,7 +153,7 @@
     <ITEM
       POSITION 0
       SNAPOFFS 0
-      LENGTH 14.76923076923077
+      LENGTH 59.07692307692308
       LOOP 1
       ALLTAKES 0
       FADEIN 1 0 0 1 0 0 0
@@ -173,74 +173,72 @@
         HASDATA 1 960 QN
         CCINTERP 32
         POOLEDEVTS {D9F8442D-D275-4779-9B32-B3C7B3CD98F5}
-        E 0 90 24 75
-        E 263 80 24 00
-        E 517 90 24 75 -60
-        E 173 80 24 00 -60
-        E 7 90 35 75
-        E 240 80 35 00
-        E 240 90 24 76 -60
-        E 325 80 24 00 -60
-        E 635 90 24 7a -24
-        E 208 80 24 00 -24
-        E 272 90 35 7c -13
-        E 241 80 35 00 -13
-        E 59 90 24 7c -6
-        E 106 80 24 00 -6
-        E 74 90 24 7c -10
-        E 193 80 24 00 -10
-        E 287 90 24 7c 27
-        E 264 80 24 00 27
-        E 516 90 24 7c -52
-        E 174 80 24 00 -52
-        E 6 90 35 7c -7
-        E 219 80 35 00 -7
-        E 261 90 24 7c -5
-        E 254 80 24 00 -5
-        E 706 90 24 7c -3
-        E 203 80 24 00 -3
-        E 277 90 35 7c 42
-        E 255 80 35 00 42
-        E 705 90 24 7c 3
-        E 357 80 24 00 3
-        E 423 90 24 7c -37
-        E 172 80 24 00 -37
-        E 8 90 35 7c -8
-        E 228 80 35 00 -8
-        E 252 90 24 7c 6
-        E 303 80 24 00 6
-        E 657 90 24 7c -19
-        E 210 80 24 00 -19
-        E 270 90 35 7c
-        E 209 80 35 00
-        E 91 90 24 7c 9
-        E 128 80 24 00 9
-        E 52 90 24 7c 15
-        E 224 80 24 00 15
-        E 256 90 24 7c 9
-        E 362 80 24 00 9
-        E 418 90 24 7c -59
-        E 164 80 24 00 -59
-        E 16 90 35 7c -64
-        E 313 80 35 00 -64
-        E 407 90 35 7f
-        E 240 80 35 00
-        E 0 90 35 7f
-        E 240 80 35 00
-        E 240 90 35 7f
-        E 240 80 35 00
-        E 240 90 35 7f
-        E 240 80 35 00
-        e 240 90 35 7f
+        e 0 90 24 75
+        e 263 80 24 00
+        e 517 90 24 75 -60
+        e 173 80 24 00 -60
+        e 7 90 35 75
         e 240 80 35 00
-        E 240 b0 7b 00
+        e 240 90 24 76 -60
+        e 325 80 24 00 -60
+        e 635 90 24 7a -24
+        e 208 80 24 00 -24
+        e 272 90 35 7c -13
+        e 241 80 35 00 -13
+        e 59 90 24 7c -6
+        e 106 80 24 00 -6
+        e 74 90 24 7c -10
+        e 193 80 24 00 -10
+        e 287 90 24 7c 27
+        e 264 80 24 00 27
+        e 516 90 24 7c -52
+        e 174 80 24 00 -52
+        e 6 90 35 7c -7
+        e 219 80 35 00 -7
+        e 261 90 24 7c -5
+        e 254 80 24 00 -5
+        e 706 90 24 7c -3
+        e 203 80 24 00 -3
+        e 277 90 35 7c 42
+        e 255 80 35 00 42
+        e 705 90 24 7c 3
+        e 357 80 24 00 3
+        e 423 90 24 7c -37
+        e 172 80 24 00 -37
+        e 8 90 35 7c -8
+        e 228 80 35 00 -8
+        e 252 90 24 7c 6
+        e 303 80 24 00 6
+        e 657 90 24 7c -19
+        e 210 80 24 00 -19
+        e 270 90 35 7c
+        e 209 80 35 00
+        e 91 90 24 7c 9
+        e 128 80 24 00 9
+        e 52 90 24 7c 15
+        e 224 80 24 00 15
+        e 256 90 24 7c 9
+        e 362 80 24 00 9
+        e 418 90 24 7c -59
+        e 164 80 24 00 -59
+        e 16 90 35 7c -64
+        e 313 80 35 00 -64
+        e 167 90 24 7c -43
+        e 260 80 24 00 -43
+        e 700 90 24 7c -42
+        e 195 80 24 00 -42
+        e 285 90 35 7c
+        e 147 80 35 00
+        e 153 90 35 7f -59
+        e 251 80 35 00 -59
+        E 409 b0 7b 00
         CCINTERP 32
         CHASE_CC_TAKEOFFS 1
         GUID {56E724CA-71BF-4647-A32B-5CF2C91DBC26}
         IGNTEMPO 0 120 4 4
         SRCCOLOR 3
         VELLANE -1 99 0 0 1
-        CFGEDITVIEW 66.078912 0.213144 54 12 0 -1 0 0 0 0.5
+        CFGEDITVIEW 0 0.044666 79 12 0 -1 0 0 0 0.5
         KEYSNAP 0
         TRACKSEL 0
         EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
@@ -254,7 +252,7 @@
     BEAT -1
     AUTOMODE 0
     PANLAWFLAGS 3
-    VOLPAN 0.26529707233193 0 -1 -1 1
+    VOLPAN 0.65859561281431 0 -1 -1 1
     MUTESOLO 0 0 0
     IPHASE 0
     PLAYOFFS 0 1
@@ -262,7 +260,7 @@
     BUSCOMP 0 0 0 0 0
     SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
     FIXEDLANES 9 0 0 0 0
-    SEL 1
+    SEL 0
     REC 0 5088 1 0 0 0 0 0
     VU 64
     TRACKHEIGHT 0 0 0 0 0 0 0
@@ -295,16 +293,16 @@
         YXkiIHZhbHVlPSIwLjI5OTk5OTk4MjExODYwNjYiLz48UEFSQU0gaWQ9InZpYnJhdG9EZXB0aCIgdmFsdWU9IjAuMCIvPjxQQVJBTSBpZD0idmlicmF0b0lnbm9yZXNX
         aGVlbF9yYXciIHZhbHVlPSIxLjAiLz48UEFSQU0gaWQ9InZpYnJhdG9SYXRlIiB2YWx1ZT0iMC4xNTAwMDAwMDU5NjA0NjQ1Ii8+PC9QYXJhbXM+PHZvbHVtZUVudj48
         L3ZvbHVtZUVudj48cGl0Y2hFbnY+PC9waXRjaEVudj48ZHV0eUVudj48L2R1dHlFbnY+PC9yb290PgA=
-        AFByb2dyYW0gMQAQAAAA
+        AAAQAAAA
       >
       FLOATPOS 0 0 0 0
       FXID {DE9E14A5-558E-40F7-9747-122B8056952E}
       WAK 0 0
     >
     <ITEM
-      POSITION 0
+      POSITION 3.69230769230769
       SNAPOFFS 0
-      LENGTH 14.72451923076923
+      LENGTH 29.44903846153846
       LOOP 1
       ALLTAKES 0
       FADEIN 1 0 0 1 0 0 0
@@ -403,7 +401,7 @@
     BEAT -1
     AUTOMODE 0
     PANLAWFLAGS 3
-    VOLPAN 0.49866990604774 0 -1 -1 1
+    VOLPAN 0.70462939198009 0 -1 -1 1
     MUTESOLO 0 0 0
     IPHASE 0
     PLAYOFFS 0 1
@@ -412,7 +410,7 @@
     SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
     FIXEDLANES 9 0 0 0 0
     SEL 0
-    REC 0 5088 1 0 0 0 0 0
+    REC 1 5088 1 0 0 0 0 0
     VU 64
     TRACKHEIGHT 0 0 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
@@ -444,107 +442,16 @@
         YXkiIHZhbHVlPSIwLjI5OTk5OTk4MjExODYwNjYiLz48UEFSQU0gaWQ9InZpYnJhdG9EZXB0aCIgdmFsdWU9IjAuMCIvPjxQQVJBTSBpZD0idmlicmF0b0lnbm9yZXNX
         aGVlbF9yYXciIHZhbHVlPSIxLjAiLz48UEFSQU0gaWQ9InZpYnJhdG9SYXRlIiB2YWx1ZT0iMC4xNTAwMDAwMDU5NjA0NjQ1Ii8+PC9QYXJhbXM+PHZvbHVtZUVudj48
         L3ZvbHVtZUVudj48cGl0Y2hFbnY+PC9waXRjaEVudj48ZHV0eUVudj48L2R1dHlFbnY+PC9yb290PgA=
-        AFByb2dyYW0gMQAQAAAA
+        AAAQAAAA
       >
       FLOATPOS 0 0 0 0
       FXID {9B8E6708-C298-49CE-90A1-6540E168A409}
       WAK 0 0
     >
     <ITEM
-      POSITION 0
+      POSITION 3.69230769230769
       SNAPOFFS 0
-      LENGTH 13.38461538461538
-      LOOP 1
-      ALLTAKES 0
-      FADEIN 1 0 0 1 0 0 0
-      FADEOUT 1 0 0 1 0 0 0
-      MUTE 0 0
-      SEL 0
-      IGUID {485A2554-1746-471B-B44D-789093003E73}
-      IID 10
-      NAME "03-Magical 8bit Plug 2-MIDI"
-      VOLPAN 1 0 1 -1
-      SOFFS 0 0
-      PLAYRATE 1 1 0 -1 0 0.0025
-      CHANMODE 0
-      GUID {947613D4-605B-448E-82E8-CB0CFE066902}
-      RECPASS 7
-      <SOURCE MIDI
-        HASDATA 1 960 QN
-        CCINTERP 32
-        POOLEDEVTS {A1BB697E-4550-42D6-A0E9-000596A64326}
-        E 0 90 3f 71
-        E 642 80 3f 00
-        E 798 90 3f 71 26
-        E 480 90 41 76 32
-        E 13 80 3f 00 26
-        E 628 80 41 00 32
-        E 799 90 41 76 -41
-        E 480 90 43 7c 13
-        E 104 80 41 00 -41
-        E 450 80 43 00 13
-        E 2806 90 43 7f 25
-        E 480 90 44 7f 28
-        E 34 80 43 00 25
-        E 513 80 44 00 28
-        E 893 90 43 7f -20
-        E 480 90 41 7f 5
-        E 36 80 43 00 -20
-        E 453 80 41 00 5
-        e 951 90 43 7f -12
-        E 480 90 3f 7f -9
-        e 23 80 43 00 -12
-        E 449 80 3f 00 -9
-        E 488 90 3e 7f 52
-        E 431 80 3e 00 52
-        E 529 90 3b 7f 56
-        E 461 80 3b 00 56
-        E 499 90 3e 7f 35
-        E 706 80 3e 00 35
-        E 254 90 3f 7f -22
-        E 550 80 3f 00 -22
-        E 890 90 3f 7f -20
-        E 480 90 41 7f 22
-        E 9 80 3f 00 -20
-        E 473 80 41 00 22
-        E 958 90 41 7f 38
-        E 480 90 43 7f 74
-        E 19 80 41 00 38
-        E 499 80 43 00 74
-        E 3322 90 48 7f -53
-        E 574 80 48 00 -53
-        E 866 90 48 7f -34
-        E 480 90 47 7f -9
-        E 94 80 48 00 -34
-        E 632 80 47 00 -9
-        E 534 90 43 7f 85
-        E 622 80 43 00 85
-        E 38 90 48 7f 41
-        E 404 80 48 00 41
-        E 556 90 43 7f 54
-        E 429 80 43 00 54
-        E 531 90 3f 7f 76
-        E 483 80 3f 00 76
-        E 477 90 3e 7f 102
-        E 410 80 3e 00 102
-        E 550 b0 7b 00
-        CCINTERP 32
-        CHASE_CC_TAKEOFFS 1
-        GUID {C1CCB26B-1400-4D9D-98A9-2C0F2EB5F9F7}
-        IGNTEMPO 0 120 4 4
-        SRCCOLOR 31
-        VELLANE -1 99 0 0 1
-        CFGEDITVIEW -7927.017544 0.044531 55 12 0 -1 0 0 0 0.5
-        KEYSNAP 0
-        TRACKSEL 0
-        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
-        CFGEDIT 1 1 0 1 0 0 1 1 1 1 1 0.0625 883 458 3142 1431 0 0 0 0 0 0 0 0 0 0.5 0 0 1 64
-      >
-    >
-    <ITEM
-      POSITION 18.46151846153845
-      SNAPOFFS 0
-      LENGTH 0.00001
+      LENGTH 14.76922076923076
       LOOP 1
       ALLTAKES 0
       FADEIN 1 0 0 1 0 0 0
@@ -555,7 +462,7 @@
       IID 6
       NAME "03-Magical 8bit Plug 2-MIDI-glued"
       VOLPAN 1 0 1 -1
-      SOFFS 14.76921076923076 31.99995666666664
+      SOFFS 0 0
       PLAYRATE 1 1 0 -1 0 0.0025
       CHANMODE 0
       TAKECOLOR 27594869 R
@@ -742,6 +649,97 @@
         VELLANE -1 99 0 0 1
       >
     >
+    <ITEM
+      POSITION 18.46153846153846
+      SNAPOFFS 0
+      LENGTH 14.76922728065585
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0
+      FADEOUT 1 0 0 1 0 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {485A2554-1746-471B-B44D-789093003E73}
+      IID 10
+      NAME "03-Magical 8bit Plug 2-MIDI"
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {947613D4-605B-448E-82E8-CB0CFE066902}
+      RECPASS 7
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {A1BB697E-4550-42D6-A0E9-000596A64326}
+        E 0 90 3f 71
+        E 642 80 3f 00
+        E 798 90 3f 71 26
+        E 480 90 41 76 32
+        E 13 80 3f 00 26
+        E 628 80 41 00 32
+        E 799 90 41 76 -41
+        E 480 90 43 7c 13
+        E 104 80 41 00 -41
+        E 450 80 43 00 13
+        E 2806 90 43 7f 25
+        E 480 90 44 7f 28
+        E 34 80 43 00 25
+        E 513 80 44 00 28
+        E 893 90 43 7f -20
+        E 480 90 41 7f 5
+        E 36 80 43 00 -20
+        E 453 80 41 00 5
+        e 951 90 43 7f -12
+        E 480 90 3f 7f -9
+        e 23 80 43 00 -12
+        E 449 80 3f 00 -9
+        E 488 90 3e 7f 52
+        E 431 80 3e 00 52
+        E 529 90 3b 7f 56
+        E 461 80 3b 00 56
+        E 499 90 3e 7f 35
+        E 706 80 3e 00 35
+        E 254 90 3f 7f -22
+        E 550 80 3f 00 -22
+        E 890 90 3f 7f -20
+        E 480 90 41 7f 22
+        E 9 80 3f 00 -20
+        E 473 80 41 00 22
+        E 958 90 41 7f 38
+        E 480 90 43 7f 74
+        E 19 80 41 00 38
+        E 499 80 43 00 74
+        E 3322 90 48 7f -53
+        E 574 80 48 00 -53
+        E 866 90 48 7f -34
+        E 480 90 47 7f -9
+        E 94 80 48 00 -34
+        E 632 80 47 00 -9
+        E 534 90 43 7f 85
+        E 622 80 43 00 85
+        E 38 90 48 7f 41
+        E 404 80 48 00 41
+        E 556 90 43 7f 54
+        E 429 80 43 00 54
+        E 531 90 3f 7f 76
+        E 483 80 3f 00 76
+        E 477 90 3e 7f 102
+        E 410 80 3e 00 102
+        E 550 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {C1CCB26B-1400-4D9D-98A9-2C0F2EB5F9F7}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 31
+        VELLANE -1 99 0 0 1
+        CFGEDITVIEW -7927.017544 0.044531 55 12 0 -1 0 0 0 0.5
+        KEYSNAP 0
+        TRACKSEL 0
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+        CFGEDIT 1 1 0 1 0 0 1 1 1 1 1 0.0625 883 458 3142 1431 0 0 0 0 0 0 0 0 0 0.5 0 0 1 64
+      >
+    >
   >
   <TRACK {160FD8CD-0F3D-4E26-8BE5-0173F1EB6F90}
     NAME "Magical 8bit Plug 2"
@@ -749,7 +747,7 @@
     BEAT -1
     AUTOMODE 0
     PANLAWFLAGS 3
-    VOLPAN 0.1271249718755 0 -1 -1 1
+    VOLPAN 1 0 -1 -1 1
     MUTESOLO 0 0 0
     IPHASE 0
     PLAYOFFS 0 1
@@ -757,8 +755,8 @@
     BUSCOMP 0 0 0 0 0
     SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
     FIXEDLANES 9 0 0 0 0
-    SEL 0
-    REC 1 5088 1 0 0 0 0 0
+    SEL 1
+    REC 0 5088 1 0 0 0 0 0
     VU 64
     TRACKHEIGHT 0 0 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
@@ -790,140 +788,11 @@
         YXkiIHZhbHVlPSIwLjI5OTk5OTk4MjExODYwNjYiLz48UEFSQU0gaWQ9InZpYnJhdG9EZXB0aCIgdmFsdWU9IjAuMCIvPjxQQVJBTSBpZD0idmlicmF0b0lnbm9yZXNX
         aGVlbF9yYXciIHZhbHVlPSIxLjAiLz48UEFSQU0gaWQ9InZpYnJhdG9SYXRlIiB2YWx1ZT0iMC4xNTAwMDAwMDU5NjA0NjQ1Ii8+PC9QYXJhbXM+PHZvbHVtZUVudj48
         L3ZvbHVtZUVudj48cGl0Y2hFbnY+PC9waXRjaEVudj48ZHV0eUVudj48L2R1dHlFbnY+PC9yb290PgA=
-        AFByb2dyYW0gMQAQAAAA
+        AAAQAAAA
       >
       FLOATPOS 0 0 0 0
       FXID {1A99C26A-46B0-4754-AD96-D6CE881C9DCF}
       WAK 0 0
-    >
-    <ITEM
-      POSITION 0
-      SNAPOFFS 0
-      LENGTH 14.72451923076923
-      LOOP 1
-      ALLTAKES 0
-      FADEIN 1 0 0 1 0 0 0
-      FADEOUT 1 0 0 1 0 0 0
-      MUTE 0 0
-      SEL 1
-      IGUID {FD2C6B85-D3F5-4327-8BDE-0A1173A13DEC}
-      IID 14
-      NAME "04-Magical 8bit Plug 2-MIDI"
-      VOLPAN 1 0 1 -1
-      SOFFS 0 0
-      PLAYRATE 1 1 0 -1 0 0.0025
-      CHANMODE 0
-      GUID {1797A055-3D25-49FD-BD42-F0AFEBF96F44}
-      RECPASS 9
-      <SOURCE MIDI
-        HASDATA 1 960 QN
-        CCINTERP 32
-        POOLEDEVTS {5616648A-8799-4BB2-9E5B-DDFA953AA9FE}
-        e 480 90 57 7f 20
-        e 0 90 54 5d 47
-        e 122 80 54 00 47
-        e 11 80 57 00 20
-        e 827 90 57 7f 48
-        e 0 90 54 60 67
-        e 120 80 57 00 48
-        e 12 80 54 00 67
-        e 828 90 59 5d 63
-        e 0 90 56 57 69
-        e 154 80 59 00 63
-        e 9 80 56 00 69
-        e 797 90 56 60 35
-        e 0 90 59 68 52
-        e 133 80 59 00 52
-        e 40 80 56 00 35
-        e 787 90 57 2f 13
-        e 0 90 5b 53 53
-        e 144 80 5b 00 53
-        e 33 80 57 00 13
-        e 783 90 57 71 27
-        e 0 90 5b 68 44
-        e 151 80 5b 00 44
-        e 7 80 57 00 27
-        e 2722 90 5c 71 30
-        e 0 90 59 70 40
-        e 137 80 5c 00 30
-        e 22 80 59 00 40
-        e 801 90 5c 77 52
-        e 0 90 59 68 58
-        e 131 80 5c 00 52
-        e 27 80 59 00 58
-        e 802 90 59 5a 130
-        e 0 90 56 60 140
-        e 154 80 56 00 140
-        e 4 80 59 00 130
-        e 802 90 56 68 44
-        e 0 90 59 60 60
-        e 165 80 59 00 60
-        e 3 80 56 00 44
-        e 792 90 57 77 30
-        e 0 90 5b 68 55
-        e 146 80 57 00 30
-        e 2 80 5b 00 55
-        e 812 90 57 66 65
-        e 0 90 5b 74 71
-        e 149 80 5b 00 71
-        e 25 80 57 00 65
-        e 2706 90 57 77 -7
-        e 0 90 54 3b 18
-        e 124 80 57 00 -7
-        e 21 80 54 00 18
-        e 815 90 57 6b 18
-        e 0 90 54 40 29
-        e 138 80 57 00 18
-        e 51 80 54 00 29
-        e 771 90 59 43 97
-        e 0 90 56 40 103
-        e 166 80 59 00 97
-        e 1 80 56 00 103
-        e 793 90 56 47 100
-        e 0 90 59 5d 106
-        e 133 80 59 00 106
-        e 12 80 56 00 100
-        e 815 90 57 66 61
-        e 0 90 5b 5d 78
-        e 133 80 5b 00 78
-        e 26 80 57 00 61
-        e 801 90 57 7f 91
-        e 0 90 5b 57 135
-        e 142 80 57 00 91
-        e 10 80 5b 00 135
-        e 2728 90 5c 7c -21
-        e 0 90 59 5a 26
-        e 147 80 5c 00 -21
-        e 11 80 59 00 26
-        e 802 90 5c 7f 54
-        e 0 90 59 5d 70
-        e 167 80 5c 00 54
-        e 0 80 59 00 70
-        e 793 90 59 68 74
-        e 0 90 56 70 84
-        e 208 80 59 00 74
-        e 21 80 56 00 84
-        e 731 90 56 53 27
-        e 0 90 59 43 54
-        e 156 80 56 00 27
-        e 7 80 59 00 54
-        e 317 90 57 7f -14
-        e 0 90 5b 7c -6
-        e 225 80 57 00 -14
-        e 17 80 5b 00 -6
-        E 3505 b0 7b 00
-        CCINTERP 32
-        CHASE_CC_TAKEOFFS 1
-        GUID {9F05A732-5F77-4477-A142-C2939981E141}
-        IGNTEMPO 0 120 4 4
-        SRCCOLOR 366
-        VELLANE -1 99 0 0 1
-        CFGEDITVIEW 0 0.044666 35 12 0 -1 0 0 0 0.5
-        KEYSNAP 0
-        TRACKSEL 0
-        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
-        CFGEDIT 1 1 0 1 0 0 1 1 1 1 1 0.0625 883 458 3142 1431 0 0 0 0 0 0 0 0 0 0.5 0 0 1 64
-      >
     >
   >
   <EXTENSIONS

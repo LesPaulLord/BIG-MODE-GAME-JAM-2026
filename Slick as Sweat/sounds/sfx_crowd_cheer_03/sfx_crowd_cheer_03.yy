@@ -22,5 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"sfx_crowd_cheer_03.wav",
-  "volume":0.6,
+  "volume":0.5,
 }

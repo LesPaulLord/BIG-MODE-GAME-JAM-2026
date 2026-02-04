@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"sfx_crowd_cheer_01",
+  "%Name":"sfx_MainMenuTheme",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,17 +10,17 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":2.1607482,
+  "duration":14.769229,
   "exportDir":"",
-  "name":"sfx_crowd_cheer_01",
+  "name":"sfx_MainMenuTheme",
   "parent":{
-    "name":"Crowd",
-    "path":"folders/Sounds/Crowd.yy",
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sfx_crowd_cheer_01.wav",
-  "volume":0.5,
+  "soundFile":"sfx_MainMenuTheme.wav",
+  "volume":0.8,
 }

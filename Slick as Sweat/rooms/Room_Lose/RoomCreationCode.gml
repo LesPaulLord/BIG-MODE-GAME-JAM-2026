@@ -2,5 +2,6 @@
 /// @DnDVersion : 1.1
 /// @DnDHash : 396089B2
 /// @DnDArgument : "soundid" "sfx_Battle_Song"
+/// @DnDArgument : "loop" "1"
 /// @DnDSaveInfo : "soundid" "sfx_Battle_Song"
-audio_play_sound(sfx_Battle_Song, 0, 0, 1.0, undefined, 1.0);
+audio_play_sound(sfx_Battle_Song, 0, 1, 1.0, undefined, 1.0);
