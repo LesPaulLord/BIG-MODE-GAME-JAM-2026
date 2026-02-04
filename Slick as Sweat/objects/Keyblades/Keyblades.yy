@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_HealthBars",
-    "path":"sprites/spr_HealthBars/spr_HealthBars.yy",
+    "name":"spr_HealthBar_01",
+    "path":"sprites/spr_HealthBar_01/spr_HealthBar_01.yy",
   },
   "spriteMaskId":null,
   "visible":true,
