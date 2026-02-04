@@ -122,6 +122,7 @@
     {"id":{"name":"sfx_UI_A","path":"sounds/sfx_UI_A/sfx_UI_A.yy",},},
     {"id":{"name":"BG_Test","path":"sprites/BG_Test/BG_Test.yy",},},
     {"id":{"name":"MainMenu_BG","path":"sprites/MainMenu_BG/MainMenu_BG.yy",},},
+    {"id":{"name":"MainMenu_Button","path":"sprites/MainMenu_Button/MainMenu_Button.yy",},},
     {"id":{"name":"MainMenu_Characters","path":"sprites/MainMenu_Characters/MainMenu_Characters.yy",},},
     {"id":{"name":"MainMenu_TitleLogo","path":"sprites/MainMenu_TitleLogo/MainMenu_TitleLogo.yy",},},
     {"id":{"name":"Spr_Background","path":"sprites/Spr_Background/Spr_Background.yy",},},
