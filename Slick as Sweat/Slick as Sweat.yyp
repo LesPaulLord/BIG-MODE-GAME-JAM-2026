@@ -206,8 +206,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room_Round1","path":"rooms/Room_Round1/Room_Round1.yy",},},
     {"roomId":{"name":"Room_Round2","path":"rooms/Room_Round2/Room_Round2.yy",},},
+    {"roomId":{"name":"Room_Round1","path":"rooms/Room_Round1/Room_Round1.yy",},},
     {"roomId":{"name":"Room_StartScreen","path":"rooms/Room_StartScreen/Room_StartScreen.yy",},},
     {"roomId":{"name":"Room_Lose","path":"rooms/Room_Lose/Room_Lose.yy",},},
     {"roomId":{"name":"Room_Win","path":"rooms/Room_Win/Room_Win.yy",},},
