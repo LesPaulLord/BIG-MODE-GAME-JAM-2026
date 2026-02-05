@@ -2,7 +2,7 @@ if(gameOver)
 {
 	if(!gameOverInited)
 	{
-		audio_stop_all();
+		audio_stop_sound(sfx_Battle_Song_03);
 		gameOverInited = true;
 	}
 

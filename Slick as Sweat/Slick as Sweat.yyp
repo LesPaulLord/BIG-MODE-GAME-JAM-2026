@@ -41,6 +41,8 @@
   "ForcedPrefabProjectReferences":[
     {"link":"io.gamemaker.gmparticlepresets-1.0.0","name":"io.gamemaker.gmparticlepresets-1.0.0","path":"io.gamemaker.gmparticlepresets-1.0.0.yyp",},
     {"link":"io.gamemaker.gm_filter_screenshake-1.0.0","name":"io.gamemaker.gm_filter_screenshake-1.0.0","path":"io.gamemaker.gm_filter_screenshake-1.0.0.yyp",},
+    {"link":"io.gamemaker.gm_effect_blend-1.0.0","name":"io.gamemaker.gm_effect_blend-1.0.0","path":"io.gamemaker.gm_effect_blend-1.0.0.yyp",},
+    {"link":"io.gamemaker.gm_filter_colourise-1.0.0","name":"io.gamemaker.gm_filter_colourise-1.0.0","path":"io.gamemaker.gm_filter_colourise-1.0.0.yyp",},
   ],
   "IncludedFiles":[],
   "isEcma":false,
@@ -52,6 +54,7 @@
   "resources":[
     {"id":{"name":"MovementCurves","path":"animcurves/MovementCurves/MovementCurves.yy",},},
     {"id":{"name":"Font_currentState","path":"fonts/Font_currentState/Font_currentState.yy",},},
+    {"id":{"name":"BG_Fade","path":"objects/BG_Fade/BG_Fade.yy",},},
     {"id":{"name":"Character_Movement","path":"objects/Character_Movement/Character_Movement.yy",},},
     {"id":{"name":"Credits_LevelChange","path":"objects/Credits_LevelChange/Credits_LevelChange.yy",},},
     {"id":{"name":"Emitter_Start","path":"objects/Emitter_Start/Emitter_Start.yy",},},
@@ -208,10 +211,10 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room_StartScreen","path":"rooms/Room_StartScreen/Room_StartScreen.yy",},},
-    {"roomId":{"name":"Room_Round1","path":"rooms/Room_Round1/Room_Round1.yy",},},
-    {"roomId":{"name":"Room_Round2","path":"rooms/Room_Round2/Room_Round2.yy",},},
     {"roomId":{"name":"Room_Round3","path":"rooms/Room_Round3/Room_Round3.yy",},},
+    {"roomId":{"name":"Room_Round2","path":"rooms/Room_Round2/Room_Round2.yy",},},
+    {"roomId":{"name":"Room_Round1","path":"rooms/Room_Round1/Room_Round1.yy",},},
+    {"roomId":{"name":"Room_StartScreen","path":"rooms/Room_StartScreen/Room_StartScreen.yy",},},
     {"roomId":{"name":"Room_Win","path":"rooms/Room_Win/Room_Win.yy",},},
     {"roomId":{"name":"Room_Lose","path":"rooms/Room_Lose/Room_Lose.yy",},},
     {"roomId":{"name":"Room_Test_Jay","path":"rooms/Room_Test_Jay/Room_Test_Jay.yy",},},

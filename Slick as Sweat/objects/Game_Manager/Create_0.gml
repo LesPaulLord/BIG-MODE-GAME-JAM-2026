@@ -43,7 +43,6 @@ gameOver = false;
 
 
 audio_play_sound_at(sfx_crowd_01, x, y, 0, 100, 300, 1, true, 1, 1);
-audio_play_sound_at(sfx_Battle_Song_03, x, y, 0, 100, 300, 1, true, 1, 1);
 
 alarm[0] = 20;
 
@@ -53,6 +52,7 @@ function GameOver(_winnerID)
 	gameOver = true;
 	
 	pos = GetMiddleOfScreen();
+	pos[1] -= 50;
 	var _endText = instance_create_layer(pos[0], pos[1], "instances", EndMatch_text);
 	
 	if(winnerID == 0)

@@ -72,6 +72,16 @@ alarm[0] = 70;
 
 Game_Manager.updateCharactersHealth = true;
 
+_musicPitch = 1;
+
+switch(roundID){
+	case 2: _musicPitch = 1.2; break;
+	case 3: _musicPitch = 1.5; break;
+}
+
+audio_play_sound_at(sfx_Battle_Song_03, x, y, 0, 100, 300, 1, true, 1, 1, 0, _musicPitch);
+
+
 function SetActionBoxAlpha(_flexRoot, _alpha)
 {
 	var _childCount = flexpanel_node_get_num_children(_flexRoot);
