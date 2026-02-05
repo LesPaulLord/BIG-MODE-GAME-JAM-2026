@@ -104,6 +104,8 @@
     {"id":{"name":"sfx_Announcer_Round3","path":"sounds/sfx_Announcer_Round3/sfx_Announcer_Round3.yy",},},
     {"id":{"name":"sfx_Announcer_Round4","path":"sounds/sfx_Announcer_Round4/sfx_Announcer_Round4.yy",},},
     {"id":{"name":"sfx_Announcer_Round5","path":"sounds/sfx_Announcer_Round5/sfx_Announcer_Round5.yy",},},
+    {"id":{"name":"sfx_Announcer_StoutWins","path":"sounds/sfx_Announcer_StoutWins/sfx_Announcer_StoutWins.yy",},},
+    {"id":{"name":"sfx_Announcer_TurkeyWins","path":"sounds/sfx_Announcer_TurkeyWins/sfx_Announcer_TurkeyWins.yy",},},
     {"id":{"name":"sfx_Battle_Song_03","path":"sounds/sfx_Battle_Song_03/sfx_Battle_Song_03.yy",},},
     {"id":{"name":"sfx_Battle_Song","path":"sounds/sfx_Battle_Song/sfx_Battle_Song.yy",},},
     {"id":{"name":"sfx_blockC_1","path":"sounds/sfx_blockC_1/sfx_blockC_1.yy",},},

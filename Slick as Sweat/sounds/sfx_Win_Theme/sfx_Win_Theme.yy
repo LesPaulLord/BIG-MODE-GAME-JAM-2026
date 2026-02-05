@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":36.75,
+  "duration":24.0,
   "exportDir":"",
   "name":"sfx_Win_Theme",
   "parent":{
