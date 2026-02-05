@@ -12,8 +12,8 @@
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
-    "name":"Slick as Sweat",
-    "path":"Slick as Sweat.yyp",
+    "name":"Env",
+    "path":"folders/Sprite/Env.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
