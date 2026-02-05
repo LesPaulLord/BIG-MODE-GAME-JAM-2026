@@ -203,8 +203,6 @@
     {"id":{"name":"WinScreen_BG","path":"sprites/WinScreen_BG/WinScreen_BG.yy",},},
     {"id":{"name":"WinScreen_TextBox","path":"sprites/WinScreen_TextBox/WinScreen_TextBox.yy",},},
     {"id":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},},
-    {"id":{"name":"ts_background_02","path":"tilesets/ts_background_02/ts_background_02.yy",},},
-    {"id":{"name":"ts_background_03","path":"tilesets/ts_background_03/ts_background_03.yy",},},
     {"id":{"name":"ts_Background","path":"tilesets/ts_Background/ts_Background.yy",},},
   ],
   "resourceType":"GMProject",
