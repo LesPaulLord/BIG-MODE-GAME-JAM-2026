@@ -15,8 +15,26 @@ gameOverInited = false;
 
 gameOverTimer = 0;
 
-npcHearth = [H_P_01, H_P_02, H_P_03, H_P_04, H_P_05]
-playerHearth = [H_N_01, H_N_02, H_N_03, H_N_04, H_N_05]
+npcHeart = [];
+playerHeart = [];
+
+playerHeartPos = 238;
+npcHeartPos = 72;
+heartSpace = 18;
+heartY = 35;
+
+for(var i=0; i<5; i++)
+{
+	var  _npcHeart = instance_create_layer(playerHeartPos + i * heartSpace, heartY, "Instances", Heart);
+	var _playerHeart = instance_create_layer(npcHeartPos + i * heartSpace, heartY, "Instances", Heart);
+	
+	_playerHeart.depth = -80;
+	_npcHeart.depth = -80;
+	
+	playerHeart[i] = _playerHeart;
+	npcHeart[4-i] = _npcHeart;	
+}
+
 layer_depth("Effect_Shake", -999);
 
 victoryTextInited = false;
@@ -47,13 +65,11 @@ function GameOver(_winnerID)
 	}
 }
 
-GameOver(1);
-
-function UpdateHearth()
+function UpdateHeart()
 {
 	var _playerHealth = Sequence_Manager.characters[1].characterHealth - 1;
-	playerHearth[_playerHealth].sprite_index = spr_UI_Health_02;	
+	playerHeart[_playerHealth].sprite_index = spr_UI_Health_02;	
 	
 	var _npcHealth = Sequence_Manager.characters[0].characterHealth - 1;
-	npcHearth[_npcHealth].sprite_index = spr_UI_Health_02;	
+	npcHeart[_npcHealth].sprite_index = spr_UI_Health_02;	
 }

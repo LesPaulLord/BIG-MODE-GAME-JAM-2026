@@ -1,1 +1,1 @@
-UpdateHearth();
+UpdateHeart();
