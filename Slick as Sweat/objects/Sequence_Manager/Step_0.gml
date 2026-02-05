@@ -202,30 +202,30 @@ function PlayerInputPhase()
 	{
 	if(keyboard_check_pressed(vk_right))
 	{		
-		if(characters[1].x > room_width - Game_Manager.ringPadding + Game_Manager.gridSpace)
-		{
-			audio_play_sound(sfx_cantInput, 1, false)
-		}
-		else
-		{
+		//if(characters[1].x > room_width - Game_Manager.ringPadding + Game_Manager.gridSpace)
+		//{
+			//audio_play_sound(sfx_cantInput, 1, false)
+		//}
+		//else
+		//{
 			show_debug_message("press right");
 			playerActionList[currentInputID] = ActionType.moveRight;	
 			_keyPressed = true;
-		}
+		//}
 	}
 
 	if(keyboard_check_pressed(vk_left))
 	{
-		if(characters[1].x < Game_Manager.gridSpace + Game_Manager.ringPadding)
-		{
-			audio_play_sound(sfx_cantInput, 1, false)
-		}
-		else		
-		{
+		//if(characters[1].x < Game_Manager.ringPadding - Game_Manager.gridSpace)
+		//{
+			//audio_play_sound(sfx_cantInput, 1, false)
+		//}
+		//else		
+		//{
 			show_debug_message("press left");
 			playerActionList[currentInputID] = ActionType.moveLeft;
 			_keyPressed = true;
-		}		
+		//}		
 	}
 
 	if(keyboard_check_pressed(vk_up))

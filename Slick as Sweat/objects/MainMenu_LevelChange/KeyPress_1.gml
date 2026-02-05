@@ -10,4 +10,4 @@ audio_stop_sound(sfx_MainMenuTheme);
 /// @DnDHash : 1C3951F7
 /// @DnDArgument : "room" "Room_Main"
 /// @DnDSaveInfo : "room" "Room_Main"
-room_goto(Room_Main);
+room_goto(Room_Round1);

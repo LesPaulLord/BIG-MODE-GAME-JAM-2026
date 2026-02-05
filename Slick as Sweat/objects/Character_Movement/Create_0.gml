@@ -65,6 +65,10 @@ function Move(_initial, _goal, _fract, _attack, _ignoreMargins = false){
 
 		_moved = true;
 	}
+	else	
+	{
+		///WOBBLE
+	}
 	
 	if(_goal[1] > Game_Manager.topPadding || _ignoreMargins)
 	{
@@ -74,6 +78,10 @@ function Move(_initial, _goal, _fract, _attack, _ignoreMargins = false){
 		{
 			_moved = true;
 		}
+	}
+	else	
+	{
+		///WOBBLE
 	}
 
 	show_debug_message("move: " + string(_moved));	

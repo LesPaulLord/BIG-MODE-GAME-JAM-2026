@@ -11,25 +11,43 @@ npcHealth = 0;
 
 winnerID = 0;
 
-playerHearth = [H_P_01, H_P_02, H_P_03, H_P_04, H_P_05]
-npcHearth = [H_N_01, H_N_02, H_N_03, H_N_04, H_N_05]
+gameOverInited = false;
 
+gameOverTimer = 0;
+
+npcHearth = [H_P_01, H_P_02, H_P_03, H_P_04, H_P_05]
+playerHearth = [H_N_01, H_N_02, H_N_03, H_N_04, H_N_05]
 layer_depth("Effect_Shake", -999);
 
 victoryTextInited = false;
 
 gameOver = false;
 
-function GameOver(_winnerID)
-{
-	winnerID = _winnerID;
-	gameOver = true;
-}
 
 audio_play_sound_at(sfx_crowd_01, x, y, 0, 100, 300, 1, true, 1, 1);
 audio_play_sound_at(sfx_Battle_Song_03, x, y, 0, 100, 300, 1, true, 1, 1);
 
 alarm[0] = 20;
+
+function GameOver(_winnerID)
+{	
+	winnerID = _winnerID;
+	gameOver = true;
+	
+	pos = GetMiddleOfScreen();
+	var _endText = instance_create_layer(pos[0], pos[1], "instances", EndMatch_text);
+	
+	if(winnerID == 0)
+	{
+		_endText.sprite_index = spr_UI_StoutWin_01;
+	}
+	else	
+	{
+		_endText.sprite_index = spr_UI_TurkeyWin_01;	
+	}
+}
+
+GameOver(1);
 
 function UpdateHearth()
 {
