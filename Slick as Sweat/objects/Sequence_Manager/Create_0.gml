@@ -25,6 +25,7 @@ playerInputLength = 2.5
 playerSequenceAfterTime = 0.5
 playerIconID = 0;
 playerSequenceFinishInit = false;
+inputTimer = noone;
 
 ///
 playerActionList = []

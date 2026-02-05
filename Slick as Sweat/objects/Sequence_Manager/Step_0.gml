@@ -183,9 +183,10 @@ function InitPlayerMoveIntputSequence()
 	{
 		SetActionBoxSprite(player_actionBox_flexPannel, i, ActionType.idle, false);
 	}
-	
-	var _timer = instance_create_layer( 200, 250, "Instances", Timer);
-	_timer.length = playerInputLength;
+
+	inputTimer = instance_create_layer(characters[1].x - 59, characters[1].y - 110, "Instances", Input_Timer);
+	inputTimer.depth = -999;
+	inputTimer.length = playerInputLength;
 	
 	sequenceInited = true;
 	playerSequenceFinishInit = false;
@@ -215,7 +216,7 @@ function PlayerInputPhase()
 
 	if(keyboard_check_pressed(vk_left))
 	{
-		if(characters[0].x < Game_Manager.gridSpace + Game_Manager.ringPadding)
+		if(characters[1].x < Game_Manager.gridSpace + Game_Manager.ringPadding)
 		{
 			audio_play_sound(sfx_cantInput, 1, false)
 		}
@@ -301,6 +302,7 @@ function PlayerInputPhase()
 	}
 	else if(sequenceFinished && !playerSequenceFinishInit)
 	{
+		if(inputTimer != noone) instance_destroy(inputTimer);
 		sequenceTimer = playerInputLength;
 		playerSequenceFinishInit = true;
 	}
@@ -321,8 +323,9 @@ function InitFight()
 	currentActionID = 0;
 		
 	var _center = GetMiddleOfScreen();
-	_center[1] -= 60;
+	_center[1] -= 55;
 	fightText = instance_create_layer(_center[0], _center[1], "Instances", Fight_Text);
+	fightText.depth = -9999;
 	audio_play_sound_at(choose(sfx_Announcer_Fight, sfx_Announcer_Fight_02, sfx_Announcer_Fight_03), x, y, 0, 100, 300, 1, false, 1, 1, 0, random_range(0.9, 1.1));
 	
 	layer_set_visible(UI_Player_Actions, false);
