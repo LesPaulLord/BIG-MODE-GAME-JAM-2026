@@ -141,6 +141,8 @@
     {"id":{"name":"MainMenu_Button","path":"sprites/MainMenu_Button/MainMenu_Button.yy",},},
     {"id":{"name":"MainMenu_Characters","path":"sprites/MainMenu_Characters/MainMenu_Characters.yy",},},
     {"id":{"name":"MainMenu_TitleLogo","path":"sprites/MainMenu_TitleLogo/MainMenu_TitleLogo.yy",},},
+    {"id":{"name":"spr_background_02","path":"sprites/spr_background_02/spr_background_02.yy",},},
+    {"id":{"name":"spr_background_03","path":"sprites/spr_background_03/spr_background_03.yy",},},
     {"id":{"name":"Spr_Background","path":"sprites/Spr_Background/Spr_Background.yy",},},
     {"id":{"name":"spr_Credits","path":"sprites/spr_Credits/spr_Credits.yy",},},
     {"id":{"name":"spr_fx_dash_01","path":"sprites/spr_fx_dash_01/spr_fx_dash_01.yy",},},
