@@ -58,10 +58,12 @@ function GameOver(_winnerID)
 	if(winnerID == 0)
 	{
 		_endText.sprite_index = spr_UI_StoutWin_01;
+		audio_play_sound_at(sfx_Announcer_StoutWins, x, y, 0, 100, 300, 1, false, 1, 1)
 	}
 	else	
 	{
-		_endText.sprite_index = spr_UI_TurkeyWin_01;	
+		_endText.sprite_index = spr_UI_TurkeyWin_01;
+		audio_play_sound_at(sfx_Announcer_TurkeyWins, x, y, 0, 100, 300, 1, false, 1, 1)
 	}
 }
 

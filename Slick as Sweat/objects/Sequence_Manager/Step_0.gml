@@ -323,7 +323,7 @@ function InitFight()
 	currentActionID = 0;
 		
 	var _center = GetMiddleOfScreen();
-	_center[1] -= 55;
+	_center[1] -= 40;
 	fightText = instance_create_layer(_center[0], _center[1], "Instances", Fight_Text);
 	fightText.depth = -9999;
 	audio_play_sound_at(choose(sfx_Announcer_Fight, sfx_Announcer_Fight_02, sfx_Announcer_Fight_03), x, y, 0, 100, 300, 1, false, 1, 1, 0, random_range(0.9, 1.1));

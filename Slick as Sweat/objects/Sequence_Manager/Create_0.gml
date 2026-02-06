@@ -64,10 +64,11 @@ initiativeID = 0;
 fightText = noone;
 
 var spr_round = [spr_UI_Round_01, spr_UI_Round_02, spr_UI_Round_03]
+var sfx_round_announcer = [sfx_Announcer_Round1, sfx_Announcer_Round2, sfx_Announcer_Round3, sfx_Announcer_Round4, sfx_Announcer_Round5]
 
 roundObject = instance_create_layer(GetMiddleOfScreen()[0], GetMiddleOfScreen()[1]-50, "Instances", Round_text);
 roundObject.sprite_index = spr_round[roundID-1];
-audio_play_sound_at(sfx_Announcer_Round1, x, y, 0, 100, 300, 1, false, 1, 1, 0, random_range(0.9, 1.1));
+audio_play_sound_at(sfx_round_announcer[roundID -1], x, y, 0, 100, 300, 1, false, 1, 1, 0, random_range(0.9, 1.1));
 alarm[0] = 70;
 
 Game_Manager.updateCharactersHealth = true;
