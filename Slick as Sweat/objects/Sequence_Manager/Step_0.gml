@@ -69,14 +69,14 @@ function InitNPCMovesSequence()
 	npcAlreadyBlocked = false;
 	
 	//Initiative arrow
-	var _initiativeArrow =  initiativeID == 0? Initiative_NPC: Initiative_player;
+	var _initiativeArrow =  initiativeID == 0? Initiative_player: Initiative_NPC;
 	var _pos = [characters[initiativeID].x, characters[initiativeID].y];
 	
 	initiativeArrow = instance_create_layer(x, y, "Instances", _initiativeArrow);
 	initiativeArrow.depth = -9999;
 	
 	initiativeArrow.x = _pos[0];
-	initiativeArrow.y = _pos[1] - 62;	
+	initiativeArrow.y = _pos[1] + 6;	
 	
 	///GET RANDOM MOVE
 	for (var i = 0; i < actionNB; i++)

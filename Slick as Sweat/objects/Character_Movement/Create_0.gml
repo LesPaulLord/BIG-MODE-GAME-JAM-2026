@@ -189,12 +189,18 @@ function GetHurt(_value)
 	{
 		if(characterID == 1)
 		{
+			if(characterHealth-1 > 0)
+			{			
 				Game_Manager.playerHeart[characterHealth-1].sprite_index = spr_UI_Health_03;
+			}
 		}
 	
 		if(characterID == 0)
-		{
+		{			
+			if(characterHealth-1 > 0)
+			{		
 				Game_Manager.npcHeart[characterHealth-1].sprite_index = spr_UI_Health_03;
+			}
 		}
 		
 		characterHealth--;
