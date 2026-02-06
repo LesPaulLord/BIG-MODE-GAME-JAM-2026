@@ -212,7 +212,7 @@ function PlayerInputPhase()
 	
 	if(!sequenceFinished)
 	{
-	if(_right = keyboard_check(vk_right) || keyboard_check(ord("D")) || gamepad_button_check(0, gp_padr) || (gamepad_axis_value(0, gp_axislh) > 0.5))
+	if(keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D")))
 	{		
 		//if(characters[1].x > room_width - Game_Manager.ringPadding + Game_Manager.gridSpace)
 		//{
@@ -226,7 +226,7 @@ function PlayerInputPhase()
 		//}
 	}
 
-	if(keyboard_check(vk_left) || keyboard_check(ord("A")) || gamepad_button_check(0, gp_padl) || (gamepad_axis_value(0, gp_axislh) < -0.5))
+	if(keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A")))
 		{
 		//if(characters[1].x < Game_Manager.ringPadding - Game_Manager.gridSpace)
 		//{
@@ -240,7 +240,7 @@ function PlayerInputPhase()
 		//}		
 	}
 
-	if (keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W")) || gamepad_button_check_pressed(0, gp_padu) || (gamepad_axis_value(0, gp_axislv) < -0.5))
+	if (keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W")))
 	{
 		if(playerLastInput != ActionType.jump)
 		{
@@ -254,7 +254,7 @@ function PlayerInputPhase()
 		}
 	}
 	
-	if (keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S")) || gamepad_button_check_pressed(0, gp_padd) || (gamepad_axis_value(0, gp_axislv) > 0.5))
+	if (keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S")))
 	{
 		if(!playerAlreadyBlocked)
 		{
@@ -287,10 +287,10 @@ function PlayerInputPhase()
 			sequenceFinished = true;
 		}
 	}
+	}
 	
 	if(sequenceTimer > playerInputLength + playerSequenceAfterTime)
 	{
-		show_message("player input finished");
 					
 		if(!sequenceFinished)
 		{
@@ -318,6 +318,7 @@ function PlayerInputPhase()
 		playerSequenceFinishInit = true;
 	}
 }
+
 
 
 ////FIGHT
@@ -415,5 +416,4 @@ function FightSequence()
 			HideShakeFX();
 		}
 	}	
-}
 }
