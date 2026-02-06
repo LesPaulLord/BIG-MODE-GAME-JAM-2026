@@ -61,7 +61,8 @@ function InitNPCMovesSequence()
 	sequenceInited = true;
 	array_resize(NPCActionList, actionNB);
 	moveShowedID = 0;
-	alarm[2] = initiativeDelay;
+	//alarm[2] = initiativeDelay;
+	delayDone = true;
 	
 	instance_destroy(roundObject);
 	
@@ -74,9 +75,13 @@ function InitNPCMovesSequence()
 	
 	initiativeArrow = instance_create_layer(x, y, "Instances", _initiativeArrow);
 	initiativeArrow.depth = -9999;
+	initiativeArrow.visible = false;
 	
-	initiativeArrow.x = _pos[0];
-	initiativeArrow.y = _pos[1] + 15;	
+	initiativeArrow.x = _pos[0] -40;
+	if(initiativeID == 1) initiativeArrow.x = _pos[0] -32
+	initiativeArrow.y = _pos[1] -95;
+	
+	if(initiativeID == 1) initiativeArrow.visible = false;	
 	
 	///GET RANDOM MOVE
 	for (var i = 0; i < actionNB; i++)
@@ -161,6 +166,7 @@ function cpu_generate_moves()
 
 function ShowNPCActionFunc(_id, _moveId)
 {
+	if(initiativeID == 0) initiativeArrow.visible = true;
 	show_debug_message("Show action: " + string(_moveId))
 	
 	SetActionBoxSprite(NPC_actionBox_flexPannel, _id, NPCActionList[_id]);
@@ -172,6 +178,9 @@ function ShowNPCActionFunc(_id, _moveId)
 /////PLAYER
 function InitPlayerMoveIntputSequence()
 {
+	if(initiativeID == 0) instance_destroy(initiativeArrow);
+	else initiativeArrow.visible = true;
+	
 	show_debug_message("Init Player Input sequence");
 	sequenceTimer = 0;
 	playerActionList = [];
@@ -203,7 +212,7 @@ function PlayerInputPhase()
 	
 	if(!sequenceFinished)
 	{
-	if(keyboard_check_pressed(vk_right))
+	if(keyboard_check_pressed(vk_right)) //|| gamepad_button_check(0, gp_padr) || (gamepad_axis_value(0, gp_axislh) > 0.5)
 	{		
 		//if(characters[1].x > room_width - Game_Manager.ringPadding + Game_Manager.gridSpace)
 		//{
@@ -217,8 +226,8 @@ function PlayerInputPhase()
 		//}
 	}
 
-	if(keyboard_check_pressed(vk_left))
-	{
+	if(keyboard_check_pressed(vk_left)) //gamepad_button_check(0, gp_padl) || (gamepad_axis_value(0, gp_axislh) < -0.5)
+		{
 		//if(characters[1].x < Game_Manager.ringPadding - Game_Manager.gridSpace)
 		//{
 			//audio_play_sound(sfx_cantInput, 1, false)
@@ -231,7 +240,7 @@ function PlayerInputPhase()
 		//}		
 	}
 
-	if(keyboard_check_pressed(vk_up))
+	if (keyboard_check_pressed(vk_up)) //|| gamepad_button_check_pressed(0, gp_padu) || (gamepad_axis_value(0, gp_axislv) < -0.5)
 	{
 		if(playerLastInput != ActionType.jump)
 		{
@@ -245,7 +254,7 @@ function PlayerInputPhase()
 		}
 	}
 	
-	if(keyboard_check_pressed(vk_down))
+	if (keyboard_check_pressed(vk_down)) //|| gamepad_button_check_pressed(0, gp_padd) || (gamepad_axis_value(0, gp_axislv) > 0.5)
 	{
 		if(!playerAlreadyBlocked)
 		{
@@ -258,9 +267,7 @@ function PlayerInputPhase()
 		{
 			audio_play_sound(sfx_cantInput, 1, false)
 		}
-	}	
 	}
-
 
 	if(_keyPressed)
 	{
@@ -407,4 +414,5 @@ function FightSequence()
 			HideShakeFX();
 		}
 	}	
+}
 }
