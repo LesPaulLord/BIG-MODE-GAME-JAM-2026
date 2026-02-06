@@ -14,3 +14,24 @@ if(reachingDestination)
 		active = true;
 	}
 }
+
+
+if(active)
+{
+	if(playerID = 1)
+	{
+		if(place_meeting(x, y, Player))
+		{
+			show_message("player sweat");
+			instance_destroy(self);
+		}
+	}
+	else
+	{
+		if(place_meeting(x, y, NPC))
+		{
+			show_message("NPC sweat");
+			instance_destroy(self);
+		}
+	}
+}

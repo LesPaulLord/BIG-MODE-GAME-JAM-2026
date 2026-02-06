@@ -160,9 +160,19 @@ function GetHurt(_value)
 	{
 			Game_Manager.npcHeart[characterHealth-1].sprite_index = spr_UI_Health_03;
 	}
-
 	
 	characterHealth-= _value;
+	
+	if(characterHealth == 2)
+	{
+		for(i = 0; i<2; i++)
+		{
+			var _sweat = instance_create_layer(x, y, "Instances", Sweat_col);
+			_sweat.reachingDestination = true;
+			_sweat.playerID = characterID;
+			_sweat.InitSweat();
+		}
+	}
 	
 	if(IsDead())
 	{

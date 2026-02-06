@@ -30,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_fx_sweat_turkey",
+    "path":"sprites/spr_fx_sweat_turkey/spr_fx_sweat_turkey.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
