@@ -76,7 +76,7 @@ function InitNPCMovesSequence()
 	initiativeArrow.depth = -9999;
 	
 	initiativeArrow.x = _pos[0];
-	initiativeArrow.y = _pos[1] + 6;	
+	initiativeArrow.y = _pos[1] + 15;	
 	
 	///GET RANDOM MOVE
 	for (var i = 0; i < actionNB; i++)

@@ -43,16 +43,6 @@ maxHealth = characterHealth;
 curveA = animcurve_get_channel(MovementCurves, "MovementCurveA");
 fxSweat = noone;
 
-Sweat();
-
-for(i = 0; i<2; i++)
-{
-	var _sweat = instance_create_layer(x, y, "Instances", Sweat_col);
-	_sweat.reachingDestination = true;
-	_sweat.playerID = characterID;
-	_sweat.InitSweat();
-}
-
 alarm[0] = 5;
 
 if(characterID ==0) image_xscale = -1;
@@ -189,7 +179,7 @@ function GetHurt(_value)
 	{
 		if(characterID == 1)
 		{
-			if(characterHealth-1 > 0)
+			if(characterHealth > 0)
 			{			
 				Game_Manager.playerHeart[characterHealth-1].sprite_index = spr_UI_Health_03;
 			}
@@ -197,7 +187,7 @@ function GetHurt(_value)
 	
 		if(characterID == 0)
 		{			
-			if(characterHealth-1 > 0)
+			if(characterHealth > 0)
 			{		
 				Game_Manager.npcHeart[characterHealth-1].sprite_index = spr_UI_Health_03;
 			}
