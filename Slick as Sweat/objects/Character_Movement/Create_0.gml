@@ -45,7 +45,7 @@ fxSweat = noone;
 
 alarm[0] = 5;
 
-if(characterID ==0) image_xscale = -1;
+if(characterID == 0) image_xscale = -1;
 
 function PerformAction(_actionType, _length)
 {

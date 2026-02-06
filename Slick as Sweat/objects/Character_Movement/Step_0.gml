@@ -6,7 +6,7 @@ else
 {
 	if(fxSweat != noone)
 	{
-	part_system_position(fxSweat,-500, -500);	
+		part_system_position(fxSweat,-500, -500);	
 	}
 }
 
@@ -14,29 +14,30 @@ if(!performAction)
 {
 	if(isControllable)
 	{
-		if(keyboard_check(vk_right))
+		if(keyboard_check(vk_right) || keyboard_check(ord("D")))
 		{
 			show_debug_message("perform move right");
 			PerformAction(ActionType.moveRight, Sequence_Manager.currentActionLength);
 		}
 
-		if(keyboard_check(vk_left))
+		if(keyboard_check(vk_left) || keyboard_check(ord("A")))
 		{
 			show_debug_message("perform move left");
 			PerformAction(ActionType.moveLeft, Sequence_Manager.currentActionLength);
 		}
 
-		if(keyboard_check(vk_up))
+		if(keyboard_check(vk_up) || keyboard_check(ord("W")))
 		{
 			show_debug_message("perform jump");
 			PerformAction(ActionType.jump, Sequence_Manager.currentActionLength);
 		}
 	
+	/*
 		if(keyboard_check(ord("Y")))
 		{
 			show_debug_message("perform attack");
 			PerformAction(ActionType.attack, Sequence_Manager.currentActionLength);
-		}
+		}*/
 	
 		if(keyboard_check(vk_enter))
 		{
