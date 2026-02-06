@@ -2,7 +2,7 @@
 
 ///GLOBAL
 acceleration = 1.0
-initiativeDelay = 1;
+initiativeDelay = 25;
 
 //DONT SET
 currentTurn = 0

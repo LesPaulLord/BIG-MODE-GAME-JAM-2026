@@ -7,13 +7,14 @@ if(gameOver)
 	}
 	
 	//CLEAR REMAINING SWEAT
+	/*
 	for(var i =0; i<2; i++)
 	{
 		if(Sequence_Manager.characters[i].fxSweat != noone)
 		{
 			part_system_position(Sequence_Manager.characters[i].fxSweat,-500, -500);	
 		}
-	}
+	}*/
 
 	gameOverTimer += delta_time/100000
 	
