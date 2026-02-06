@@ -212,7 +212,7 @@ function PlayerInputPhase()
 	
 	if(!sequenceFinished)
 	{
-	if(keyboard_check_pressed(vk_right)) //|| gamepad_button_check(0, gp_padr) || (gamepad_axis_value(0, gp_axislh) > 0.5)
+	if(_right = keyboard_check(vk_right) || keyboard_check(ord("D")) || gamepad_button_check(0, gp_padr) || (gamepad_axis_value(0, gp_axislh) > 0.5))
 	{		
 		//if(characters[1].x > room_width - Game_Manager.ringPadding + Game_Manager.gridSpace)
 		//{
@@ -226,7 +226,7 @@ function PlayerInputPhase()
 		//}
 	}
 
-	if(keyboard_check_pressed(vk_left)) //gamepad_button_check(0, gp_padl) || (gamepad_axis_value(0, gp_axislh) < -0.5)
+	if(keyboard_check(vk_left) || keyboard_check(ord("A")) || gamepad_button_check(0, gp_padl) || (gamepad_axis_value(0, gp_axislh) < -0.5))
 		{
 		//if(characters[1].x < Game_Manager.ringPadding - Game_Manager.gridSpace)
 		//{
@@ -240,7 +240,7 @@ function PlayerInputPhase()
 		//}		
 	}
 
-	if (keyboard_check_pressed(vk_up)) //|| gamepad_button_check_pressed(0, gp_padu) || (gamepad_axis_value(0, gp_axislv) < -0.5)
+	if (keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W")) || gamepad_button_check_pressed(0, gp_padu) || (gamepad_axis_value(0, gp_axislv) < -0.5))
 	{
 		if(playerLastInput != ActionType.jump)
 		{
@@ -254,7 +254,7 @@ function PlayerInputPhase()
 		}
 	}
 	
-	if (keyboard_check_pressed(vk_down)) //|| gamepad_button_check_pressed(0, gp_padd) || (gamepad_axis_value(0, gp_axislv) > 0.5)
+	if (keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S")) || gamepad_button_check_pressed(0, gp_padd) || (gamepad_axis_value(0, gp_axislv) > 0.5))
 	{
 		if(!playerAlreadyBlocked)
 		{
@@ -268,6 +268,7 @@ function PlayerInputPhase()
 			audio_play_sound(sfx_cantInput, 1, false)
 		}
 	}
+
 
 	if(_keyPressed)
 	{
