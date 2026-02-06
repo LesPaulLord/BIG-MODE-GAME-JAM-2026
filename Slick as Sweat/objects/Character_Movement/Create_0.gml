@@ -45,6 +45,14 @@ fxSweat = noone;
 
 Sweat();
 
+for(i = 0; i<2; i++)
+{
+	var _sweat = instance_create_layer(x, y, "Instances", Sweat_col);
+	_sweat.reachingDestination = true;
+	_sweat.playerID = characterID;
+	_sweat.InitSweat();
+}
+
 alarm[0] = 5;
 
 if(characterID ==0) image_xscale = -1;

@@ -12,6 +12,8 @@ function InitSweat()
 {
 	goal = GetRandomGoal();
 	reachingDestination = true;
+	
+	timer = 0;
 
 	initialPos[0] = x;
 	initialPos[1] = y;

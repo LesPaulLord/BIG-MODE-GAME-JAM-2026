@@ -9,14 +9,16 @@ if(reachingDestination)
 	y = lerp(initialPos[1], goal[1], _newFract)	
 	
 	if(timer/spawnTime > 1)
-	{
-		if(place_meeting(x,y, Sweat_col))
-		{
-			
-		}
-		
+	{		
 		reachingDestination = false;
 		active = true;
+		
+		if(place_meeting(x,y, Sweat_col))
+		{
+			reachingDestination = true;
+			active = false;
+			InitSweat();
+		}
 	}
 }
 
