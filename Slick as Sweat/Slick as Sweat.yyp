@@ -77,6 +77,7 @@
     {"id":{"name":"playerTimer","path":"objects/playerTimer/playerTimer.yy",},},
     {"id":{"name":"Round_text","path":"objects/Round_text/Round_text.yy",},},
     {"id":{"name":"Sequence_Manager","path":"objects/Sequence_Manager/Sequence_Manager.yy",},},
+    {"id":{"name":"Sweat_col","path":"objects/Sweat_col/Sweat_col.yy",},},
     {"id":{"name":"Test","path":"objects/Test/Test.yy",},},
     {"id":{"name":"WinScreen_LevelChange","path":"objects/WinScreen_LevelChange/WinScreen_LevelChange.yy",},},
     {"id":{"name":"ps_Sweat","path":"particles/ps_Sweat/ps_Sweat.yy",},},
