@@ -116,12 +116,15 @@ function InitNPCMovesSequence()
 		{
 			if(characters[0].x < Game_Manager.gridSpace + Game_Manager.ringPadding)
 			{
-				_action =ActionType.moveRight
+				_action = ActionType.moveRight
 			}
 		}
 		////-------------------------
 		
 		NPCActionList[i] = _action;
+		
+		//NPCActionList =[ActionType.moveLeft, ActionType.jump, ActionType.moveLeft]; <-------------------- debug hard code NPC sequence
+		
 		show_debug_message("random move: " + string(NPCActionList[i]));
 	}
 	
@@ -376,6 +379,7 @@ function FightSequence()
 		{
 			if(currentActionID < actionNB) ///Mettre specifiquement au character
 			{
+				if(playerLastInput == ActionType.block) characters[1].sprite_index = characters[1].spr_idle;
 				show_debug_message("Player action: " + string(currentActionID));	
 				characters[1].PerformAction(playerActionList[currentActionID], currentActionLength)
 				currentFighterID = 0;

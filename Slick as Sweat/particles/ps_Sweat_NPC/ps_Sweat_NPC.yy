@@ -1,0 +1,25 @@
+{
+  "$GMParticleSystem":"",
+  "%Name":"ps_Sweat_NPC",
+  "backdropHeight":768,
+  "backdropImageOpacity":0.5,
+  "backdropImagePath":"",
+  "backdropWidth":1366,
+  "backdropXOffset":0.0,
+  "backdropYOffset":0.0,
+  "drawOrder":0,
+  "emitters":[
+    {"$GMPSEmitter":"","%Name":"Emitter","additiveBlend":false,"directionIncrease":0.0,"directionMax":358.0,"directionMin":15.0,"directionWiggle":1.0,"distribution":0,"editorColour":4294967295,"editorDrawShape":true,"emitCount":1,"emitDelayMax":0.0,"emitDelayMin":0.0,"emitDelayUnits":0,"emitIntervalMax":0.0,"emitIntervalMin":3.0,"emitIntervalUnits":1,"enabled":true,"endColour":4294967295,"GMPresetName":null,"gravityDirection":242.0,"gravityForce":0.2,"headPosition":0.0,"lifetimeMax":15.0,"lifetimeMin":10.0,"linkedEmitter":null,"locked":false,"midColour":4294967295,"mode":0,"name":"Emitter","orientationIncrease":0.0,"orientationMax":300.0,"orientationMin":0.0,"orientationRelative":true,"orientationWiggle":0.0,"regionH":23.210632,"regionW":23.21051,"regionX":0.0,"regionY":0.0,"resourceType":"GMPSEmitter","resourceVersion":"2.0","scaleX":1.0,"scaleY":1.0,"shape":1,"sizeIncrease":0.0,"sizeMax":1.0,"sizeMin":1.0,"sizeWiggle":1.0,"spawnOnDeathCount":1,"spawnOnDeathGMPreset":null,"spawnOnDeathId":null,"spawnOnUpdateCount":1,"spawnOnUpdateGMPreset":null,"spawnOnUpdateId":null,"speedIncrease":0.0,"speedMax":1.0,"speedMin":5.0,"speedWiggle":0.0,"spriteAnimate":false,"spriteId":{"name":"spr_waterdrop_NPC","path":"sprites/spr_waterdrop_NPC/spr_waterdrop_NPC.yy",},"spriteRandom":false,"spriteStretch":true,"startColour":4294915542,"texture":-1,},
+  ],
+  "name":"ps_Sweat_NPC",
+  "parent":{
+    "name":"Emitters",
+    "path":"folders/Emitters.yy",
+  },
+  "resourceType":"GMParticleSystem",
+  "resourceVersion":"2.0",
+  "showBackdrop":true,
+  "showBackdropImage":false,
+  "xorigin":1,
+  "yorigin":1,
+}

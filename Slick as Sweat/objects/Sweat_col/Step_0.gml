@@ -10,6 +10,11 @@ if(reachingDestination)
 	
 	if(timer/spawnTime > 1)
 	{
+		if(place_meeting(x,y, Sweat_col))
+		{
+			
+		}
+		
 		reachingDestination = false;
 		active = true;
 	}
@@ -22,16 +27,20 @@ if(active)
 	{
 		if(place_meeting(x, y, Player))
 		{
-			show_message("player sweat");
+			var _sfx = choose(sfx_sweat_1, sfx_sweat_2);
 			instance_destroy(self);
+			Sequence_Manager.characters[1].Sweat();
+			audio_play_sound(_sfx, 1, false, 1, 0 , random_range(0.8,1.2))
 		}
 	}
 	else
 	{
 		if(place_meeting(x, y, NPC))
 		{
-			show_message("NPC sweat");
+			var _sfx = choose(sfx_sweat_1, sfx_sweat_2);
 			instance_destroy(self);
+			Sequence_Manager.characters[0].Sweat();
+			audio_play_sound(_sfx, 1, false, 1, 0 , random_range(0.8,1.2))
 		}
 	}
 }

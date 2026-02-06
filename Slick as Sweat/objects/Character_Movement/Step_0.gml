@@ -1,3 +1,15 @@
+if(sweating)
+{
+	part_system_position(fxSweat, x, y - 20);
+}
+else
+{
+	if(fxSweat != noone)
+	{
+	part_system_position(fxSweat,-500, -500);	
+	}
+}
+
 if(!performAction)
 {
 	if(isControllable)
