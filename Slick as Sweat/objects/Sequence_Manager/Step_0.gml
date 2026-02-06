@@ -289,7 +289,7 @@ function PlayerInputPhase()
 	
 	if(sequenceTimer > playerInputLength + playerSequenceAfterTime)
 	{
-		show_debug_message("player input finished");
+		show_message("player input finished");
 					
 		if(!sequenceFinished)
 		{
