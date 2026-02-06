@@ -42,7 +42,7 @@
   ],
   "name":"spr_UI_Initiative_02",
   "nineSlice":null,
-  "origin":9,
+  "origin":4,
   "parent":{
     "name":"UI",
     "path":"folders/Sprite/UI.yy",
@@ -152,7 +152,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":24,
-    "yorigin":9,
+    "yorigin":8,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
