@@ -127,7 +127,6 @@ function InitNPCMovesSequence()
 			if(characters[0].x < Game_Manager.gridSpace + Game_Manager.ringPadding)
 			{
 				_action = ActionType.moveRight
-				show_message("force right");
 			}
 		}
 		////-------------------------
