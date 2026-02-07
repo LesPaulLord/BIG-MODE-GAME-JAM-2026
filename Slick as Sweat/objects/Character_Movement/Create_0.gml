@@ -42,6 +42,7 @@ maxHealth = characterHealth;
 //visual
 curveA = animcurve_get_channel(MovementCurves, "MovementCurveA");
 fxSweat = noone;
+dashSpawned = false;
 
 alarm[0] = 5;
 
@@ -65,13 +66,30 @@ function Move(_initial, _goal, _fract, _attack, _ignoreMargins = false){
 	if(_goal[0] < room_width - Game_Manager.ringPadding + Game_Manager.gridSpace
 	 && _goal[0] > 0 - Game_Manager.gridSpace + Game_Manager.ringPadding || _ignoreMargins)
 	{
-		x = lerp(_initial[0], _goal[0], _newFract)
+		x = lerp(_initial[0], _goal[0], _newFract)		
 
 		_moved = true;
 	}
 	else	
 	{
 		///WOBBLE
+		sprite_index = spr_wobble;
+		image_speed = 2;
+	}
+	
+	if(_moved && !dashSpawned)
+	{
+		var _offset = 15;
+		var _dashFX = instance_create_layer(x -_offset, y -_offset , "Instances", FX_Dash);
+		
+		///Gauche
+		if(_initial[0] > _goal[0])
+		{
+			_dashFX.x = x + _offset
+			_dashFX.image_xscale = -1;
+		}
+		
+		dashSpawned = true;
 	}
 	
 	if(_goal[1] > Game_Manager.topPadding || _ignoreMargins)
@@ -127,7 +145,7 @@ function Move(_initial, _goal, _fract, _attack, _ignoreMargins = false){
 							GoalPosDelayed[1] = floorY;
 							
 							alarm[6] = 20
-							
+
 							//if(falling) = _initial[0] + choose(_initial[0] + Game_Manager.gridSpace, _initial[0] - Game_Manager.gridSpace)
 							
 							knocked = true;

@@ -51,7 +51,6 @@ switch(currentSequenceStep)
 		sequenceTimer = 0;
 	}
 	
-	if(Game_Manager.gameOver) return;
 	FightSequence();
 	
 	break;
@@ -199,8 +198,8 @@ function InitPlayerMoveIntputSequence()
 	{
 		SetActionBoxSprite(player_actionBox_flexPannel, i, ActionType.idle, false);
 	}
-
-	inputTimer = instance_create_layer(characters[1].x - 46, characters[1].y - 85, "Instances", Input_Timer);
+///POSITIONBOXICI
+	inputTimer = instance_create_layer(characters[1].x - 46, characters[1].y - 105, "Instances", Input_Timer);
 	inputTimer.depth = -999;
 	inputTimer.length = playerInputLength;
 	

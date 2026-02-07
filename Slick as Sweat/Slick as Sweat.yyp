@@ -63,6 +63,7 @@
     {"id":{"name":"EndMatch_text","path":"objects/EndMatch_text/EndMatch_text.yy",},},
     {"id":{"name":"Fight_Text","path":"objects/Fight_Text/Fight_Text.yy",},},
     {"id":{"name":"FX_block","path":"objects/FX_block/FX_block.yy",},},
+    {"id":{"name":"FX_Dash","path":"objects/FX_Dash/FX_Dash.yy",},},
     {"id":{"name":"FX_jump","path":"objects/FX_jump/FX_jump.yy",},},
     {"id":{"name":"FX_powerPunch","path":"objects/FX_powerPunch/FX_powerPunch.yy",},},
     {"id":{"name":"FX_stars","path":"objects/FX_stars/FX_stars.yy",},},

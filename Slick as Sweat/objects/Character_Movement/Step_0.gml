@@ -54,6 +54,7 @@ if(performAction)
 		readyToFight = false;
 		initialPos[0] = x;
 		initialPos[1] = y;
+		dashSpawned = false;
 		image_speed = 0.5;
 		depth = -50;
 		currentActionType = actionType;

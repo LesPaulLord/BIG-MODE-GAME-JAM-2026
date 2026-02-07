@@ -157,10 +157,11 @@ function SetActionBoxSprite(_flexRoot, _actionID, actionType, setAnim = true)
 	}
 }
 
+///POSITIONBOXICI
 function SetBoxPosition(_box, _character)
 {
 	var _x = _character.x - 40;
-	var _y = _character.y - 80;
+	var _y = _character.y - 95;
 	
 	if(_character.characterID == 1) _x -= 15;
 	
