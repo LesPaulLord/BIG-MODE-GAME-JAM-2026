@@ -73,7 +73,7 @@ function InitNPCMovesSequence()
 	npcAlreadyBlocked = false;
 	
 	//Initiative arrow
-	var _initiativeArrow =  initiativeID == 0? Initiative_player: Initiative_NPC;
+	var _initiativeArrow =  initiativeID == 0? Initiative_player: Initiative_player;
 	var _pos = [characters[initiativeID].x, characters[initiativeID].y];
 	
 	initiativeArrow = instance_create_layer(x, y, "Instances", _initiativeArrow);
