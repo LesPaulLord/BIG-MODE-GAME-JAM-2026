@@ -181,6 +181,7 @@
     {"id":{"name":"spr_stout_idle_jump_01","path":"sprites/spr_stout_idle_jump_01/spr_stout_idle_jump_01.yy",},},
     {"id":{"name":"spr_stout_idle_punch_01","path":"sprites/spr_stout_idle_punch_01/spr_stout_idle_punch_01.yy",},},
     {"id":{"name":"spr_stout_punch_01","path":"sprites/spr_stout_punch_01/spr_stout_punch_01.yy",},},
+    {"id":{"name":"spr_stout_specialmove_01","path":"sprites/spr_stout_specialmove_01/spr_stout_specialmove_01.yy",},},
     {"id":{"name":"spr_turkey_arenalimit_01","path":"sprites/spr_turkey_arenalimit_01/spr_turkey_arenalimit_01.yy",},},
     {"id":{"name":"spr_turkey_block_01","path":"sprites/spr_turkey_block_01/spr_turkey_block_01.yy",},},
     {"id":{"name":"spr_turkey_hit_01","path":"sprites/spr_turkey_hit_01/spr_turkey_hit_01.yy",},},
