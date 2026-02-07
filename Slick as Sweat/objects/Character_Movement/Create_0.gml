@@ -71,7 +71,7 @@ function Move(_initial, _goal, _fract, _attack, _ignoreMargins = false){
 	{
 		x = lerp(_initial[0], _goal[0], _newFract)		
 
-		_moved = true;
+		_moved = true;		
 	}
 	else
 	{
@@ -110,12 +110,18 @@ function Move(_initial, _goal, _fract, _attack, _ignoreMargins = false){
 		///WOBBLE
 	}
 	
+	if(actionType == ActionType.attack || knocked)
+	{
+		wobble = false;
+	}
+	
 	if(wobble && !blocking)
 	{		
 		///WOBBLE
 		if(!wobbleSpriteInited)
 		{
 			sprite_index = spr_wobble;
+			image_index = 0;
 			image_speed = 2;
 			wobbleSpriteInited = true;
 		}
@@ -135,7 +141,7 @@ function Move(_initial, _goal, _fract, _attack, _ignoreMargins = false){
 
 					if(!blocking || falling)
 					{
-						if(!falling)sprite_index = spr_attack;
+						if(!falling && _goal[1] >= floorY-2)sprite_index = spr_attack;
 						else sprite_index = spr_downKick;
 						
 						///BLOCK
@@ -208,6 +214,8 @@ function Move(_initial, _goal, _fract, _attack, _ignoreMargins = false){
 
 function GetHurt(_value)
 {
+	Sequence_Manager.hurtCheck = true;
+	
 	for(i =0; i< _value; i++)
 	{
 		if(characterID == 1)
@@ -252,8 +260,11 @@ function GetHurt(_value)
 		Sequence_Manager.sequencePaused = true;
 		if(characterID == 1) instance_create_layer(0, 0, "Instances", UI_PlayerSweatModeON);
 		else if(characterID == 0) instance_create_layer(0, 0, "Instances", UI_NPCSweatModeON);
+		audio_play_sound(sfx_powerUp, 1, false, 1, 0 , random_range(0.85,1.1))
 		Sweat();
 	}
+	
+	Sequence_Manager.hurtCheck = false;
 }
 
 function ResetPowerMove()

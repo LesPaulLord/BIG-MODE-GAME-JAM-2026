@@ -77,6 +77,8 @@ function InitNPCMovesSequence()
 	var _pos = [characters[initiativeID].x, characters[initiativeID].y];
 	
 	initiativeArrow = instance_create_layer(_pos[0], _pos[1]+15, "Instances", _initiativeArrow);
+	var sfx_initiative = choose(sfx_initiativeA, sfx_initiativeB);
+	audio_play_sound(sfx_initiative, 1, false, 1, 0 , random_range(0.85,1.1))
 	initiativeArrow.depth = -9999;
 	
 	//initiativeArrow.x = _pos[0] -40;
@@ -310,7 +312,11 @@ function PlayerInputPhase()
 	}
 	else if(sequenceFinished && !playerSequenceFinishInit)
 	{
-		if(inputTimer != noone) instance_destroy(inputTimer);
+		if(inputTimer != noone)
+		{
+			inputTimer.RemoveTimer();
+		}
+		
 		sequenceTimer = playerInputLength;
 		playerSequenceFinishInit = true;
 	}

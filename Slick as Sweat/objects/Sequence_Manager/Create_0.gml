@@ -42,6 +42,7 @@ currentFighterID = 0;
 currentActionID = 0;
 currentActionMadePerTurn = 0;
 currentActionLength = actionLength;
+hurtCheck = false;
 
 sequencePaused = false;
 
@@ -206,7 +207,8 @@ function ArePlayerReadyToFight()
 {
 	if(characters[0].readyToFight && characters[1].readyToFight
 	&& !characters[0].knocked  && !characters[1].knocked && !Game_Manager.gameOver
-	&& !sequencePaused)
+	&& !sequencePaused &&
+	!hurtCheck)
 	{
 		show_debug_message("Ready To Fight!!");
 		 return true;
