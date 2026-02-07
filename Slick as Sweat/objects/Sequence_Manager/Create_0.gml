@@ -157,8 +157,15 @@ function SetActionBoxSprite(_flexRoot, _actionID, actionType, setAnim = true)
 
 function SetBoxPosition(_box, _character)
 {
-	layer_x(_box, _character.x - 60)
-	layer_y(_box, _character.y - 100)
+	var _x = _character.x - 60;
+	var _y = _character.y - 100;
+	
+	if (_x < Game_Manager.ringPadding) _x = Game_Manager.ringPadding;
+	if(_x > room_width - Game_Manager.ringPadding) _x = room_width - Game_Manager.ringPadding;
+	if(_y < Game_Manager.topPadding) _y = Game_Manager.topPadding;
+	
+	layer_x(_box, _x)
+	layer_y(_box, _y)
 }
 
 function JumpCoolDown(_id)
