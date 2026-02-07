@@ -257,7 +257,6 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room_initHTML","path":"rooms/Room_initHTML/Room_initHTML.yy",},},
     {"roomId":{"name":"Room_StartScreen","path":"rooms/Room_StartScreen/Room_StartScreen.yy",},},
     {"roomId":{"name":"Room_Round1","path":"rooms/Room_Round1/Room_Round1.yy",},},
     {"roomId":{"name":"Room_Round2","path":"rooms/Room_Round2/Room_Round2.yy",},},
@@ -268,6 +267,7 @@
     {"roomId":{"name":"Room_Test_Fred","path":"rooms/Room_Test_Fred/Room_Test_Fred.yy",},},
     {"roomId":{"name":"Room_Test_Etienne","path":"rooms/Room_Test_Etienne/Room_Test_Etienne.yy",},},
     {"roomId":{"name":"Room_Credits","path":"rooms/Room_Credits/Room_Credits.yy",},},
+    {"roomId":{"name":"Room_initHTML","path":"rooms/Room_initHTML/Room_initHTML.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

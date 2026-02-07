@@ -118,6 +118,7 @@ function InitNPCMovesSequence()
 			if(characters[0].x > room_width - Game_Manager.ringPadding + Game_Manager.gridSpace)
 			{
 				_action =ActionType.moveLeft
+				show_message("force left");
 			}
 		}
 		
@@ -126,6 +127,7 @@ function InitNPCMovesSequence()
 			if(characters[0].x < Game_Manager.gridSpace + Game_Manager.ringPadding)
 			{
 				_action = ActionType.moveRight
+				show_message("force right");
 			}
 		}
 		////-------------------------

@@ -194,8 +194,9 @@ function JumpCoolDown(_id)
 
 function GetRandomActionType()
 {	
-	var _rand = irandom(3);
-
+	randomise();
+	var _rand = floor(random(4))
+	
 	switch(_rand)
 	{
 		case 0: return ActionType.moveLeft;
