@@ -22,5 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"sfx_Match_Win.wav",
-  "volume":0.64,
+  "volume":0.8,
 }
