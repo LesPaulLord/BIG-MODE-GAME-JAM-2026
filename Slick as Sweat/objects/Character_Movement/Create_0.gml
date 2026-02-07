@@ -43,6 +43,8 @@ maxHealth = characterHealth;
 curveA = animcurve_get_channel(MovementCurves, "MovementCurveA");
 fxSweat = noone;
 dashSpawned = false;
+wobbleSpriteInited = false;
+wobble = false;
 
 alarm[0] = 5;
 
@@ -51,10 +53,11 @@ if(characterID == 0) image_xscale = -1;
 function PerformAction(_actionType, _length)
 {
 	actionType = _actionType;
-	actionLength = _length
+	actionLength = _length;
 	performAction = true;
 	performActionInited = false;
 	attackLanded = false;
+	wobble = false;
 }
 
 function Move(_initial, _goal, _fract, _attack, _ignoreMargins = false){
@@ -70,14 +73,12 @@ function Move(_initial, _goal, _fract, _attack, _ignoreMargins = false){
 
 		_moved = true;
 	}
-	else	
+	else
 	{
-		///WOBBLE
-		sprite_index = spr_wobble;
-		image_speed = 2;
+		wobble = true;
 	}
 	
-	if(_moved && !dashSpawned)
+	if(_moved && !dashSpawned && _initial[1] == _goal[1])
 	{
 		var _offset = 15;
 		var _dashFX = instance_create_layer(x -_offset, y -_offset , "Instances", FX_Dash);
@@ -89,6 +90,8 @@ function Move(_initial, _goal, _fract, _attack, _ignoreMargins = false){
 			_dashFX.image_xscale = -1;
 		}
 		
+		wobble = false;
+		
 		dashSpawned = true;
 	}
 	
@@ -99,11 +102,23 @@ function Move(_initial, _goal, _fract, _attack, _ignoreMargins = false){
 		if(_initial[1] !=_goal[1])
 		{
 			_moved = true;
-		}
+			wobble = false;
+		}	
 	}
 	else	
 	{
 		///WOBBLE
+	}
+	
+	if(wobble)
+	{		
+		///WOBBLE
+		if(!wobbleSpriteInited)
+		{
+			sprite_index = spr_wobble;
+			image_speed = 2;
+			wobbleSpriteInited = true;
+		}
 	}
 
 	show_debug_message("move: " + string(_moved));	
@@ -180,7 +195,7 @@ function Move(_initial, _goal, _fract, _attack, _ignoreMargins = false){
 							}	
 							
 							alarm[3] = random_range(5,20);
-							alarm[4] = 20+_extraPause;	
+							alarm[4] = 20 + _extraPause;	
 							
 							Game_Manager.updateCharactersHealth = true;
 						}

@@ -58,6 +58,7 @@ if(performAction)
 		image_speed = 0.5;
 		depth = -50;
 		currentActionType = actionType;
+		wobbleSpriteInited = false;
 		
 		blocking = false;
 		
