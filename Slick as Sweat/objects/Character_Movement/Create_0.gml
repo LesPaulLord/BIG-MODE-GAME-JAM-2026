@@ -195,15 +195,18 @@ function GetHurt(_value)
 		
 		characterHealth--;
 		
-		if(characterHealth == 2)
+		if(characterHealth == 1)
 		{
+			/*
 			for(i = 0; i<2; i++)
 			{
 				var _sweat = instance_create_layer(x, y, "Instances", Sweat_col);
 				_sweat.reachingDestination = true;
 				_sweat.playerID = characterID;
 				_sweat.InitSweat();
-			}
+			}*/
+			
+			Sweat();
 		}
 	}
 
