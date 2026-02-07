@@ -82,6 +82,8 @@
     {"id":{"name":"Sequence_Manager","path":"objects/Sequence_Manager/Sequence_Manager.yy",},},
     {"id":{"name":"Sweat_col","path":"objects/Sweat_col/Sweat_col.yy",},},
     {"id":{"name":"Test","path":"objects/Test/Test.yy",},},
+    {"id":{"name":"UI_NPCSweatModeON","path":"objects/UI_NPCSweatModeON/UI_NPCSweatModeON.yy",},},
+    {"id":{"name":"UI_PlayerSweatModeON","path":"objects/UI_PlayerSweatModeON/UI_PlayerSweatModeON.yy",},},
     {"id":{"name":"WinScreen_LevelChange","path":"objects/WinScreen_LevelChange/WinScreen_LevelChange.yy",},},
     {"id":{"name":"ps_Sweat_NPC","path":"particles/ps_Sweat_NPC/ps_Sweat_NPC.yy",},},
     {"id":{"name":"ps_Sweat","path":"particles/ps_Sweat/ps_Sweat.yy",},},

@@ -43,6 +43,8 @@ currentActionID = 0;
 currentActionMadePerTurn = 0;
 currentActionLength = actionLength;
 
+sequencePaused = false;
+
 ///UI
 UI_NPC_Actions = layer_get_id("UI_NPC_MoveBoxes");
 NPC_actionBox_flexPannel = layer_get_flexpanel_node("UI_NPC_MoveBoxes");
@@ -160,9 +162,9 @@ function SetBoxPosition(_box, _character)
 	var _x = _character.x - 60;
 	var _y = _character.y - 100;
 	
-	if (_x < Game_Manager.ringPadding) _x = Game_Manager.ringPadding;
-	if(_x > room_width - Game_Manager.ringPadding) _x = room_width - Game_Manager.ringPadding;
-	if(_y < Game_Manager.topPadding) _y = Game_Manager.topPadding;
+	if (_x < 10) _x = 10;
+	if(_x > room_width - 30) _x = room_width - 30;
+	if(_y < 15) _y = 15;
 	
 	layer_x(_box, _x)
 	layer_y(_box, _y)
@@ -199,7 +201,9 @@ function GetRandomActionType()
 
 function ArePlayerReadyToFight()
 {
-	if(characters[0].readyToFight && characters[1].readyToFight && !characters[0].knocked  && !characters[1].knocked && !Game_Manager.gameOver)
+	if(characters[0].readyToFight && characters[1].readyToFight
+	&& !characters[0].knocked  && !characters[1].knocked && !Game_Manager.gameOver
+	&& !sequencePaused)
 	{
 		show_debug_message("Ready To Fight!!");
 		 return true;

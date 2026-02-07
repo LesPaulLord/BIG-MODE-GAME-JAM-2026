@@ -45,7 +45,7 @@ fxSweat = noone;
 
 alarm[0] = 5;
 
-if(characterID ==0) image_xscale = -1;
+if(characterID == 0) image_xscale = -1;
 
 function PerformAction(_actionType, _length)
 {
@@ -204,8 +204,11 @@ function GetHurt(_value)
 				_sweat.reachingDestination = true;
 				_sweat.playerID = characterID;
 				_sweat.InitSweat();
-			}*/
+			}*/			
 			
+			Sequence_Manager.sequencePaused = true;
+			if(characterID == 1) instance_create_layer(0, 0, "Instances", UI_PlayerSweatModeON);
+			else if(characterID == 0) instance_create_layer(0, 0, "Instances", UI_PlayerSweatModeON);
 			Sweat();
 		}
 	}

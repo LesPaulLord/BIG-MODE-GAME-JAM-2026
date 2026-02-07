@@ -65,6 +65,9 @@ function GameOver(_winnerID)
 		_endText.sprite_index = spr_UI_TurkeyWin_01;
 		audio_play_sound_at(sfx_Announcer_TurkeyWins, x, y, 0, 100, 300, 1, false, 1, 1)
 	}
+	
+	if(layer_exists(UI_NPC_Actions))layer_set_visible(UI_NPC_Actions, false);
+	if(layer_exists(UI_Player_Actions)) layer_set_visible(UI_Player_Actions, false);
 }
 
 function UpdateHeart()
