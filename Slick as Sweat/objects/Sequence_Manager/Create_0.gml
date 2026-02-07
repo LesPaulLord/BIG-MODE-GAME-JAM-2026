@@ -66,6 +66,8 @@ initiativeID = 0;
 
 fightText = noone;
 
+if(roundID != 1) instance_create_layer(0, 0, "Instances", Frame_transition_In);
+
 var spr_round = [spr_UI_Round_01, spr_UI_Round_02, spr_UI_Round_03]
 var sfx_round_announcer = [sfx_Announcer_Round1, sfx_Announcer_Round2, sfx_Announcer_Round3, sfx_Announcer_Round4, sfx_Announcer_Round5]
 

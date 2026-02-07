@@ -33,7 +33,7 @@ if(gameOver)
 			else		
 			{
 				audio_stop_all();
-				var _transition = instance_create_layer(0, 0, "Instances", Frame_transition)
+				var _transition = instance_create_layer(0, 0, "Instances", Frame_transition_out)
 				audio_play_sound(sfx_transition, 1, false, 1, 0 , random_range(0.85,1.1))
 				_transition.depth = -9999;
 			}

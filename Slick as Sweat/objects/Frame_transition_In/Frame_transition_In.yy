@@ -1,11 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"Frame_transition",
+  "%Name":"Frame_transition_In",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Frame_transition",
+  "name":"Frame_transition_In",
   "overriddenProperties":[],
   "parent":{
     "name":"Jay",
@@ -30,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_transition_01",
-    "path":"sprites/spr_transition_01/spr_transition_01.yy",
+    "name":"spr_transition_02",
+    "path":"sprites/spr_transition_02/spr_transition_02.yy",
   },
   "spriteMaskId":null,
   "visible":true,
