@@ -110,7 +110,7 @@ function Move(_initial, _goal, _fract, _attack, _ignoreMargins = false){
 		///WOBBLE
 	}
 	
-	if(wobble)
+	if(wobble && !blocking)
 	{		
 		///WOBBLE
 		if(!wobbleSpriteInited)

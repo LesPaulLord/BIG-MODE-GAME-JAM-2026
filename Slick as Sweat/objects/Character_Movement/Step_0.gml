@@ -109,7 +109,7 @@ if(performAction)
 		
 			case ActionType.block:
 				sprite_index = spr_block;
-				var blockAudio = choose(sfx_dash_1, sfx_dash_2)
+				var blockAudio = sfx_pour_fred //choose(sfx_dash_1, sfx_dash_2)
 				audio_play_sound(blockAudio, 1, false, 1, 0 , random_range(0.8,1.2))
 				blocking = true;
 				break;

@@ -76,7 +76,7 @@ function InitNPCMovesSequence()
 	var _initiativeArrow =  initiativeID == 0? Initiative_player: Initiative_NPC;
 	var _pos = [characters[initiativeID].x, characters[initiativeID].y];
 	
-	initiativeArrow = instance_create_layer(_pos[0], _pos[1]+15, "Instances", Initiative_NPC);
+	initiativeArrow = instance_create_layer(_pos[0], _pos[1]+15, "Instances", _initiativeArrow);
 	initiativeArrow.depth = -9999;
 	
 	//initiativeArrow.x = _pos[0] -40;
