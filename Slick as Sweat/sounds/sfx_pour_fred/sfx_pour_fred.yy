@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sfx_pour_fred",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":2.4959865,
+  "exportDir":"",
+  "name":"sfx_pour_fred",
+  "parent":{
+    "name":"BlockC",
+    "path":"folders/Sounds/BlockC.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_pour_fred.mp3",
+  "volume":1.0,
+}

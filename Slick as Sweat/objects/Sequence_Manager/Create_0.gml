@@ -43,6 +43,8 @@ currentActionID = 0;
 currentActionMadePerTurn = 0;
 currentActionLength = actionLength;
 
+sequencePaused = false;
+
 ///UI
 UI_NPC_Actions = layer_get_id("UI_NPC_MoveBoxes");
 NPC_actionBox_flexPannel = layer_get_flexpanel_node("UI_NPC_MoveBoxes");
@@ -69,7 +71,7 @@ var sfx_round_announcer = [sfx_Announcer_Round1, sfx_Announcer_Round2, sfx_Annou
 roundObject = instance_create_layer(GetMiddleOfScreen()[0], GetMiddleOfScreen()[1]-50, "Instances", Round_text);
 roundObject.sprite_index = spr_round[roundID-1];
 audio_play_sound_at(sfx_round_announcer[roundID -1], x, y, 0, 100, 300, 1, false, 1, 1, 0, random_range(0.9, 1.1));
-alarm[0] = 70;
+alarm[0] = 60;
 
 Game_Manager.updateCharactersHealth = true;
 
@@ -155,10 +157,20 @@ function SetActionBoxSprite(_flexRoot, _actionID, actionType, setAnim = true)
 	}
 }
 
+///POSITIONBOXICI
 function SetBoxPosition(_box, _character)
 {
-	layer_x(_box, _character.x - 60)
-	layer_y(_box, _character.y - 100)
+	var _x = _character.x - 40;
+	var _y = _character.y - 95;
+	
+	if(_character.characterID == 1) _x -= 15;
+	
+	if (_x < 10) _x = 10;
+	if(_x > room_width - 85) _x = room_width - 85;
+	if(_y < 15) _y = 15;
+	
+	layer_x(_box, _x)
+	layer_y(_box, _y)
 }
 
 function JumpCoolDown(_id)
@@ -192,7 +204,9 @@ function GetRandomActionType()
 
 function ArePlayerReadyToFight()
 {
-	if(characters[0].readyToFight && characters[1].readyToFight && !characters[0].knocked  && !characters[1].knocked && !Game_Manager.gameOver)
+	if(characters[0].readyToFight && characters[1].readyToFight
+	&& !characters[0].knocked  && !characters[1].knocked && !Game_Manager.gameOver
+	&& !sequencePaused)
 	{
 		show_debug_message("Ready To Fight!!");
 		 return true;

@@ -22,6 +22,8 @@ switch(currentSequenceStep)
 		InitNPCMovesSequence();
 	}
 	
+	if(Game_Manager.gameOver) return;
+	
 	if(!delayDone) return;	
 	
 	cpu_generate_moves()
@@ -36,6 +38,7 @@ switch(currentSequenceStep)
 		sequenceTimer = 0;
 	}
 	
+	if(Game_Manager.gameOver) return;	
 	PlayerInputPhase();
 	
 	break
@@ -61,7 +64,8 @@ function InitNPCMovesSequence()
 	sequenceInited = true;
 	array_resize(NPCActionList, actionNB);
 	moveShowedID = 0;
-	alarm[2] = initiativeDelay;
+	//alarm[2] = initiativeDelay;
+	delayDone = true;
 	
 	instance_destroy(roundObject);
 	
@@ -69,14 +73,15 @@ function InitNPCMovesSequence()
 	npcAlreadyBlocked = false;
 	
 	//Initiative arrow
-	var _initiativeArrow =  initiativeID == 0? Initiative_NPC: Initiative_player;
+	var _initiativeArrow =  initiativeID == 0? Initiative_player: Initiative_NPC;
 	var _pos = [characters[initiativeID].x, characters[initiativeID].y];
 	
-	initiativeArrow = instance_create_layer(x, y, "Instances", _initiativeArrow);
+	initiativeArrow = instance_create_layer(_pos[0], _pos[1]+15, "Instances", _initiativeArrow);
 	initiativeArrow.depth = -9999;
 	
-	initiativeArrow.x = _pos[0];
-	initiativeArrow.y = _pos[1] - 62;	
+	//initiativeArrow.x = _pos[0] -40;
+	//if(initiativeID == 1) initiativeArrow.x = _pos[0] -32
+	//initiativeArrow.y = _pos[1] + 55;
 	
 	///GET RANDOM MOVE
 	for (var i = 0; i < actionNB; i++)
@@ -116,12 +121,15 @@ function InitNPCMovesSequence()
 		{
 			if(characters[0].x < Game_Manager.gridSpace + Game_Manager.ringPadding)
 			{
-				_action =ActionType.moveRight
+				_action = ActionType.moveRight
 			}
 		}
 		////-------------------------
 		
 		NPCActionList[i] = _action;
+		
+		//NPCActionList =[ActionType.moveLeft, ActionType.jump, ActionType.moveLeft]; <-------------------- debug hard code NPC sequence
+		
 		show_debug_message("random move: " + string(NPCActionList[i]));
 	}
 	
@@ -169,6 +177,7 @@ function ShowNPCActionFunc(_id, _moveId)
 /////PLAYER
 function InitPlayerMoveIntputSequence()
 {
+
 	show_debug_message("Init Player Input sequence");
 	sequenceTimer = 0;
 	playerActionList = [];
@@ -183,8 +192,8 @@ function InitPlayerMoveIntputSequence()
 	{
 		SetActionBoxSprite(player_actionBox_flexPannel, i, ActionType.idle, false);
 	}
-
-	inputTimer = instance_create_layer(characters[1].x - 59, characters[1].y - 110, "Instances", Input_Timer);
+///POSITIONBOXICI
+	inputTimer = instance_create_layer(characters[1].x - 46, characters[1].y - 105, "Instances", Input_Timer);
 	inputTimer.depth = -999;
 	inputTimer.length = playerInputLength;
 	
@@ -200,7 +209,7 @@ function PlayerInputPhase()
 	
 	if(!sequenceFinished)
 	{
-	if(keyboard_check_pressed(vk_right))
+	if(keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D")))
 	{		
 		//if(characters[1].x > room_width - Game_Manager.ringPadding + Game_Manager.gridSpace)
 		//{
@@ -214,8 +223,8 @@ function PlayerInputPhase()
 		//}
 	}
 
-	if(keyboard_check_pressed(vk_left))
-	{
+	if(keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A")))
+		{
 		//if(characters[1].x < Game_Manager.ringPadding - Game_Manager.gridSpace)
 		//{
 			//audio_play_sound(sfx_cantInput, 1, false)
@@ -228,7 +237,7 @@ function PlayerInputPhase()
 		//}		
 	}
 
-	if(keyboard_check_pressed(vk_up))
+	if (keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W")))
 	{
 		if(playerLastInput != ActionType.jump)
 		{
@@ -242,7 +251,7 @@ function PlayerInputPhase()
 		}
 	}
 	
-	if(keyboard_check_pressed(vk_down))
+	if (keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S")))
 	{
 		if(!playerAlreadyBlocked)
 		{
@@ -255,7 +264,6 @@ function PlayerInputPhase()
 		{
 			audio_play_sound(sfx_cantInput, 1, false)
 		}
-	}	
 	}
 
 
@@ -276,10 +284,10 @@ function PlayerInputPhase()
 			sequenceFinished = true;
 		}
 	}
+	}
 	
 	if(sequenceTimer > playerInputLength + playerSequenceAfterTime)
 	{
-		show_debug_message("player input finished");
 					
 		if(!sequenceFinished)
 		{
@@ -307,6 +315,7 @@ function PlayerInputPhase()
 		playerSequenceFinishInit = true;
 	}
 }
+
 
 
 ////FIGHT
@@ -376,6 +385,7 @@ function FightSequence()
 		{
 			if(currentActionID < actionNB) ///Mettre specifiquement au character
 			{
+				if(playerLastInput == ActionType.block) characters[1].sprite_index = characters[1].spr_idle;
 				show_debug_message("Player action: " + string(currentActionID));	
 				characters[1].PerformAction(playerActionList[currentActionID], currentActionLength)
 				currentFighterID = 0;
