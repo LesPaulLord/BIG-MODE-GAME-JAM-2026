@@ -66,8 +66,8 @@ function GameOver(_winnerID)
 		audio_play_sound_at(sfx_Announcer_TurkeyWins, x, y, 0, 100, 300, 1, false, 1, 1)
 	}
 	
-	if(layer_exists(UI_NPC_Actions))layer_set_visible(UI_NPC_Actions, false);
-	if(layer_exists(UI_Player_Actions)) layer_set_visible(UI_Player_Actions, false);
+	Sequence_Manager.characters[0].ResetPowerMove();
+	Sequence_Manager.characters[1].ResetPowerMove();
 }
 
 function UpdateHeart()

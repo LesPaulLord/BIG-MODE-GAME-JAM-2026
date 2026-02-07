@@ -193,33 +193,34 @@ function GetHurt(_value)
 			}
 		}
 		
-		characterHealth--;
-		
-		if(characterHealth == 1)
-		{
-			/*
-			for(i = 0; i<2; i++)
-			{
-				var _sweat = instance_create_layer(x, y, "Instances", Sweat_col);
-				_sweat.reachingDestination = true;
-				_sweat.playerID = characterID;
-				_sweat.InitSweat();
-			}*/			
-			
-			Sequence_Manager.sequencePaused = true;
-			if(characterID == 1) instance_create_layer(0, 0, "Instances", UI_PlayerSweatModeON);
-			else if(characterID == 0) instance_create_layer(0, 0, "Instances", UI_PlayerSweatModeON);
-			Sweat();
-		}
-	}
+		characterHealth--;	
 
+	}
+	
+	Game_Manager.updateCharactersHealth = true;
 	
 	if(IsDead())
 	{
 		Game_Manager.GameOver(1 - characterID);
+		return;
 	}
 	
-	Game_Manager.updateCharactersHealth = true;
+	if(characterHealth == 1)
+	{
+		/*
+		for(i = 0; i<2; i++)
+		{
+			var _sweat = instance_create_layer(x, y, "Instances", Sweat_col);
+			_sweat.reachingDestination = true;
+			_sweat.playerID = characterID;
+			_sweat.InitSweat();
+		}*/			
+			
+		Sequence_Manager.sequencePaused = true;
+		if(characterID == 1) instance_create_layer(0, 0, "Instances", UI_PlayerSweatModeON);
+		else if(characterID == 0) instance_create_layer(0, 0, "Instances", UI_NPCSweatModeON);
+		Sweat();
+	}
 }
 
 function ResetPowerMove()

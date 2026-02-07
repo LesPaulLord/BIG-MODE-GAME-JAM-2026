@@ -71,7 +71,7 @@ var sfx_round_announcer = [sfx_Announcer_Round1, sfx_Announcer_Round2, sfx_Annou
 roundObject = instance_create_layer(GetMiddleOfScreen()[0], GetMiddleOfScreen()[1]-50, "Instances", Round_text);
 roundObject.sprite_index = spr_round[roundID-1];
 audio_play_sound_at(sfx_round_announcer[roundID -1], x, y, 0, 100, 300, 1, false, 1, 1, 0, random_range(0.9, 1.1));
-alarm[0] = 70;
+alarm[0] = 60;
 
 Game_Manager.updateCharactersHealth = true;
 
@@ -159,11 +159,13 @@ function SetActionBoxSprite(_flexRoot, _actionID, actionType, setAnim = true)
 
 function SetBoxPosition(_box, _character)
 {
-	var _x = _character.x - 60;
-	var _y = _character.y - 100;
+	var _x = _character.x - 40;
+	var _y = _character.y - 80;
+	
+	if(_character.characterID == 1) _x -= 15;
 	
 	if (_x < 10) _x = 10;
-	if(_x > room_width - 30) _x = room_width - 30;
+	if(_x > room_width - 85) _x = room_width - 85;
 	if(_y < 15) _y = 15;
 	
 	layer_x(_box, _x)

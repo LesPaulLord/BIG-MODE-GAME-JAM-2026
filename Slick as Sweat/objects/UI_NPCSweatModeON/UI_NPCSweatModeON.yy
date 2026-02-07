@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_turkey_specialmove_01",
-    "path":"sprites/spr_turkey_specialmove_01/spr_turkey_specialmove_01.yy",
+    "name":"spr_stout_specialmove_01",
+    "path":"sprites/spr_stout_specialmove_01/spr_stout_specialmove_01.yy",
   },
   "spriteMaskId":null,
   "visible":true,

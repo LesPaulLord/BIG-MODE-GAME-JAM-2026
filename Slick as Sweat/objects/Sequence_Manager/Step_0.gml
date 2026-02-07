@@ -22,6 +22,8 @@ switch(currentSequenceStep)
 		InitNPCMovesSequence();
 	}
 	
+	if(Game_Manager.gameOver) return;
+	
 	if(!delayDone) return;	
 	
 	cpu_generate_moves()
@@ -36,6 +38,7 @@ switch(currentSequenceStep)
 		sequenceTimer = 0;
 	}
 	
+	if(Game_Manager.gameOver) return;	
 	PlayerInputPhase();
 	
 	break
@@ -48,6 +51,7 @@ switch(currentSequenceStep)
 		sequenceTimer = 0;
 	}
 	
+	if(Game_Manager.gameOver) return;
 	FightSequence();
 	
 	break;
@@ -196,7 +200,7 @@ function InitPlayerMoveIntputSequence()
 		SetActionBoxSprite(player_actionBox_flexPannel, i, ActionType.idle, false);
 	}
 
-	inputTimer = instance_create_layer(characters[1].x - 59, characters[1].y - 110, "Instances", Input_Timer);
+	inputTimer = instance_create_layer(characters[1].x - 46, characters[1].y - 85, "Instances", Input_Timer);
 	inputTimer.depth = -999;
 	inputTimer.length = playerInputLength;
 	
