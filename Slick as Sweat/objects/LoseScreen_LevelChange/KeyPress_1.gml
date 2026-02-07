@@ -1,2 +1,2 @@
 audio_stop_sound(sfx_Lose_Theme);
-room_goto(Room_Test_Jay);
+room_goto(Room_StartScreen);
