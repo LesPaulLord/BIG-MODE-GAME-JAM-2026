@@ -80,7 +80,7 @@ function InitNPCMovesSequence()
 	initiativeArrow = instance_create_layer(_pos[0], _pos[1]+15, "Instances", _initiativeArrow);
 	var sfx_initiative = choose(sfx_initiativeA, sfx_initiativeB);
 	var _pitch = initiativeID == 0 ?  0.5: 0.8 ;
-	audio_play_sound(sfx_initiative, 1, false, 1, 0 , initiativeID)
+	audio_play_sound(sfx_initiative, 1, false, 1, 0 , _pitch)
 	initiativeArrow.depth = -9999;
 	
 	//initiativeArrow.x = _pos[0] -40;
