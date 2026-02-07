@@ -16,7 +16,8 @@ switch(currentSequenceStep)
 	break
 
 	//SET RANDOM NPC MOVES
-	case 1:
+	case 1:	
+	if(sequencePaused) return;
 	if (!sequenceInited)	
 	{
 		InitNPCMovesSequence();
@@ -78,7 +79,7 @@ function InitNPCMovesSequence()
 	
 	initiativeArrow = instance_create_layer(_pos[0], _pos[1]+15, "Instances", _initiativeArrow);
 	var sfx_initiative = choose(sfx_initiativeA, sfx_initiativeB);
-	audio_play_sound(sfx_initiative, 1, false, 1, 0 , random_range(0.85,1.1))
+	audio_play_sound(sfx_initiative, 1, false, 1, 0 , random_range(0.5,0.8))
 	initiativeArrow.depth = -9999;
 	
 	//initiativeArrow.x = _pos[0] -40;

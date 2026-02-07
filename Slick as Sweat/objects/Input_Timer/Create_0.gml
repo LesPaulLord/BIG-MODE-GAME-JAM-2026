@@ -9,7 +9,7 @@ sfxTone = audio_play_sound(sfx_tone, 1, true);
 
 function RemoveTimer()
 {
-	audio_stop_sound(sfx_tone);
-	audio_stop_sound(sfx_tiktak);
+	if(audio_is_playing(sfx_tone)) audio_stop_sound(sfx_tone);
+	if(audio_is_playing(sfx_tiktak)) audio_stop_sound(sfx_tiktak);
 	instance_destroy(self);
 }

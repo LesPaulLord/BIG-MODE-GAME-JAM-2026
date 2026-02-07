@@ -10,7 +10,7 @@
   "compression":1,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.7916553,
+  "duration":0.30174604,
   "exportDir":"",
   "name":"sfx_initiativeA",
   "parent":{
@@ -22,5 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"sfx_initiativeA.wav",
-  "volume":1.0,
+  "volume":0.82,
 }

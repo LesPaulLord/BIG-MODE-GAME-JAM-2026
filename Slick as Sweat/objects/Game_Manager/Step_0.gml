@@ -4,6 +4,9 @@ if(gameOver)
 	{
 		audio_stop_sound(sfx_Battle_Song_03);
 		gameOverInited = true;
+		
+		var _winAudio = winnerID == 1? sfx_Match_Win : sfx_Match_Loose;
+		audio_play_sound(_winAudio, 1, false)
 	}
 	
 	//CLEAR REMAINING SWEAT

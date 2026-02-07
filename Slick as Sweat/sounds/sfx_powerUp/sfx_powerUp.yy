@@ -10,7 +10,7 @@
   "compression":1,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":1.0903175,
+  "duration":1.6761905,
   "exportDir":"",
   "name":"sfx_powerUp",
   "parent":{
