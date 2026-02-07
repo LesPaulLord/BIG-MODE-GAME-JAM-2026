@@ -29,7 +29,7 @@
   "height":250,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"61777d38-0179-4097-8cbe-6fa378abf885","blendMode":0,"displayName":"default","isLocked":false,"name":"61777d38-0179-4097-8cbe-6fa378abf885","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"61777d38-0179-4097-8cbe-6fa378abf885","blendMode":0,"displayName":"default","isLocked":true,"name":"61777d38-0179-4097-8cbe-6fa378abf885","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_fx_shockwave_02",
   "nineSlice":null,
