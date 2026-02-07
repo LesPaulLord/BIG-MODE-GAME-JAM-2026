@@ -1,1 +1,1 @@
-music = audio_play_sound(sfx_MainMenuTheme, 100, true);
+audio_play_sound(sfx_MainMenuTheme, 100, true);

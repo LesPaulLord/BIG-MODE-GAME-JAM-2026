@@ -118,7 +118,6 @@ function InitNPCMovesSequence()
 			if(characters[0].x > room_width - Game_Manager.ringPadding + Game_Manager.gridSpace)
 			{
 				_action =ActionType.moveLeft
-				show_message("force left");
 			}
 		}
 		

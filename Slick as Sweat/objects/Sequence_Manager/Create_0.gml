@@ -74,7 +74,7 @@ var sfx_round_announcer = [sfx_Announcer_Round1, sfx_Announcer_Round2, sfx_Annou
 roundObject = instance_create_layer(GetMiddleOfScreen()[0], GetMiddleOfScreen()[1]-50, "Instances", Round_text);
 var _roundIndex = clamp(roundID-1, 0, 2);
 roundObject.sprite_index = spr_round[_roundIndex];
-audio_play_sound_at(sfx_round_announcer[roundID -1], x, y, 0, 100, 300, 1, false, 1, 1, 0, random_range(0.9, 1.1));
+audio_play_sound_at(sfx_round_announcer[_roundIndex], x, y, 0, 100, 300, 1, false, 1, 1, 0, random_range(0.9, 1.1));
 alarm[0] = 60;
 
 Game_Manager.updateCharactersHealth = true;
