@@ -73,18 +73,15 @@ function InitNPCMovesSequence()
 	npcAlreadyBlocked = false;
 	
 	//Initiative arrow
-	var _initiativeArrow =  initiativeID == 0? Initiative_player: Initiative_player;
+	var _initiativeArrow =  initiativeID == 0? Initiative_player: Initiative_NPC;
 	var _pos = [characters[initiativeID].x, characters[initiativeID].y];
 	
-	initiativeArrow = instance_create_layer(x, y, "Instances", _initiativeArrow);
+	initiativeArrow = instance_create_layer(_pos[0], _pos[1]+15, "Instances", Initiative_NPC);
 	initiativeArrow.depth = -9999;
-	initiativeArrow.visible = false;
 	
-	initiativeArrow.x = _pos[0] -40;
-	if(initiativeID == 1) initiativeArrow.x = _pos[0] -32
-	initiativeArrow.y = _pos[1] -95;
-	
-	if(initiativeID == 1) initiativeArrow.visible = false;	
+	//initiativeArrow.x = _pos[0] -40;
+	//if(initiativeID == 1) initiativeArrow.x = _pos[0] -32
+	//initiativeArrow.y = _pos[1] + 55;
 	
 	///GET RANDOM MOVE
 	for (var i = 0; i < actionNB; i++)
@@ -169,7 +166,6 @@ function cpu_generate_moves()
 
 function ShowNPCActionFunc(_id, _moveId)
 {
-	if(initiativeID == 0) initiativeArrow.visible = true;
 	show_debug_message("Show action: " + string(_moveId))
 	
 	SetActionBoxSprite(NPC_actionBox_flexPannel, _id, NPCActionList[_id]);
@@ -181,9 +177,7 @@ function ShowNPCActionFunc(_id, _moveId)
 /////PLAYER
 function InitPlayerMoveIntputSequence()
 {
-	if(initiativeID == 0) instance_destroy(initiativeArrow);
-	else initiativeArrow.visible = true;
-	
+
 	show_debug_message("Init Player Input sequence");
 	sequenceTimer = 0;
 	playerActionList = [];
